@@ -26,49 +26,22 @@ from bs4 import BeautifulSoup
 
 # BS4 method
 
+companies = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
+"PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
+
+symbol = companies[5]
+
 headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
+# url = f"https://finance.yahoo.com/quote/{symbol}"
+# r = requests.get(url, headers=headers)
+# soup = BeautifulSoup(r.text,"html.parser")
+# print(symbol)
+# currentPrice = soup.find("span",{"class" : "Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)"}).text
+# print(currentPrice)
 
-url = "https://finance.yahoo.com/quote/NVDA"
-
-r = requests.get(url)
-
+url = f"https://finance.yahoo.com/quote/NVDA/key-statistics?p=NVDA"
+r = requests.get(url, headers= headers)
 soup = BeautifulSoup(r.text,"html.parser")
-
-print(soup.title.text)
-
-currentPrice = soup.find("span",{"class" : "Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)"}).text
-print(currentPrice)
-
-
-
-
-
-
-
-
-
-
-# is52weekHigh = False
-# isRSI = False
-# isADX = False
-# isMACD = False
-# is50dayEMA = False
-# isOBV = False                                                                
-
-
-# nvda = yf.Ticker("NVDA")
-# historical = nvda.info
-# currentPrice = nvda.info["regularMarketPrice"]
-# fiftyTwoWeekHigh = nvda.info["fiftyTwoWeekHigh"]
-# hist = nvda.history(period="max")
-# hist.to_csv()
-# print(hist)
-
-# if currentPrice > fiftyTwoWeekHigh:
-#     print("Current price is greater than 52 week high")
-#     is52weekHigh = True
-# elif currentPrice < fiftyTwoWeekHigh:
-#     print("Current price is less than 52 week high")
-#     is52weekHigh = False
-
-
+print(symbol)
+fiftyTwoWeekHigh = soup.find("td",{"class" : "Fw(500) Ta(end) Pstart(10px) Miw(60px)"})
+print(fiftyTwoWeekHigh)
