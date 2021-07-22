@@ -2,6 +2,7 @@ import yfinance as yf
 import pandas as pd
 from matplotlib import pyplot as plt
 import json
+import selenium
 
 # Basic Stocks Trading Strategy
 
@@ -20,6 +21,13 @@ import json
 # 4. MACD is set to sell
 # 5. current price is 0.70 * bought price
 
+is52weekHigh = False
+isRSI = False
+isADX = False
+isMACD = False
+is50dayEMA = False
+isOBV = False                                                                
+
 nvda = yf.Ticker("NVDA")
 
 historical = nvda.info
@@ -29,5 +37,8 @@ fiftyTwoWeekHigh = nvda.info["fiftyTwoWeekHigh"]
 
 if currentPrice > fiftyTwoWeekHigh:
     print("Current price is greater than 52 week high")
+    is52weekHigh = True
 else:
     print("Current price is less than 52 week high")
+    is52weekHigh = False
+
