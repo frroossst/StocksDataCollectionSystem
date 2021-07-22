@@ -39,9 +39,30 @@ headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/201001
 # currentPrice = soup.find("span",{"class" : "Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)"}).text
 # print(currentPrice)
 
-url = f"https://finance.yahoo.com/quote/NVDA/key-statistics?p=NVDA"
+url = "https://finance.yahoo.com/quote/NVDA/key-statistics?p=NVDA"
 r = requests.get(url, headers= headers)
 soup = BeautifulSoup(r.text,"html.parser")
-print(symbol)
-fiftyTwoWeekHigh = soup.find("td",{"class" : "Fw(500) Ta(end) Pstart(10px) Miw(60px)"})
-print(fiftyTwoWeekHigh)
+
+# print(symbol)
+# fiftyTwoWeekHigh = soup.find_all("td",{"class" : "Fw(500) Ta(end) Pstart(10px) Miw(60px)"})
+# print(fiftyTwoWeekHigh)
+
+textWall = soup.get_text()
+print(textWall)
+fiftyWeekHigh = "52 Week High 3"
+lindex = 0
+compar = []
+
+for i in textWall:
+    compar.append(i)
+    if "".join(compar) == fiftyWeekHigh:
+        print("found a match")
+    elif len(compar) > 14:
+        compar = []
+    else:
+        pass
+
+
+
+
+
