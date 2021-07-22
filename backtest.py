@@ -3,8 +3,9 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import json
 import time
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+import requests
+from bs4 import BeautifulSoup
+
 
 # # # Basic Stocks Trading Strategy
 
@@ -23,19 +24,24 @@ from selenium.webdriver.common.keys import Keys
 # # # 4. MACD is set to sell
 # # # 5. current price is 0.70 * bought price
 
-PATH = "/home/home/Desktop/Projects/Stonks/chromedriver"
-driver = webdriver.Chrome(PATH)
+# BS4 method
 
-driver.get("https://in.finance.yahoo.com/")
+headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
 
-search = driver.find_element_by_id("yfin-usr-qry")
-search.send_keys("NVDA")
-search.send_keys(Keys.RETURN)
+url = "https://finance.yahoo.com/quote/NVDA"
+
+r = requests.get(url)
+
+soup = BeautifulSoup(r.text,"html.parser")
+
+print(soup.title.text)
+
+currentPrice = soup.find("span",{"class" : "Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)"}).text
+print(currentPrice)
 
 
-time.sleep(60)
 
-driver.quit()
+
 
 
 
@@ -54,6 +60,9 @@ driver.quit()
 # historical = nvda.info
 # currentPrice = nvda.info["regularMarketPrice"]
 # fiftyTwoWeekHigh = nvda.info["fiftyTwoWeekHigh"]
+# hist = nvda.history(period="max")
+# hist.to_csv()
+# print(hist)
 
 # if currentPrice > fiftyTwoWeekHigh:
 #     print("Current price is greater than 52 week high")
