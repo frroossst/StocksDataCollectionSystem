@@ -2,6 +2,7 @@ import yfinance as yf
 import pandas as pd
 from matplotlib import pyplot as plt
 import json
+import ast
 import time
 import requests
 from bs4 import BeautifulSoup
@@ -42,12 +43,12 @@ with open("data.json","w") as fobj:
     json.dump(result,fobj)
     fobj.close()
 
+with open("data.json","r") as fobj:
+    content = json.load(fobj)
 
+# print(content)
+content = json.loads(content)
+print(type(content))
 
-
-
-
-
-
-
-
+print("52 Week High")
+print(content["quoteResponse"]["result"][0]["fiftyTwoWeekHigh"]["fmt"])
