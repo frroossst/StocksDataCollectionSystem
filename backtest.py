@@ -2,8 +2,7 @@ import yfinance as yf
 import pandas as pd
 from matplotlib import pyplot as plt
 import json
-import ast
-import time
+import os
 import requests
 from bs4 import BeautifulSoup
 
@@ -27,28 +26,56 @@ from bs4 import BeautifulSoup
 companies = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
 "PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
 
-symbol = companies[5]
 
-headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
 
-url = ("https://query1.finance.yahoo.com/v7/finance/quote?formatted=true&crumb=Pkgha4QtRuo&lang=en-US&region=US&symbols=NVDA&fields=messageBoardId,longName,shortName,marketCap,underlyingSymbol,underlyingExchangeSymbol,headSymbolAsString,regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketVolume,uuid,regularMarketOpen,fiftyTwoWeekLow,fiftyTwoWeekHigh,toCurrency,fromCurrency,toExchange,fromExchange&corsDomain=finance.yahoo.com")
-r = requests.get(url, headers=headers)
-soup = BeautifulSoup(r.text,"html.parser")
+class dataHandling():
 
-print(type(soup))
+    def __init__(self) -> None:
+        result = ""
+        
+    def getData(self,symbol):
 
-result = soup.string
+        headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
 
-with open("data.json","w") as fobj:
-    json.dump(result,fobj)
-    fobj.close()
+        url = (f"https://query1.finance.yahoo.com/v7/finance/quote?formatted=true&crumb=Pkgha4QtRuo&lang=en-US&region=US&symbols={symbol}&fields=messageBoardId,longName,shortName,marketCap,underlyingSymbol,underlyingExchangeSymbol,headSymbolAsString,regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketVolume,uuid,regularMarketOpen,fiftyTwoWeekLow,fiftyTwoWeekHigh,toCurrency,fromCurrency,toExchange,fromExchange&corsDomain=finance.yahoo.com")
+        r = requests.get(url, headers=headers)
+        soup = BeautifulSoup(r.text,"html.parser")
+        result = soup.string
 
-with open("data.json","r") as fobj:
-    content = json.load(fobj)
+        with open("data.json","w") as fobj:
+            json.dump(result,fobj)
+            fobj.close()
 
-# print(content)
-content = json.loads(content)
-print(type(content))
+        dataHandling.getAttributes(self)
 
-print("52 Week High")
-print(content["quoteResponse"]["result"][0]["fiftyTwoWeekHigh"]["fmt"])
+    def getAttributes(self):
+
+        with open("data.json","r") as fobj:
+            content = json.load(fobj)
+
+        content = json.loads(content)
+
+        ticker = (content["quoteResponse"]["result"][0]["symbol"])
+        fiftyTwoWeekHigh = (content["quoteResponse"]["result"][0]["fiftyTwoWeekHigh"]["fmt"])
+        fiftyTwoWeekLow = (content["quoteResponse"]["result"][0]["fiftyTwoWeekLow"]["fmt"])
+        currentPrice = (content["quoteResponse"]["result"][0]["regularMarketPrice"]["fmt"])
+
+        filename = ticker + ".json"
+        dataDump = {"Name" : ticker, "Current Price" : currentPrice,"52 Week High" : fiftyTwoWeekHigh,"52 Week Low" : fiftyTwoWeekLow}
+
+        with open(filename,"w") as fobj:
+            json.dump(dataDump,fobj,indent=6)
+
+def main():
+
+    for i in companies:
+        i = i + ".json"
+        if os.path.exists(i):
+            os.remove(i)
+
+    for i in companies:
+        symbol = i
+        D = dataHandling()
+        D.getData(symbol)
+
+main()
