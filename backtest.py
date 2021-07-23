@@ -1,10 +1,13 @@
+from pandas.core.window.rolling import Window
 import yfinance as yf
 import pandas as pd
+import ta
+from bs4 import BeautifulSoup
 from matplotlib import pyplot as plt
+import requests
 import json
 import os
-import requests
-from bs4 import BeautifulSoup
+
 
 # # # Basic Stocks Trading Strategy
 
@@ -69,6 +72,38 @@ class dataHandling():
         with open(filename,"w") as fobj:
             json.dump(dataDump,fobj,indent=6)
 
+    @classmethod
+    def dumpData(self,ticker,data,type = None):
+        
+        if type == None:
+            raise Exception ("None type is not a valid keyword argument")
+        elif type == "RSI":
+            content = {"RSI" : data}
+
+        filename = ticker + ".json"
+        with open(filename,"a") as fobj:
+            json.dump(content,fobj)
+            fobj.close()
+
+
+
+class technicalIndicators():
+
+    def __init__(self) -> None:
+        pass
+
+    def getRSI(self,ticker):
+        self.ticker = ticker
+
+        dataF = yf.Ticker(self.ticker).history(period="max").reset_index()[["Date","Close"]]
+        dataF["RSI"] = ta.momentum.RSIIndicator(dataF["Close"], window = 14).rsi()
+        lastDataF = dataF.iloc[-1]
+        print(lastDataF["RSI"])
+        print(type(dataF))
+        dataHandling.dumpData("NVDA",lastDataF["RSI"],"RSI")
+
+
+
 def main():
 
     for i in companies:
@@ -81,4 +116,7 @@ def main():
         D = dataHandling()
         D.getData(symbol)
 
-main()
+# main()
+
+T = technicalIndicators()
+T.getRSI("NVDA")
