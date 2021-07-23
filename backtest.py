@@ -85,10 +85,11 @@ class dataHandling():
             content = json.load(fobj)
             fobj.close()
 
-
         if type == "RSI":
             data = round(data,4)
             content["Technical Indicators"].update({"RSI" : data})
+
+
 
         with open(filename,"w") as fobj:
             json.dump(content,fobj,indent=6)
