@@ -59,9 +59,10 @@ class dataHandling():
         fiftyTwoWeekHigh = (content["quoteResponse"]["result"][0]["fiftyTwoWeekHigh"]["fmt"])
         fiftyTwoWeekLow = (content["quoteResponse"]["result"][0]["fiftyTwoWeekLow"]["fmt"])
         currentPrice = (content["quoteResponse"]["result"][0]["regularMarketPrice"]["fmt"])
+        name = (content["quoteResponse"]["result"][0]["longName"])
 
         filename = ticker + ".json"
-        dataDump = {"Name" : ticker, "Current Price" : currentPrice,"52 Week High" : fiftyTwoWeekHigh,"52 Week Low" : fiftyTwoWeekLow}
+        dataDump = {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice,"52 Week High" : fiftyTwoWeekHigh,"52 Week Low" : fiftyTwoWeekLow}
 
         with open(filename,"w") as fobj:
             json.dump(dataDump,fobj,indent=6)
