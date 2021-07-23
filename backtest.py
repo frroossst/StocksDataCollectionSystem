@@ -7,6 +7,7 @@ from matplotlib import pyplot as plt
 import requests
 import json
 import os
+import math
 
 
 # # # Basic Stocks Trading Strategy
@@ -66,8 +67,11 @@ class dataHandling():
         percentChange = (content["quoteResponse"]["result"][0]["regularMarketChangePercent"]["fmt"])
 
         filename = ticker + ".json"
-        dataDump = {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
-        "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow}
+        dataDump = {
+            "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
+        "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow},
+            "Technical Indicators" : {"RSI" : ""}
+        }
 
         with open(filename,"w") as fobj:
             json.dump(dataDump,fobj,indent=6)
@@ -75,16 +79,20 @@ class dataHandling():
     @classmethod
     def dumpData(self,ticker,data,type = None):
         
-        if type == None:
-            raise Exception ("None type is not a valid keyword argument")
-        elif type == "RSI":
-            content = {"RSI" : data}
-
         filename = ticker + ".json"
-        with open(filename,"a") as fobj:
-            json.dump(content,fobj)
+        
+        with open(filename,"r") as fobj:
+            content = json.load(fobj)
             fobj.close()
 
+
+        if type == "RSI":
+            data = round(data,4)
+            content["Technical Indicators"].update({"RSI" : data})
+
+        with open(filename,"w") as fobj:
+            json.dump(content,fobj,indent=6)
+            fobj.close()
 
 
 class technicalIndicators():
@@ -118,5 +126,8 @@ def main():
 
 # main()
 
+symbol = companies[5]
+D = dataHandling()
+D.getData(symbol)
 T = technicalIndicators()
 T.getRSI("NVDA")
