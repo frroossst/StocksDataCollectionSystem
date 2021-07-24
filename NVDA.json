@@ -2,12 +2,22 @@
       "Basic Info": {
             "Name": "NVIDIA Corporation",
             "Symbol": "NVDA",
-            "Current Price": "195.30",
-            "Change Percent": "-0.33%",
+            "Current Price": "195.58",
+            "Change Percent": "-0.18%",
             "52 Week High": "208.75",
-            "52 Week Low": "97.77"
+            "52 Week Low": "102.09"
       },
       "Technical Indicators": {
-            "RSI": 55.0049
+            "RSI": "",
+            "ADX": "",
+            "MACD": [
+                  {
+                        "Line": 2.9529
+                  },
+                  {
+                        "Signal": 4.8204
+                  }
+            ],
+            "OBV": ""
       }
 }

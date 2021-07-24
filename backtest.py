@@ -2,6 +2,8 @@ from pandas.core.window.rolling import Window
 import yfinance as yf
 import pandas as pd
 import ta
+import talib
+import numpy as np
 from bs4 import BeautifulSoup
 from matplotlib import pyplot as plt
 import requests
@@ -70,7 +72,7 @@ class dataHandling():
         dataDump = {
             "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
         "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow},
-            "Technical Indicators" : {"RSI" : ""}
+            "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : ""}
         }
 
         with open(filename,"w") as fobj:
@@ -89,7 +91,18 @@ class dataHandling():
             data = round(data,4)
             content["Technical Indicators"].update({"RSI" : data})
 
+        elif type == "OBV":
+            content["Technical Indicators"].update({"OBV" : data})
 
+        elif type == "ADX":
+            content["Technical Indicators"].update({"ADX" : data})
+
+        elif type == "MACD":
+            # data input is a list for MACD
+            data = [round(data[0],4), round(data[1],4)]
+            content["Technical Indicators"].update({"MACD" : [{"Line" : data[0]}, {"Signal" : data[1]}]})
+        else:
+            raise Exception("type None is not a valid keyword input")
 
         with open(filename,"w") as fobj:
             json.dump(content,fobj,indent=6)
@@ -109,8 +122,34 @@ class technicalIndicators():
         lastDataF = dataF.iloc[-1]
         print(lastDataF["RSI"])
         print(type(dataF))
-        dataHandling.dumpData("NVDA",lastDataF["RSI"],"RSI")
+        dataHandling.dumpData(self.ticker,lastDataF["RSI"],"RSI")
 
+    def getADX(self,ticker):
+        self.ticker = ticker
+
+        dataF = yf.download(self.ticker)
+        
+        
+    def getOBV(self,ticker):
+        self.ticker = ticker
+
+        dataF = yf.download(self.ticker)
+        #not sure this is accurate!
+        dataF["OBV"] = ta.volume.OnBalanceVolumeIndicator(dataF["Close"],dataF["Volume"]).on_balance_volume()
+        print(dataF)
+
+    def getMACD(self,ticker):
+        self.ticker = ticker
+
+        dataF = yf.download(self.ticker)
+
+        dataF["MACD Line"] = ta.trend.MACD(dataF["Close"],window_slow = 26, window_fast = 12, window_sign = 9).macd()
+        dataF["MACD Signal"] = ta.trend.MACD(dataF["Close"],window_slow = 26, window_fast = 12, window_sign = 9).macd_signal()
+
+        lastDataF = dataF.iloc[-1]
+        data = [lastDataF["MACD Line"], lastDataF["MACD Signal"]]
+
+        dataHandling.dumpData(self.ticker,data,"MACD")
 
 
 def main():
@@ -131,4 +170,4 @@ symbol = companies[5]
 D = dataHandling()
 D.getData(symbol)
 T = technicalIndicators()
-T.getRSI("NVDA")
+T.getMACD("NVDA")
