@@ -154,6 +154,7 @@ class technicalIndicators():
 
         #dataHandling.dumpData(self.ticker,adx,"ADX")
 
+### [FATAL] returns suspicious values
     def getOBV(self,ticker):
         self.ticker = ticker
 
@@ -163,8 +164,8 @@ class technicalIndicators():
         print(dataF["OBV"])
         lastDataF = dataF.iloc[-1]
         print(lastDataF["OBV"])
-
-    
+        data = lastDataF["OBV"]
+        dataHandling.dumpData(self.ticker,data,"OBV")
 
 
 def main():
@@ -181,8 +182,8 @@ def main():
 
 # main()
 
-symbol = companies[5]
+symbol = companies[0]
 D = dataHandling()
 D.getData(symbol)
 T = technicalIndicators()
-T.getOBV("NVDA")
+T.getOBV(symbol)
