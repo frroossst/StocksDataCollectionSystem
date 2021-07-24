@@ -121,8 +121,8 @@ class technicalIndicators():
         dataF = yf.Ticker(self.ticker).history(period="max").reset_index()[["Date","Close"]]
         dataF["RSI"] = ta.momentum.RSIIndicator(dataF["Close"], window = 14).rsi()
         lastDataF = dataF.iloc[-1]
-        print(lastDataF["RSI"])
-        print(type(dataF))
+        # print(lastDataF["RSI"])
+        # print(type(dataF))
         dataHandling.dumpData(self.ticker,lastDataF["RSI"],"RSI")
 
     # method to get MACD
@@ -163,7 +163,7 @@ class technicalIndicators():
         dataF["OBV"] = ta.volume.OnBalanceVolumeIndicator(dataF["Close"],dataF["Volume"]).on_balance_volume()
         print(dataF["OBV"])
         lastDataF = dataF.iloc[-1]
-        print(lastDataF["OBV"])
+        print(lastDataF)
         data = lastDataF["OBV"]
         dataHandling.dumpData(self.ticker,data,"OBV")
 
@@ -175,15 +175,19 @@ def main():
         if os.path.exists(i):
             os.remove(i)
 
+    print("collecting data...")
     for i in companies:
         symbol = i
         D = dataHandling()
         D.getData(symbol)
+        T = technicalIndicators()
+        T.getRSI(symbol)
+        T.getMACD(symbol)
 
-# main()
+main()
 
-symbol = companies[0]
-D = dataHandling()
-D.getData(symbol)
-T = technicalIndicators()
-T.getOBV(symbol)
+# symbol = companies[0]
+# D = dataHandling()
+# D.getData("NVDA")
+# T = technicalIndicators()
+# T.getOBV("NVDA")
