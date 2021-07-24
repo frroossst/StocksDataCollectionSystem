@@ -114,6 +114,7 @@ class technicalIndicators():
     def __init__(self) -> None:
         pass
 
+    # method to get RSI
     def getRSI(self,ticker):
         self.ticker = ticker
 
@@ -124,20 +125,7 @@ class technicalIndicators():
         print(type(dataF))
         dataHandling.dumpData(self.ticker,lastDataF["RSI"],"RSI")
 
-    def getADX(self,ticker):
-        self.ticker = ticker
-
-        dataF = yf.download(self.ticker)
-        
-        
-    def getOBV(self,ticker):
-        self.ticker = ticker
-
-        dataF = yf.download(self.ticker)
-        #not sure this is accurate!
-        dataF["OBV"] = ta.volume.OnBalanceVolumeIndicator(dataF["Close"],dataF["Volume"]).on_balance_volume()
-        print(dataF)
-
+    # method to get MACD
     def getMACD(self,ticker):
         self.ticker = ticker
 
@@ -150,6 +138,33 @@ class technicalIndicators():
         data = [lastDataF["MACD Line"], lastDataF["MACD Signal"]]
 
         dataHandling.dumpData(self.ticker,data,"MACD")
+
+### [FATAL] return NaN
+    def getADX(self,ticker):
+        self.ticker = ticker
+
+        dataF = yf.download(self.ticker)
+        print(dataF)
+        dataF["ADX"] = ta.trend.ADXIndicator(dataF["High"].values,dataF["Low"].values,dataF["Close"].values,window=14).adx()
+        lastDataF = dataF.iloc[-1]
+        print(lastDataF["ADX"])
+
+        adx = talib.ADX(dataF["High"].values,dataF["Low"].values,dataF["Close"].values)
+        print(adx)
+
+        #dataHandling.dumpData(self.ticker,adx,"ADX")
+
+    def getOBV(self,ticker):
+        self.ticker = ticker
+
+        dataF = yf.download(self.ticker)
+        #not sure this is accurate!
+        dataF["OBV"] = ta.volume.OnBalanceVolumeIndicator(dataF["Close"],dataF["Volume"]).on_balance_volume()
+        print(dataF["OBV"])
+        lastDataF = dataF.iloc[-1]
+        print(lastDataF["OBV"])
+
+    
 
 
 def main():
@@ -170,4 +185,4 @@ symbol = companies[5]
 D = dataHandling()
 D.getData(symbol)
 T = technicalIndicators()
-T.getMACD("NVDA")
+T.getOBV("NVDA")
