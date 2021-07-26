@@ -11,12 +11,19 @@ import json
 import os
 import math
 
-
+# companies listed on the NASDAQ (USA)
 NASDAQ = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
 "PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
 
-NSE = ["ITC.NS","GUJGAS.NS"]
+# companies listed on the NSE (India)
+NSE = ["ITC.NS","IOB.NS","MRPL.NS","IDEA.NS","SBIN.NS","INFY.NS","ASIANPAINT.NS","HCLTECH.NS","JUBLFOOD.NS","LT.NS","LTI.NS",
+"HINDUNILVR.NS","ONGC.NS","BAJFINANCE.NS","TATASTEEL.NS","TATAMOTORS.NS","TATACOFFEE.NS","TECHM.NS"]
 
+#companies that are shooting up problems
+li = ["GUJGAS.NS","SUNPHARMA.NS"]
+
+global dump
+dump = False
 
 class dataHandling():
 
@@ -40,6 +47,9 @@ class dataHandling():
 
     def getAttributes(self):
 
+        global dump
+        dump = True
+
         with open("data.json","r") as fobj:
             content = json.load(fobj)
 
@@ -52,49 +62,61 @@ class dataHandling():
             currentPrice = (content["quoteResponse"]["result"][0]["regularMarketPrice"]["fmt"])
             name = (content["quoteResponse"]["result"][0]["longName"])
             percentChange = (content["quoteResponse"]["result"][0]["regularMarketChangePercent"]["fmt"])
-        except KeyError:
-            print("[KEY ERROR] Moved onto the next value")
+            dump = True
+        except Exception as e:
+            print("[{e}]")
+            dump = False
 
-        filename = ticker + ".json"
-        dataDump = {
-            "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
-        "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow},
-            "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : ""}
-        }
+        try:
+            filename = ticker + ".json"
+            dataDump = {
+                "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
+            "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow},
+                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : ""}
+            }
+        except Exception as e:
+            print(f"[{e}]")
+            dump = False
 
-        with open(filename,"w") as fobj:
-            json.dump(dataDump,fobj,indent=6)
+        if dump:
+            with open(filename,"w") as fobj:
+                json.dump(dataDump,fobj,indent=6)
 
     @classmethod
     def dumpData(self,ticker,data,type = None):
         
-        filename = ticker + ".json"
+        if dump:
+
+            filename = ticker + ".json"
+            
+            with open(filename,"r") as fobj:
+                content = json.load(fobj)
+                fobj.close()
+
+            if type == "RSI":
+                data = round(data,4)
+                content["Technical Indicators"].update({"RSI" : data})
+
+            elif type == "OBV":
+                content["Technical Indicators"].update({"OBV" : data})
+
+            elif type == "ADX":
+                data = round(data,4)
+                content["Technical Indicators"].update({"ADX" : data})
+
+            elif type == "MACD":
+                # data input is a list for MACD
+                data = [round(data[0],4), round(data[1],4)]
+                content["Technical Indicators"].update({"MACD" : [{"Line" : data[0]}, {"Signal" : data[1]}]})
+            else:
+                raise Exception("type None is not a valid keyword input")
+
+            with open(filename,"w") as fobj:
+                json.dump(content,fobj,indent=6)
+                fobj.close()
         
-        with open(filename,"r") as fobj:
-            content = json.load(fobj)
-            fobj.close()
-
-        if type == "RSI":
-            data = round(data,4)
-            content["Technical Indicators"].update({"RSI" : data})
-
-        elif type == "OBV":
-            content["Technical Indicators"].update({"OBV" : data})
-
-        elif type == "ADX":
-            data = round(data,4)
-            content["Technical Indicators"].update({"ADX" : data})
-
-        elif type == "MACD":
-            # data input is a list for MACD
-            data = [round(data[0],4), round(data[1],4)]
-            content["Technical Indicators"].update({"MACD" : [{"Line" : data[0]}, {"Signal" : data[1]}]})
         else:
-            raise Exception("type None is not a valid keyword input")
-
-        with open(filename,"w") as fobj:
-            json.dump(content,fobj,indent=6)
-            fobj.close()
+            print("dump attribute is false")
 
 
 class technicalIndicators():

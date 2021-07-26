@@ -1,6 +1,6 @@
 # # # Basic Stocks Trading Strategy
 
-# # # Squeeze Momentum Indicator
+# # # [LazyBear]Squeeze Momentum Indicator (construct this indicator from scratch)
 
 # # # [BUY]
 # # # 1. 26 week high is greater than 52 week high
