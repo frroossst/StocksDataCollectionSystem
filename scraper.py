@@ -12,23 +12,6 @@ import os
 import math
 
 
-# # # Basic Stocks Trading Strategy
-
-# # # [BUY]
-# # # 1. 26 week high is greater than 52 week high
-# # # 2. RSI > 70 
-# # # 3. ADX > 25
-# # # 4. MACD signal is true
-# # # 5. 50 day EMA is greater than 200 day EMA
-# # # 6. OBV signal is up!
-
-# # # [SELL]
-# # # 1. 26 week average is less than 52 week high
-# # # 2. RSI > 75
-# # # 3. ADX > 25
-# # # 4. MACD is set to sell
-# # # 5. current price is 0.70 * bought price
-
 companies = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
 "PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
 
@@ -143,16 +126,7 @@ class technicalIndicators():
     def getADX(self,ticker):
         self.ticker = ticker
 
-        dataF = yf.download(self.ticker)
-        print(dataF)
-        dataF["ADX"] = ta.trend.ADXIndicator(dataF["High"].values,dataF["Low"].values,dataF["Close"].values,window=14).adx()
-        lastDataF = dataF.iloc[-1]
-        print(lastDataF["ADX"])
-
-        adx = talib.ADX(dataF["High"].values,dataF["Low"].values,dataF["Close"].values)
-        print(adx)
-
-        #dataHandling.dumpData(self.ticker,adx,"ADX")
+    
 
 ### [FATAL] returns suspicious values
     def getOBV(self,ticker):
@@ -184,10 +158,12 @@ def main():
         T.getRSI(symbol)
         T.getMACD(symbol)
 
-main()
+# main()
 
-# symbol = companies[0]
-# D = dataHandling()
-# D.getData("NVDA")
-# T = technicalIndicators()
-# T.getOBV("NVDA")
+symbol = companies[0]
+D = dataHandling()
+D.getData("ITC.NS")
+T = technicalIndicators()
+T.getADX("ITC.NS")
+
+
