@@ -1,4 +1,3 @@
-from pandas.core.window.rolling import Window
 import yfinance as yf
 import pandas as pd
 import ta
@@ -177,7 +176,6 @@ class technicalIndicators():
 
         lastDataF = dataF.iloc[-1]
         data = lastDataF["MFI"]
-        print(data)
         dataHandling.dumpData(self.ticker,data,"MFI") 
 
 ### [FATAL] returns suspicious values

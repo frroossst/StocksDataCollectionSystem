@@ -1,0 +1,58 @@
+//
+// @author LazyBear 
+// List of all my indicators: https://www.tradingview.com/v/4IneGo8h/
+//
+// Written in Pine Script
+
+// Just some technical info for anyone interested. 
+// The indicator is made up of Bollinger Bands (20, 2) and a Keltner Channel (20, 1.5). 
+// When the BB is inside the Keltner you get the dark blue dots, when it breaks out again you get the light blue. 
+// The Momentum part is a standard Momentum indicator, 12 periods or so.
+// 
+// The Momentum colour change is just when momentum changes directions 
+// (ie a lesser value than the previous candle in each direction). 
+// I wouldn't bother with it to be honest as it mostly takes you out the trade way too early, 
+// use a normal stop and target based on your RR.
+// 
+// Sensitivity is adjusted by changing the Keltner band value, 1 is almost never triggered and mostly 
+// just gives a single dark blue dot here and there, 2 gives a lot of signals and not so reliable. 
+// 1.5 is a good amount, but wait for at least 6 dark blue dots before you consider it a 'squeeze', 
+// single dots don't mean much.
+
+study(shorttitle = "SQZMOM_LB", title="Squeeze Momentum Indicator [LazyBear]", overlay=false)
+
+length = input(20, title="BB Length")
+mult = input(2.0,title="BB MultFactor")
+lengthKC=input(20, title="KC Length")
+multKC = input(1.5, title="KC MultFactor")
+
+useTrueRange = input(true, title="Use TrueRange (KC)", type=bool)
+
+// Calculate BB
+source = close
+basis = sma(source, length)
+dev = multKC * stdev(source, length)
+upperBB = basis + dev
+lowerBB = basis - dev
+
+// Calculate KC
+ma = sma(source, lengthKC)
+range = useTrueRange ? tr : (high - low)
+rangema = sma(range, lengthKC)
+upperKC = ma + rangema * multKC
+lowerKC = ma - rangema * multKC
+
+sqzOn  = (lowerBB > lowerKC) and (upperBB < upperKC)
+sqzOff = (lowerBB < lowerKC) and (upperBB > upperKC)
+noSqz  = (sqzOn == false) and (sqzOff == false)
+
+val = linreg(source  -  avg(avg(highest(high, lengthKC), lowest(low, lengthKC)),sma(close,lengthKC)), 
+            lengthKC,0)
+
+bcolor = iff( val > 0, 
+            iff( val > nz(val[1]), lime, green),
+            iff( val < nz(val[1]), red, maroon))
+scolor = noSqz ? blue : sqzOn ? black : gray 
+plot(val, color=bcolor, style=histogram, linewidth=4)
+plot(0, color=scolor, style=cross, linewidth=2)
+

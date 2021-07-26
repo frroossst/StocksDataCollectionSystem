@@ -17,7 +17,18 @@
 # # # 4. MACD is set to sell
 # # # 5. current price is 0.70 * bought price
 
-companies = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
+from matplotlib import pyplot as plt
+import json
+import os
+
+# companies listed on the NASDAQ (USA)
+NASDAQ = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
 "PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
 
+# companies listed on the NSE (India)
+NSE = ["ITC.NS","IOB.NS","MRPL.NS","IDEA.NS","SBIN.NS","INFY.NS","ASIANPAINT.NS","HCLTECH.NS","JUBLFOOD.NS","LT.NS","LTI.NS",
+"HINDUNILVR.NS","ONGC.NS","BAJFINANCE.NS","TATASTEEL.NS","TATAMOTORS.NS","TATACOFFEE.NS","TECHM.NS"]
+
+#companies that are shooting up problems
+li = ["GUJGAS.NS","SUNPHARMA.NS"]
 
