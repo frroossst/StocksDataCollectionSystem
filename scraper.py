@@ -72,7 +72,7 @@ class dataHandling():
             dataDump = {
                 "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
             "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow},
-                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : ""}
+                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : ""}
             }
         except Exception as e:
             print(f"[{e}]")
@@ -108,6 +108,11 @@ class dataHandling():
                 # data input is a list for MACD
                 data = [round(data[0],4), round(data[1],4)]
                 content["Technical Indicators"].update({"MACD" : [{"Line" : data[0]}, {"Signal" : data[1]}]})
+            
+            elif type == "MFI":
+                data = round(data,4)
+                content["Technical Indicators"].update({"MFI" : data})
+            
             else:
                 raise Exception("type None is not a valid keyword input")
 
@@ -164,7 +169,16 @@ class technicalIndicators():
 
         dataHandling.dumpData(self.ticker,data,"ADX")
 
+    def getMFI(self,ticker):
+        self.ticker = ticker
 
+        dataF = yf.download(self.ticker)
+        dataF["MFI"] = talib.MFI(dataF["High"],dataF["Low"],dataF["Close"],dataF["Volume"],timeperiod=14)
+
+        lastDataF = dataF.iloc[-1]
+        data = lastDataF["MFI"]
+        print(data)
+        dataHandling.dumpData(self.ticker,data,"MFI") 
 
 ### [FATAL] returns suspicious values
     def getOBV(self,ticker):
@@ -181,41 +195,86 @@ class technicalIndicators():
 
 def main():
 
-    exchange = input("enter exchange to scrape : ")
+    print("1. Scrape Data")
+    print("2. Add a company")
+    print("3. Remove a company")
+    ch = int(input("enter choice : "))
 
-    if exchange == "nasdaq":
-        for i in NASDAQ:
-            i = i + ".json"
-            if os.path.exists(i):
-                os.remove(i)
+    if ch == 1:
 
-        print("collecting data...")
-        for i in NASDAQ:
-            symbol = i
-            D = dataHandling()
-            D.getData(symbol)
-            T = technicalIndicators()
-            T.getRSI(symbol)
-            T.getMACD(symbol)
-            T.getADX(symbol)
-            T.getOBV(symbol)
+        exchange = input("enter exchange to scrape : ")
 
-    elif exchange == "nse":
-        for i in NSE:
-            i = i + ".json"
-            if os.path.exists(i):
-                os.remove(i)
+        if exchange == "nasdaq":
+            for i in NASDAQ:
+                i = i + ".json"
+                if os.path.exists(i):
+                    os.remove(i)
 
-        print("collecting data...")
-        for i in NSE:
-            symbol = i
-            D = dataHandling()
-            D.getData(symbol)
-            T = technicalIndicators()
-            T.getRSI(symbol)
-            T.getMACD(symbol)
-            T.getADX(symbol)
-            T.getOBV(symbol)
+            print("collecting data...")
+            for i in NASDAQ:
+                symbol = i
+                D = dataHandling()
+                D.getData(symbol)
+                T = technicalIndicators()
+                T.getRSI(symbol)
+                T.getMACD(symbol)
+                T.getADX(symbol)
+                T.getOBV(symbol)
+                T.getMFI(symbol)
+
+        elif exchange == "nse":
+            for i in NSE:
+                i = i + ".json"
+                if os.path.exists(i):
+                    os.remove(i)
+
+            print("collecting data...")
+            for i in NSE:
+                symbol = i
+                D = dataHandling()
+                D.getData(symbol)
+                T = technicalIndicators()
+                T.getRSI(symbol)
+                T.getMACD(symbol)
+                T.getADX(symbol)
+                T.getOBV(symbol)
+                T.getMFI(symbol)
+
+    elif ch == 2:
+
+        exchange = input("enter exchange to scrape : ")
+
+        if exchange == "nasdaq":
+            print(f"Companies List : {NASDAQ}")
+            fmtTicker = "For examples : NVIDIA Corp => NVDA"
+            print(fmtTicker)
+            compAdd = input("enter ticker : ")
+            NASDAQ.append(compAdd)
+
+        elif exchange == "nse":
+            print(f"Companies List : {NSE}")
+            fmtTicker = "For examples : ITC => ITC.NS"
+            print(fmtTicker)
+            compAdd = input("enter ticker : ")
+            NSE.append(compAdd)
+
+    elif ch == 3:
+
+        exchange = input("enter exchange to scrape : ")
+
+        if exchange == "nasdaq":
+            print(f"Companies List : {NASDAQ}")
+            fmtTicker = "For examples : NVIDIA Corp => NVDA"
+            print(fmtTicker)
+            compAdd = input("enter ticker : ")
+            NASDAQ.remove(compAdd)
+
+        elif exchange == "nse":
+            print(f"Companies List : {NSE}")
+            fmtTicker = "For examples : ITC => ITC.NS"
+            print(fmtTicker)
+            compAdd = input("enter ticker : ")
+            NSE.remove(compAdd)
 
 
 main()
