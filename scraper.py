@@ -78,6 +78,7 @@ class dataHandling():
             content["Technical Indicators"].update({"OBV" : data})
 
         elif type == "ADX":
+            data = round(data,4)
             content["Technical Indicators"].update({"ADX" : data})
 
         elif type == "MACD":
@@ -125,6 +126,18 @@ class technicalIndicators():
 ### [FATAL] return NaN
     def getADX(self,ticker):
         self.ticker = ticker
+
+        self.ticker = ticker
+
+        dataF = yf.download(self.ticker)
+
+        dataF["ADX"] = talib.ADX(dataF["High"],dataF["Low"],dataF["Close"],timeperiod = 14)
+        
+        lastDataF = dataF.iloc[-1]
+        data = lastDataF["ADX"]
+
+        dataHandling.dumpData(self.ticker,data,"ADX")
+
 
     
 
