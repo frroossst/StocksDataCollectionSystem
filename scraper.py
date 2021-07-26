@@ -12,9 +12,10 @@ import os
 import math
 
 
-companies = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
+NASDAQ = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
 "PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
 
+NSE = ["ITC.NS","GUJGAS.NS"]
 
 
 class dataHandling():
@@ -44,12 +45,15 @@ class dataHandling():
 
         content = json.loads(content)
 
-        ticker = (content["quoteResponse"]["result"][0]["symbol"])
-        fiftyTwoWeekHigh = (content["quoteResponse"]["result"][0]["fiftyTwoWeekHigh"]["fmt"])
-        fiftyTwoWeekLow = (content["quoteResponse"]["result"][0]["fiftyTwoWeekLow"]["fmt"])
-        currentPrice = (content["quoteResponse"]["result"][0]["regularMarketPrice"]["fmt"])
-        name = (content["quoteResponse"]["result"][0]["longName"])
-        percentChange = (content["quoteResponse"]["result"][0]["regularMarketChangePercent"]["fmt"])
+        try:
+            ticker = (content["quoteResponse"]["result"][0]["symbol"])
+            fiftyTwoWeekHigh = (content["quoteResponse"]["result"][0]["fiftyTwoWeekHigh"]["fmt"])
+            fiftyTwoWeekLow = (content["quoteResponse"]["result"][0]["fiftyTwoWeekLow"]["fmt"])
+            currentPrice = (content["quoteResponse"]["result"][0]["regularMarketPrice"]["fmt"])
+            name = (content["quoteResponse"]["result"][0]["longName"])
+            percentChange = (content["quoteResponse"]["result"][0]["regularMarketChangePercent"]["fmt"])
+        except KeyError:
+            print("[KEY ERROR] Moved onto the next value")
 
         filename = ticker + ".json"
         dataDump = {
@@ -123,7 +127,7 @@ class technicalIndicators():
 
         dataHandling.dumpData(self.ticker,data,"MACD")
 
-### [FATAL] return NaN
+    # method to return ADX values
     def getADX(self,ticker):
         self.ticker = ticker
 
@@ -139,44 +143,60 @@ class technicalIndicators():
         dataHandling.dumpData(self.ticker,data,"ADX")
 
 
-    
 
 ### [FATAL] returns suspicious values
     def getOBV(self,ticker):
         self.ticker = ticker
 
         dataF = yf.download(self.ticker)
-        #not sure this is accurate!
-        dataF["OBV"] = ta.volume.OnBalanceVolumeIndicator(dataF["Close"],dataF["Volume"]).on_balance_volume()
-        print(dataF["OBV"])
+        dataF["OBV"] = talib.OBV(dataF["Close"],dataF["Volume"])
+
         lastDataF = dataF.iloc[-1]
-        print(lastDataF)
         data = lastDataF["OBV"]
         dataHandling.dumpData(self.ticker,data,"OBV")
 
 
+
 def main():
 
-    for i in companies:
-        i = i + ".json"
-        if os.path.exists(i):
-            os.remove(i)
+    exchange = input("enter exchange to scrape : ")
 
-    print("collecting data...")
-    for i in companies:
-        symbol = i
-        D = dataHandling()
-        D.getData(symbol)
-        T = technicalIndicators()
-        T.getRSI(symbol)
-        T.getMACD(symbol)
+    if exchange == "nasdaq":
+        for i in NASDAQ:
+            i = i + ".json"
+            if os.path.exists(i):
+                os.remove(i)
 
-# main()
+        print("collecting data...")
+        for i in NASDAQ:
+            symbol = i
+            D = dataHandling()
+            D.getData(symbol)
+            T = technicalIndicators()
+            T.getRSI(symbol)
+            T.getMACD(symbol)
+            T.getADX(symbol)
+            T.getOBV(symbol)
 
-symbol = companies[0]
-D = dataHandling()
-D.getData("ITC.NS")
-T = technicalIndicators()
-T.getADX("ITC.NS")
+    elif exchange == "nse":
+        for i in NSE:
+            i = i + ".json"
+            if os.path.exists(i):
+                os.remove(i)
+
+        print("collecting data...")
+        for i in NSE:
+            symbol = i
+            D = dataHandling()
+            D.getData(symbol)
+            T = technicalIndicators()
+            T.getRSI(symbol)
+            T.getMACD(symbol)
+            T.getADX(symbol)
+            T.getOBV(symbol)
+
+
+main()
+
 
 
