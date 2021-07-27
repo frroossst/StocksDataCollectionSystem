@@ -1,4 +1,5 @@
 from typing import Container
+from requests.models import ContentDecodingError
 import yfinance as yf
 import pandas as pd
 import ta
@@ -62,8 +63,16 @@ class dataHandling():
         data = soup.prettify()
         data = json.loads(data)
         delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
+        delivPercen = str(round(delivPercen,2)) + "%"
         print(delivPercen)
-        quit()
+
+        print(data)
+        print(result)
+        result = json.loads(result)
+        result["quoteResponse"]["result"][0].append({"delivPercen" : ""})
+        print("UPDATED RESULT")
+        print(result)
+        result["quoteResponse"]["result"][0]["delivPercen"] = delivPercen
 
         with open("data.json","w") as fobj:
             json.dump(result,fobj)
@@ -90,7 +99,7 @@ class dataHandling():
             currentPrice = (content["quoteResponse"]["result"][0]["regularMarketPrice"]["fmt"])
             name = (content["quoteResponse"]["result"][0]["longName"])
             percentChange = (content["quoteResponse"]["result"][0]["regularMarketChangePercent"]["fmt"])
-            # delivPercen = (content[])
+            delivPercen = (content["quoteResponse"]["result"][0]["delivPercen"])
             dump = True
         except Exception as e:
             print("[{e}]")
