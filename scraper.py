@@ -52,27 +52,27 @@ class dataHandling():
             if i != ".":
                 newSymbol += i
             else:
-                symbol = newSymbol
                 break
 
         # # result returns None
-        urlNSE = f"https://www.nseindia.com/get-quotes/equity?symbol={symbol}"
-        urlNSEpercen = f"https://www.nseindia.com/api/quote-equity?symbol={symbol}&section=trade_info"
+        urlNSE = f"https://www.nseindia.com/get-quotes/equity?symbol={newSymbol}"
+        urlNSEpercen = f"https://www.nseindia.com/api/quote-equity?symbol={newSymbol}&section=trade_info"
         rNSE = requests.get(urlNSEpercen, headers=headers)
         soup = BeautifulSoup(rNSE.text, "html.parser")
         data = soup.prettify()
-        data = json.loads(data)
-        delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
-        delivPercen = str(round(delivPercen,2)) + "%"
-        print(delivPercen)
+        try:
+            data = json.loads(data)
+        except Exception as e:
+            print(f"[{e}]")
+            quit()
+        # delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
+        # delivPercen = str(round(delivPercen,2)) + "%"
+        # print(delivPercen)
 
-        print(data)
-        print(result)
         result = json.loads(result)
-        result["quoteResponse"]["result"][0].append({"delivPercen" : ""})
-        print("UPDATED RESULT")
+ 
+        # result["quoteResponse"]["result"][0]["delivPercen"] = delivPercen
         print(result)
-        result["quoteResponse"]["result"][0]["delivPercen"] = delivPercen
 
         with open("data.json","w") as fobj:
             json.dump(result,fobj)
@@ -88,7 +88,7 @@ class dataHandling():
         with open("data.json","r") as fobj:
             content = json.load(fobj)
 
-        content = json.loads(content)
+        # content = json.loads(content)
 
         delivPercen = "%" + "of Deliverable Quantity to Traded Quantity"
 
@@ -102,14 +102,14 @@ class dataHandling():
             delivPercen = (content["quoteResponse"]["result"][0]["delivPercen"])
             dump = True
         except Exception as e:
-            print("[{e}]")
+            print(f"[{e}]")
             dump = False
 
         try:
             filename = ticker + ".json"
             dataDump = {
                 "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
-            "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow, delivPercen : ""},
+            "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow, "Deliverable to Traded Quantity Percent" : delivPercen},
                 "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : ""}
             }
         except Exception as e:
