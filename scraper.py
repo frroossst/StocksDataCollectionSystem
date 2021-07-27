@@ -1,3 +1,4 @@
+from typing import Container
 import yfinance as yf
 import pandas as pd
 import ta
@@ -9,6 +10,12 @@ import requests
 import json
 import os
 import math
+import time
+import urllib.request
+import selenium
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from requests_html import HTMLSession
 
 # companies listed on the NASDAQ (USA)
 NASDAQ = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
@@ -38,6 +45,26 @@ class dataHandling():
         soup = BeautifulSoup(r.text,"html.parser")
         result = soup.string
 
+        newSymbol = ""
+
+        for i in symbol:
+            if i != ".":
+                newSymbol += i
+            else:
+                symbol = newSymbol
+                break
+
+        # # result returns None
+        urlNSE = f"https://www.nseindia.com/get-quotes/equity?symbol={symbol}"
+        urlNSEpercen = f"https://www.nseindia.com/api/quote-equity?symbol={symbol}&section=trade_info"
+        rNSE = requests.get(urlNSEpercen, headers=headers)
+        soup = BeautifulSoup(rNSE.text, "html.parser")
+        data = soup.prettify()
+        data = json.loads(data)
+        delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
+        print(delivPercen)
+        quit()
+
         with open("data.json","w") as fobj:
             json.dump(result,fobj)
             fobj.close()
@@ -54,6 +81,8 @@ class dataHandling():
 
         content = json.loads(content)
 
+        delivPercen = "%" + "of Deliverable Quantity to Traded Quantity"
+
         try:
             ticker = (content["quoteResponse"]["result"][0]["symbol"])
             fiftyTwoWeekHigh = (content["quoteResponse"]["result"][0]["fiftyTwoWeekHigh"]["fmt"])
@@ -61,6 +90,7 @@ class dataHandling():
             currentPrice = (content["quoteResponse"]["result"][0]["regularMarketPrice"]["fmt"])
             name = (content["quoteResponse"]["result"][0]["longName"])
             percentChange = (content["quoteResponse"]["result"][0]["regularMarketChangePercent"]["fmt"])
+            # delivPercen = (content[])
             dump = True
         except Exception as e:
             print("[{e}]")
@@ -70,7 +100,7 @@ class dataHandling():
             filename = ticker + ".json"
             dataDump = {
                 "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
-            "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow},
+            "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow, delivPercen : ""},
                 "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : ""}
             }
         except Exception as e:
