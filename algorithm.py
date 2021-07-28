@@ -18,6 +18,11 @@
 # # # 5. current price is 0.70 * bought price
 
 from matplotlib import pyplot as plt
+import pandas_datareader as pdr
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import talib
 import json
 import os
 
@@ -32,3 +37,26 @@ NSE = ["ITC.NS","IOB.NS","MRPL.NS","IDEA.NS","SBIN.NS","INFY.NS","ASIANPAINT.NS"
 #companies that are shooting up problems
 li = ["GUJGAS.NS","SUNPHARMA.NS"]
 
+def get_sma(prices, rate):
+    return prices.rolling(rate).mean()
+
+def get_bollinger_bands(prices, rate=20):
+    sma = get_sma(prices, rate)
+    std = prices.rolling(rate).std()
+    bollinger_up = sma + std * 2 # Calculate top band
+    bollinger_down = sma - std * 2 # Calculate bottom band
+    return bollinger_up, bollinger_down
+
+
+
+dataF = yf.Ticker("NVDA").history(period="6mo")
+closing_prices = dataF["Close"]
+bollinger_up, bollinger_down = get_bollinger_bands(closing_prices)
+plt.title('NVDA' + ' Bollinger Bands')
+plt.xlabel('Time')
+plt.ylabel('Closing Prices')
+plt.plot(closing_prices, label='Closing Prices')
+plt.plot(bollinger_up, label='Bollinger Up', c='g')
+plt.plot(bollinger_down, label='Bollinger Down', c='r')
+plt.legend()
+plt.show()
