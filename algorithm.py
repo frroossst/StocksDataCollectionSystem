@@ -1,22 +1,3 @@
-# # # Basic Stocks Trading Strategy
-
-# # # [LazyBear]Squeeze Momentum Indicator (construct this indicator from scratch)
-
-# # # [BUY]
-# # # 1. 26 week high is greater than 52 week high
-# # # 2. RSI > 70 
-# # # 3. ADX > 25
-# # # 4. MACD signal is true
-# # # 5. 50 day EMA is greater than 200 day EMA
-# # # 6. OBV signal is up!
-
-# # # [SELL]
-# # # 1. 26 week average is less than 52 week high
-# # # 2. RSI > 75
-# # # 3. ADX > 25
-# # # 4. MACD is set to sell
-# # # 5. current price is 0.70 * bought price
-
 from matplotlib import pyplot as plt
 import pandas_datareader as pdr
 import yfinance as yf
@@ -40,6 +21,15 @@ li = ["GUJGAS.NS","SUNPHARMA.NS"]
 def get_sma(prices, rate):
     return prices.rolling(rate).mean()
 
+def get_ema(prices, rate):
+    return prices.ewm(span=20,adjust=False).mean()
+
+def get_atr(dataF):
+    pass
+
+def get_keltner_bands():
+    pass
+
 def get_bollinger_bands(prices, rate=20):
     sma = get_sma(prices, rate)
     std = prices.rolling(rate).std()
@@ -48,11 +38,12 @@ def get_bollinger_bands(prices, rate=20):
     return bollinger_up, bollinger_down
 
 
-
-dataF = yf.Ticker("NVDA").history(period="6mo")
+symbol = NASDAQ[5]
+dataF = yf.Ticker(symbol).history(period="6mo")
 closing_prices = dataF["Close"]
 bollinger_up, bollinger_down = get_bollinger_bands(closing_prices)
-plt.title('NVDA' + ' Bollinger Bands')
+get_ema(closing_prices,20)
+plt.title(symbol + ' Bollinger Bands')
 plt.xlabel('Time')
 plt.ylabel('Closing Prices')
 plt.plot(closing_prices, label='Closing Prices')
