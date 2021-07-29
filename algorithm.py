@@ -40,8 +40,14 @@ def get_atr(dataF):
         startLoc += 1
     return atrLi
 
-def get_keltner_bands():
-    pass
+def get_keltner_bands(dataF):
+    atrVal = get_atr(dataF)
+    atrValDF = pd.DataFrame(atrVal)
+    atrSMA = get_sma(atrValDF,20)
+    keltner_up = get_ema(dataF,20) + 2*atrSMA 
+    keltner_down = get_ema(dataF,20) - 2*atrSMA
+    keltner_middle = get_ema(dataF,20)
+    return keltner_middle, keltner_up, keltner_down
 
 def get_bollinger_bands(prices, rate=20):
     sma = get_sma(prices, rate)
@@ -51,13 +57,17 @@ def get_bollinger_bands(prices, rate=20):
     return bollinger_up, bollinger_down
 
 
+
 symbol = NASDAQ[5]
 dataF = yf.Ticker(symbol).history(period="6mo")
 print(dataF)
 closing_prices = dataF["Close"]
 bollinger_up, bollinger_down = get_bollinger_bands(closing_prices)
+keltner_middle, keltner_up, keltner_down = get_keltner_bands(dataF)
 get_ema(closing_prices,20)
 get_atr(dataF)
+print(f"BB = {bollinger_up,bollinger_down}")
+print(f"KC = {keltner_middle, keltner_up,keltner_down}")
 plt.title(symbol + ' Bollinger Bands')
 plt.xlabel('Time')
 plt.ylabel('Closing Prices')

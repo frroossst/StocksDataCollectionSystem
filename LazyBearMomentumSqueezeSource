@@ -7,6 +7,9 @@
 // Just some technical info for anyone interested. 
 // The indicator is made up of Bollinger Bands (20, 2) and a Keltner Channel (20, 1.5). 
 // When the BB is inside the Keltner you get the dark blue dots, when it breaks out again you get the light blue. 
+// When the price candles are below the mean line of KC the colour of bar is red
+// else it is green.
+//
 // The Momentum part is a standard Momentum indicator, 12 periods or so.
 // 
 // The Momentum colour change is just when momentum changes directions 
