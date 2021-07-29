@@ -55,16 +55,23 @@ def get_bollinger_bands(prices, rate=20):
     bollinger_down = sma - std * 2 # Calculate bottom band
     return bollinger_up, bollinger_down
 
+def get_momentum_squeeze(dataF):
+    if dataF["BB low"].iloc[-1] > dataF["KC low"].iloc[-1] or dataF["BB high"].iloc[-1] < dataF["KC high"].iloc[-1]:
+        print("market is in a squeeze")
+    else:
+        print("market is in a trend")
 
 
-symbol = NSE[0]
+
+symbol = NSE[1]
 dataF = yf.Ticker(symbol).history(period="6mo")
-print(dataF)
+
 closing_prices = dataF["Close"]
 bollinger_up, bollinger_down = get_bollinger_bands(closing_prices)
+dataF["BB high"], dataF["BB low"] = bollinger_up, bollinger_down 
 get_keltner_bands(dataF)
 kc_middle, kc_high, kc_low = dataF["KC middle"], dataF["KC high"], dataF["KC low"]
-
+get_momentum_squeeze(dataF)
 plt.title(symbol + ' Momentum Squeeze')
 plt.style.use("seaborn")
 plt.xlabel('Time')
@@ -77,5 +84,6 @@ plt.plot(kc_high,label="KC high",c="b")
 plt.plot(kc_low,label="KC low",c="b")
 # plt.fill_between(bollinger_up,bollinger_down,alpha=0.25,color="grey")
 plt.legend()
+# print(dataF)
 plt.show()
 
