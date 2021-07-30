@@ -42,48 +42,55 @@ def get_atr(dataF):
     return atrLi
 
 def get_keltner_bands(dataF):
-    
     dataF["KC middle"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20).keltner_channel_mband()
     dataF["KC low"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20).keltner_channel_lband()
     dataF["KC high"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20).keltner_channel_hband()
     
+def get_bollinger_bands(dataF):
+    # sma = get_sma(prices, rate)
+    # std = prices.rolling(rate).std()
+    # bollinger_up = sma + std * 2 # Calculate top band
+    # bollinger_down = sma - std * 2 # Calculate bottom band
+    # return bollinger_up, bollinger_down
+    print(dataF)
+    dataF["BB high"] = ta.volatility.BollingerBands(dataF["Close"], window=14,window_dev=2).bollinger_hband()
+    dataF["BB low"] = ta.volatility.BollingerBands(dataF["Close"],window=14,window_dev=2).bollinger_lband()
 
-def get_bollinger_bands(prices, rate=20):
-    sma = get_sma(prices, rate)
-    std = prices.rolling(rate).std()
-    bollinger_up = sma + std * 2 # Calculate top band
-    bollinger_down = sma - std * 2 # Calculate bottom band
-    return bollinger_up, bollinger_down
 
 def get_momentum_squeeze(dataF):
-    if dataF["BB low"].iloc[-1] > dataF["KC low"].iloc[-1] or dataF["BB high"].iloc[-1] < dataF["KC high"].iloc[-1]:
+    print("BB low",dataF["BB low"].iloc[-1])
+    print("KC low",dataF["KC low"].iloc[-1])
+    print("BB high",dataF["BB high"].iloc[-1])
+    print("KC high",dataF["KC high"].iloc[-1])
+    print("Close",dataF["Close"].iloc[-1])
+    print("KC middle",dataF["KC middle"].iloc[-1])
+
+    if (dataF["BB low"].iloc[-1] > dataF["KC low"].iloc[-1] and dataF["BB high"].iloc[-1] < dataF["KC high"].iloc[-1]) or (dataF["Close"].iloc[-1] < dataF["KC middle"].iloc[-1]):
         print("market is in a squeeze")
-    else:
+    elif (dataF["BB high"].iloc[-1] > dataF["KC high"].iloc[-1] and dataF["BB low"].iloc[-1] < dataF["KC low"].iloc[-1]):
         print("market is in a trend")
+    else:
+        print("inconclusive")
 
+def main(symbol):
+    dataF = yf.Ticker(symbol).history(period="6mo")
+    closing_prices = dataF["Close"]
+    get_keltner_bands(dataF)
+    get_bollinger_bands(dataF)
+    kc_middle, kc_high, kc_low = dataF["KC middle"], dataF["KC high"], dataF["KC low"]
+    bb_up, bb_down= dataF["BB high"], dataF["BB low"]
+    get_momentum_squeeze(dataF)
+    plt.title(symbol + ' Momentum Squeeze')
+    plt.style.use("seaborn")
+    plt.xlabel('Time Frame')
+    plt.ylabel('Closing Prices')
+    plt.plot(bb_up, label='Bollinger Up', c='k')
+    plt.plot(bb_down, label='Bollinger Down', c='k')
+    plt.plot(kc_middle,label="KC middle",c="b")
+    plt.plot(kc_high,label="KC high",c="b")
+    plt.plot(kc_low,label="KC low",c="b")
+    plt.legend()
+    plt.show()
 
-
-symbol = NSE[1]
-dataF = yf.Ticker(symbol).history(period="6mo")
-
-closing_prices = dataF["Close"]
-bollinger_up, bollinger_down = get_bollinger_bands(closing_prices)
-dataF["BB high"], dataF["BB low"] = bollinger_up, bollinger_down 
-get_keltner_bands(dataF)
-kc_middle, kc_high, kc_low = dataF["KC middle"], dataF["KC high"], dataF["KC low"]
-get_momentum_squeeze(dataF)
-plt.title(symbol + ' Momentum Squeeze')
-plt.style.use("seaborn")
-plt.xlabel('Time')
-plt.ylabel('Closing Prices')
-# plt.plot(closing_prices, label='Closing Prices')
-plt.plot(bollinger_up, label='Bollinger Up', c='k')
-plt.plot(bollinger_down, label='Bollinger Down', c='k')
-plt.plot(kc_middle,label="KC middle",c="b")
-plt.plot(kc_high,label="KC high",c="b")
-plt.plot(kc_low,label="KC low",c="b")
-# plt.fill_between(bollinger_up,bollinger_down,alpha=0.25,color="grey")
-plt.legend()
-# print(dataF)
-plt.show()
-
+company = NSE[0]
+main(company)

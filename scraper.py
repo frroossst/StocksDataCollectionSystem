@@ -75,7 +75,7 @@ class dataHandling():
         print(result)
 
         with open("data.json","w") as fobj:
-            json.dump(result,fobj)
+            json.dump(result,fobj,indent=6)
             fobj.close()
 
         dataHandling.getAttributes(self)
