@@ -42,10 +42,10 @@ def get_atr(dataF):
     return atrLi
 
 def get_keltner_bands(dataF):
-    dataF["KC middle"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20).keltner_channel_mband()
-    dataF["KC low"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20).keltner_channel_lband()
-    dataF["KC high"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20).keltner_channel_hband()
-    
+    dataF["KC middle"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20,window_atr=10).keltner_channel_mband()
+    dataF["KC low"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20,window_atr=10).keltner_channel_lband()
+    dataF["KC high"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20,window_atr=10).keltner_channel_hband()
+
 def get_bollinger_bands(dataF):
     # sma = get_sma(prices, rate)
     # std = prices.rolling(rate).std()
@@ -55,7 +55,6 @@ def get_bollinger_bands(dataF):
     print(dataF)
     dataF["BB high"] = ta.volatility.BollingerBands(dataF["Close"], window=14,window_dev=2).bollinger_hband()
     dataF["BB low"] = ta.volatility.BollingerBands(dataF["Close"],window=14,window_dev=2).bollinger_lband()
-
 
 def get_momentum_squeeze(dataF):
     print("BB low",dataF["BB low"].iloc[-1])
@@ -72,6 +71,9 @@ def get_momentum_squeeze(dataF):
     else:
         print("inconclusive")
 
+def get_volume(dataF):
+    pass
+
 def main(symbol):
     dataF = yf.Ticker(symbol).history(period="6mo")
     closing_prices = dataF["Close"]
@@ -79,6 +81,7 @@ def main(symbol):
     get_bollinger_bands(dataF)
     kc_middle, kc_high, kc_low = dataF["KC middle"], dataF["KC high"], dataF["KC low"]
     bb_up, bb_down= dataF["BB high"], dataF["BB low"]
+    print(dataF)
     get_momentum_squeeze(dataF)
     plt.title(symbol + ' Momentum Squeeze')
     plt.style.use("seaborn")
