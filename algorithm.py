@@ -66,15 +66,15 @@ def get_momentum_squeeze(dataF):
     print("Close",dataF["Close"].iloc[-1])
     print("KC middle",dataF["KC middle"].iloc[-1])
 
-    if (dataF["BB low"].iloc[-1] > dataF["KC low"].iloc[-1] or dataF["BB high"].iloc[-1] < dataF["KC high"].iloc[-1]) and (dataF["Close"].iloc[-1] < dataF["KC middle"].iloc[-1]):
-        print("market is in a squeeze")
-        liMOMSQZE.append("SQZE")
-    elif (dataF["BB high"].iloc[-1] > dataF["KC high"].iloc[-1] or dataF["BB low"].iloc[-1] < dataF["KC low"].iloc[-1]):
+    if dataF["BB high"].iloc[-1] > dataF["KC high"].iloc[-1] and dataF["BB low"].iloc[-1] < dataF["KC low"].iloc[-1]:
         print("market is in a trend")
         liMOMSQZE.append("TRND")
+    elif ((dataF["BB low"].iloc[-1] > dataF["KC low"].iloc[-1]) or (dataF["BB high"].iloc[-1] < dataF["KC high"].iloc[-1])) or (dataF["Close"].iloc[-1] < dataF["KC middle"].iloc[-1]):
+        print("market is in a squeeze")
+        liMOMSQZE.append("SQZE")
     else:
         print("inconclusive")
-        liMOMSQZE.appned("INCL")
+        liMOMSQZE.append("INCL")
 
 def get_volume(dataF):
     pass
@@ -101,7 +101,7 @@ def main(symbol):
     plt.show()
 
 
-company = NSE[1]
+company = NSE[12]
 main(company)
 
 
