@@ -110,7 +110,7 @@ class dataHandling():
             dataDump = {
                 "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
             "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow, "Deliverable to Traded Quantity Percent" : delivPercen},
-                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : "","50 day volume trend" : ""}
+                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : "","50 day volume trend" : "","MOMSQZE" : ""}
             }
         except Exception as e:
             print(f"[{e}]")
@@ -279,7 +279,7 @@ def main():
                 T.getADX(symbol)
                 T.getOBV(symbol)
                 T.getMFI(symbol)
-                T.get_avg_volume(symbol)
+                # T.get_avg_volume(symbol)
 
         elif exchange == "nse":
             for i in NSE:
@@ -298,7 +298,7 @@ def main():
                 T.getADX(symbol)
                 T.getOBV(symbol)
                 T.getMFI(symbol)
-                T.get_avg_volume(symbol)
+                # T.get_avg_volume(symbol)
 
     elif ch == 2:
 

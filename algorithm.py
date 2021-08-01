@@ -10,8 +10,6 @@ import json
 import os
 import ta
 
-liMOMSQZE = []
-
 # companies listed on the NASDAQ (USA)
 NASDAQ = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
 "PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
@@ -58,7 +56,7 @@ def get_bollinger_bands(dataF):
     dataF["BB high"] = ta.volatility.BollingerBands(dataF["Close"], window=20,window_dev=2).bollinger_hband()
     dataF["BB low"] = ta.volatility.BollingerBands(dataF["Close"],window=20,window_dev=2).bollinger_lband()
 
-def get_momentum_squeeze(dataF):
+def get_momentum_squeeze(symbol,dataF):
     print("BB low",dataF["BB low"].iloc[-1])
     print("KC low",dataF["KC low"].iloc[-1])
     print("BB high",dataF["BB high"].iloc[-1])
@@ -68,35 +66,63 @@ def get_momentum_squeeze(dataF):
 
     if dataF["BB high"].iloc[-1] > dataF["KC high"].iloc[-1] or dataF["BB low"].iloc[-1] < dataF["KC low"].iloc[-1] and (dataF["Close"].iloc[-1] >= dataF["KC middle"].iloc[-1]):
         print("market is in a trend")
-        liMOMSQZE.append("TRND")
+        liMOMSQZE = "TRND"
     elif dataF["BB low"].iloc[-1] > dataF["KC low"].iloc[-1] or dataF["BB high"].iloc[-1] < dataF["KC high"].iloc[-1] and (dataF["Close"].iloc[-1] <= dataF["KC middle"].iloc[-1]):
         print("market is in a squeeze")
-        liMOMSQZE.append("SQZE")
+        liMOMSQZE = "SQZE"
     else:
         print("inconclusive")
-        liMOMSQZE.append("INCL")
+        liMOMSQZE = "INCL"
 
-def get_avg_volume(dataF,timeperiod=50):
+    filename = symbol + ".json"
+
+    with open(filename,"r") as fobj:
+        content = json.load(fobj)
+        fobj.close()
+
+    content["Technical Indicators"].update({"MOMSQZE" : liMOMSQZE})
+
+    with open(filename,"w") as fobj:
+        json.dump(content,fobj,indent=6)
+        fobj.close()
+
+def get_avg_volume(symbol,dataF,timeperiod=50):
     dataF_vol = dataF["Volume"].tail(timeperiod)
     sumVol = dataF_vol.sum(axis=0, skipna=True)
     lastVol = dataF.iloc[-1]
 
     if lastVol["Volume"] > sumVol:
         print("There is a volume trend")
-        return True
+        volTrend = True
+
     else:
         print("There is no particular trend")
-        return False
+        volTrend = False
+
+    filename = symbol + ".json"
+
+    with open(filename,"r") as fobj:
+        content = json.load(fobj)
+        fobj.close()
+
+    content["Technical Indicators"].update({"50 day volume trend" : volTrend})
+
+    with open(filename,"w") as fobj:
+        json.dump(content,fobj,indent=6)
+        fobj.close()
+
+
 
 def main(symbol):
     dataF = yf.Ticker(symbol).history(period="1y")
     closing_prices = dataF["Close"]
-    get_keltner_bands(dataF)
-    get_bollinger_bands(dataF)
+    get_keltner_bands(symbol,dataF)
+    get_bollinger_bands(symbol,dataF)
     kc_middle, kc_high, kc_low = dataF["KC middle"], dataF["KC high"], dataF["KC low"]
     bb_up, bb_down= dataF["BB high"], dataF["BB low"]
     print(dataF)
-    get_momentum_squeeze(dataF)
+    get_momentum_squeeze(symbol,dataF)
+    get_avg_volume(symbol,dataF,symbol)
     plt.title(symbol + ' Momentum Squeeze')
     plt.style.use("seaborn")
     plt.xlabel('Time Frame')
@@ -108,6 +134,7 @@ def main(symbol):
     plt.plot(kc_low,label="KC low",c="b")
     plt.legend()
     plt.show()
+
 
 
 company = NSE[0]
