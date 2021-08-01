@@ -110,7 +110,7 @@ class dataHandling():
             dataDump = {
                 "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
             "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow, "Deliverable to Traded Quantity Percent" : delivPercen},
-                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : ""}
+                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : "","50 day volume trend" : ""}
             }
         except Exception as e:
             print(f"[{e}]")
@@ -150,7 +150,11 @@ class dataHandling():
             elif type == "MFI":
                 data = round(data,4)
                 content["Technical Indicators"].update({"MFI" : data})
-            
+
+            elif type == "AVGVOL":
+                data = round(data,4)
+                content["Technical Indicators"].update({"50 day volume trend" : data})
+
             else:
                 raise Exception("type None is not a valid keyword input")
 
@@ -228,6 +232,23 @@ class technicalIndicators():
         data = lastDataF["OBV"]
         dataHandling.dumpData(self.ticker,data,"OBV")
 
+    # def get_avg_volume(self,ticker,timeperiod=50):
+    #     self.ticker = ticker
+
+    #     dataF = yf.Ticker(self.ticker).history(period="1y")
+    #     dataF_vol = dataF["Volume"].tail(timeperiod)
+    #     sumVol = dataF_vol.sum(axis=0, skipna=True)
+    #     lastVol = dataF.iloc[-1]
+
+    #     if lastVol["Volume"] > sumVol:
+    #         print("There is a volume trend")
+    #         volTrend = True
+    #     else:
+    #         print("There is no particular trend")
+    #         volTrend = False
+
+    #     dataHandling.dumpData(self.ticker,volTrend,"AVGVOL")
+
 
 
 def main():
@@ -258,6 +279,7 @@ def main():
                 T.getADX(symbol)
                 T.getOBV(symbol)
                 T.getMFI(symbol)
+                T.get_avg_volume(symbol)
 
         elif exchange == "nse":
             for i in NSE:
@@ -276,6 +298,7 @@ def main():
                 T.getADX(symbol)
                 T.getOBV(symbol)
                 T.getMFI(symbol)
+                T.get_avg_volume(symbol)
 
     elif ch == 2:
 

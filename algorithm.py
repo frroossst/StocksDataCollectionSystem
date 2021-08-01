@@ -76,8 +76,17 @@ def get_momentum_squeeze(dataF):
         print("inconclusive")
         liMOMSQZE.append("INCL")
 
-def get_volume(dataF):
-    pass
+def get_avg_volume(dataF,timeperiod=50):
+    dataF_vol = dataF["Volume"].tail(timeperiod)
+    sumVol = dataF_vol.sum(axis=0, skipna=True)
+    lastVol = dataF.iloc[-1]
+
+    if lastVol["Volume"] > sumVol:
+        print("There is a volume trend")
+        return True
+    else:
+        print("There is no particular trend")
+        return False
 
 def main(symbol):
     dataF = yf.Ticker(symbol).history(period="1y")
@@ -101,5 +110,8 @@ def main(symbol):
     plt.show()
 
 
-company = NSE[13]
+company = NSE[0]
 main(company)
+
+# dataF = yf.Ticker(company).history(period="1y")
+# get_avg_volume(dataF)
