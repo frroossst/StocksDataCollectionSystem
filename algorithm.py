@@ -41,12 +41,12 @@ def get_atr(dataF):
         startLoc += 1
     return atrLi
 
-def get_keltner_bands(dataF):
+def get_keltner_bands(symbol,dataF):
     dataF["KC middle"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20,window_atr=10,original_version=False).keltner_channel_mband()
     dataF["KC low"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20,window_atr=10,original_version=False).keltner_channel_lband()
     dataF["KC high"] = ta.volatility.KeltnerChannel(dataF["High"],dataF["Low"],dataF["Close"],window=20,window_atr=10,original_version=False).keltner_channel_hband()
 
-def get_bollinger_bands(dataF):
+def get_bollinger_bands(symbol,dataF):
     # sma = get_sma(prices, rate)
     # std = prices.rolling(rate).std()
     # bollinger_up = sma + std * 2 # Calculate top band
