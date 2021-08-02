@@ -55,7 +55,6 @@ class dataHandling():
                 break
 
         # # result returns None
-        urlNSE = f"https://www.nseindia.com/get-quotes/equity?symbol={newSymbol}"
         urlNSEpercen = f"https://www.nseindia.com/api/quote-equity?symbol={newSymbol}&section=trade_info"
         rNSE = requests.get(urlNSEpercen, headers=headers)
         soup = BeautifulSoup(rNSE.text, "html.parser")
@@ -65,14 +64,14 @@ class dataHandling():
         except Exception as e:
             print(f"[{e}]")
             quit()
-        # delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
-        # delivPercen = str(round(delivPercen,2)) + "%"
+        delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
+        delivPercen = str(round(delivPercen,2)) + "%"
         # print(delivPercen)
 
         result = json.loads(result)
  
-        # result["quoteResponse"]["result"][0]["delivPercen"] = delivPercen
-        print(result)
+        result["quoteResponse"]["result"][0]["delivPercen"] = delivPercen
+        # print(result)
 
         with open("data.json","w") as fobj:
             json.dump(result,fobj,indent=6)
@@ -90,7 +89,7 @@ class dataHandling():
 
         # content = json.loads(content)
 
-        delivPercen = "%" + "of Deliverable Quantity to Traded Quantity"
+        # delivPercen = "%" + "of Deliverable Quantity to Traded Quantity"
 
         try:
             ticker = (content["quoteResponse"]["result"][0]["symbol"])
