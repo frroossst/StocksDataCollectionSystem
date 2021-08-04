@@ -5,90 +5,90 @@
                         "fullExchangeName": "NSE",
                         "symbol": "ITC.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 0.26905414,
-                              "fmt": "26.91%"
+                              "raw": 0.27701253,
+                              "fmt": "27.70%"
                         },
                         "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
-                              "raw": 206.45,
-                              "fmt": "206.45"
+                              "raw": 210.9,
+                              "fmt": "210.90"
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1627898400,
+                              "raw": 1628071202,
                               "fmt": "3:30PM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": 1.1466241,
-                              "fmt": "1.15%"
+                              "raw": -0.6193367,
+                              "fmt": "-0.62%"
                         },
                         "uuid": "2d1c10cc-4829-3114-aea5-57a0600cb464",
                         "quoteType": "EQUITY",
                         "regularMarketDayRange": {
-                              "raw": "205.45 - 207.5",
-                              "fmt": "205.45 - 207.50"
+                              "raw": "208.1 - 211.1",
+                              "fmt": "208.10 - 211.10"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 43.949997,
-                              "fmt": "43.95"
+                              "raw": 45.25,
+                              "fmt": "45.25"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.13336118,
-                              "fmt": "-13.34%"
+                              "raw": -0.12792638,
+                              "fmt": "-12.79%"
                         },
                         "regularMarketDayHigh": {
-                              "raw": 207.5,
-                              "fmt": "207.50"
+                              "raw": 211.1,
+                              "fmt": "211.10"
                         },
                         "tradeable": false,
                         "currency": "INR",
                         "sharesOutstanding": {
-                              "raw": 12308799488,
-                              "fmt": "12.309B",
-                              "longFmt": "12,308,799,488"
+                              "raw": 12309699584,
+                              "fmt": "12.31B",
+                              "longFmt": "12,309,699,584"
                         },
                         "fiftyTwoWeekHigh": {
                               "raw": 239.2,
                               "fmt": "239.20"
                         },
                         "regularMarketPreviousClose": {
-                              "raw": 204.95,
-                              "fmt": "204.95"
+                              "raw": 209.9,
+                              "fmt": "209.90"
                         },
                         "exchangeTimezoneName": "Asia/Kolkata",
                         "fiftyTwoWeekHighChange": {
-                              "raw": -31.899994,
-                              "fmt": "-31.90"
+                              "raw": -30.59999,
+                              "fmt": "-30.60"
                         },
                         "marketCap": {
-                              "raw": 2551614275584,
-                              "fmt": "2.552T",
-                              "longFmt": "2,551,614,275,584"
+                              "raw": 2567803502592,
+                              "fmt": "2.568T",
+                              "longFmt": "2,567,803,502,592"
                         },
                         "fiftyTwoWeekRange": {
                               "raw": "163.35 - 239.2",
                               "fmt": "163.35 - 239.20"
                         },
                         "regularMarketChange": {
-                              "raw": 2.350006,
-                              "fmt": "2.35"
+                              "raw": -1.2999878,
+                              "fmt": "-1.30"
                         },
                         "firstTradeDateMilliseconds": 820467900000,
                         "exchangeDataDelayedBy": 15,
                         "exchangeTimezoneShortName": "IST",
                         "marketState": "POSTPOST",
                         "regularMarketPrice": {
-                              "raw": 207.3,
-                              "fmt": "207.30"
+                              "raw": 208.6,
+                              "fmt": "208.60"
                         },
                         "fiftyTwoWeekLow": {
                               "raw": 163.35,
                               "fmt": "163.35"
                         },
                         "regularMarketVolume": {
-                              "raw": 9662578,
-                              "fmt": "9.663M",
-                              "longFmt": "9,662,578"
+                              "raw": 10979920,
+                              "fmt": "10.98M",
+                              "longFmt": "10,979,920"
                         },
                         "market": "in_market",
                         "quoteSourceName": "Delayed Quote",
@@ -97,14 +97,14 @@
                         "exchange": "NSI",
                         "sourceInterval": 15,
                         "regularMarketDayLow": {
-                              "raw": 205.45,
-                              "fmt": "205.45"
+                              "raw": 208.1,
+                              "fmt": "208.10"
                         },
                         "shortName": "ITC LTD",
                         "region": "US",
                         "triggerable": true,
                         "longName": "ITC Limited",
-                        "delivPercen": "44.61%"
+                        "delivPercen": "45.81%"
                   }
             ],
             "error": null

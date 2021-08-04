@@ -67,13 +67,14 @@ if rsi < 70.00:
 if adx > 21.00:
     adxInd = True
 
-# Weighted Indicator Final 
+# Weighted Indicator Decision
 
 if (fiftyTwoWeekLow) and (rsiInd and adxInd) and (delivInd or fiftyDayVolInd) and (momsqzeInd):
     toBUY = True
 else:
     toBUY = False
-toBUY = True
+
+# Updating trades.json file
 
 if toBUY:
     print("BUYING THIS STOCK")
@@ -88,11 +89,10 @@ if toBUY:
 
     dumper = ["BUY",dateB,qtyB,priceB]
 
-    for i in content:
-        if i == symbol:
-            content[symbol].append(dumper)
-        else:
-            content[symbol] = dumper 
+    if symbol not in content:
+        content[symbol] = dumper 
+
+    content[symbol].append(dumper)
 
     with open("trades.json","w") as fobj:
         json.dump(content,fobj,indent=6)

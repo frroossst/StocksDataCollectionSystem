@@ -1,6 +1,3 @@
-from algorithm import NASDAQ
-from typing import Container
-from requests.models import ContentDecodingError
 import yfinance as yf
 import pandas as pd
 import ta
