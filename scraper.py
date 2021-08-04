@@ -1,3 +1,4 @@
+from algorithm import NASDAQ
 from typing import Container
 from requests.models import ContentDecodingError
 import yfinance as yf
@@ -19,12 +20,16 @@ from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 
 # companies listed on the NASDAQ (USA)
-NASDAQ = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
-"PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
+
+with open("NASDAQ.json","r") as fobj:
+    NASDAQ = json.load(fobj)
+    fobj.close()
 
 # companies listed on the NSE (India)
-NSE = ["ITC.NS","IOB.NS","MRPL.NS","IDEA.NS","SBIN.NS","INFY.NS","ASIANPAINT.NS","HCLTECH.NS","JUBLFOOD.NS","LT.NS","LTI.NS",
-"HINDUNILVR.NS","ONGC.NS","BAJFINANCE.NS","TATASTEEL.NS","TATAMOTORS.NS","TATACOFFEE.NS","TECHM.NS"]
+
+with open("NSE.json","r") as fobj:
+    NSE = json.load(fobj)
+    fobj.close()
 
 #companies that are shooting up problems
 li = ["GUJGAS.NS","SUNPHARMA.NS"]
@@ -254,7 +259,7 @@ def main():
 
     print("1. Scrape Data")
     print("2. Add a company")
-    print("3. Remove a company")
+    # print("3. Remove a company")
     ch = int(input("enter choice : "))
 
     if ch == 1:
@@ -309,6 +314,9 @@ def main():
             print(fmtTicker)
             compAdd = input("enter ticker : ")
             NASDAQ.append(compAdd)
+            with open("NASDAQ.json","w") as fobj:
+                json.dump(NASDAQ,fobj,indent=6)
+                fobj.close()
 
         elif exchange == "nse":
             print(f"Companies List : {NSE}")
@@ -316,6 +324,9 @@ def main():
             print(fmtTicker)
             compAdd = input("enter ticker : ")
             NSE.append(compAdd)
+            with open("NSE.json","w") as fobj:
+                json.dump(NSE,fobj,indent=6)
+                fobj.close()
 
     elif ch == 3:
 
@@ -325,15 +336,15 @@ def main():
             print(f"Companies List : {NASDAQ}")
             fmtTicker = "For examples : NVIDIA Corp => NVDA"
             print(fmtTicker)
-            compAdd = input("enter ticker : ")
-            NASDAQ.remove(compAdd)
+            compRem = input("enter ticker : ")
+            NASDAQ.remove(compRem)
 
         elif exchange == "nse":
             print(f"Companies List : {NSE}")
             fmtTicker = "For examples : ITC => ITC.NS"
             print(fmtTicker)
-            compAdd = input("enter ticker : ")
-            NSE.remove(compAdd)
+            compRem = input("enter ticker : ")
+            NSE.remove(compRem)
 
 
 main()

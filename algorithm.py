@@ -11,12 +11,21 @@ import os
 import ta
 
 # companies listed on the NASDAQ (USA)
-NASDAQ = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
-"PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
+with open("NASDAQ.json","r") as fobj:
+    NASDAQ = json.load(fobj)
+    fobj.close()
+
+# NASDAQ = ["AAPL","MSFT","AMZN","GOOGL","FB","NVDA","PYPL","NFLX","CMCSA","INTC","ADBE","AMD","TSM",
+# "PEP","CSCO","AVGO","QCOM","TMUS","COST","KO","TXN","AMGN","CHTR","SBUX","ABNB","AMAT","ISRG","MU","GILD"]
 
 # companies listed on the NSE (India)
-NSE = ["ITC.NS","IOB.NS","MRPL.NS","IDEA.NS","SBIN.NS","INFY.NS","ASIANPAINT.NS","HCLTECH.NS","JUBLFOOD.NS","LT.NS","LTI.NS",
-"HINDUNILVR.NS","ONGC.NS","BAJFINANCE.NS","TATASTEEL.NS","TATAMOTORS.NS","TATACOFFEE.NS","TECHM.NS"]
+with open("NSE.json","r") as fobj:
+    NSE = json.load(fobj)
+    fobj.close()
+
+
+# NSE = ["ITC.NS","IOB.NS","MRPL.NS","IDEA.NS","SBIN.NS","INFY.NS","ASIANPAINT.NS","HCLTECH.NS","JUBLFOOD.NS","LT.NS","LTI.NS",
+# "HINDUNILVR.NS","ONGC.NS","BAJFINANCE.NS","TATASTEEL.NS","TATAMOTORS.NS","TATACOFFEE.NS","TECHM.NS"]
 
 #companies that are shooting up problems
 li = ["GUJGAS.NS","SUNPHARMA.NS"]
@@ -101,7 +110,7 @@ def get_avg_volume(symbol,dataF,timeperiod=50):
         volTrend = True
 
     else:
-        print("There is no particular trend")
+        print("There is no particular volume trend")
         volTrend = False
 
     filename = symbol + ".json"
@@ -120,7 +129,6 @@ def get_avg_volume(symbol,dataF,timeperiod=50):
 
 def main(symbol):
     dataF = yf.Ticker(symbol).history(period="1y")
-    closing_prices = dataF["Close"]
     get_keltner_bands(symbol,dataF)
     get_bollinger_bands(symbol,dataF)
     kc_middle, kc_high, kc_low = dataF["KC middle"], dataF["KC high"], dataF["KC low"]
@@ -143,6 +151,7 @@ def main(symbol):
 
 
 company = NSE[0]
+
 main(company)
 
 # dataF = yf.Ticker(company).history(period="1y")
