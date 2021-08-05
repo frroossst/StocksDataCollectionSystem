@@ -39,6 +39,15 @@ class dataHandling():
     def __init__(self) -> None:
         result = ""
         
+    @classmethod
+    def reNSE(self,symbol):
+        headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
+        urlNSEpercen = f"https://www.nseindia.com/api/quote-equity?symbol={symbol}&section=trade_info"
+        rNSE = requests.get(urlNSEpercen)
+        soup = BeautifulSoup(rNSE.text,"html.parser")
+        result = soup.string
+        return result
+
     def getData(self,symbol):
 
         headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
@@ -58,11 +67,16 @@ class dataHandling():
 
         # # result returns None
         urlNSEpercen = f"https://www.nseindia.com/api/quote-equity?symbol={newSymbol}&section=trade_info"
-        rNSE = requests.get(urlNSEpercen, headers=headers)
+        rNSE = requests.get(urlNSEpercen,headers=headers)
         if rNSE.status_code == 401:
             print("[401] Website denies auth")
             print()
-            main()
+            reResult = dataHandling.reNSE(newSymbol)
+            if rNSE.status_code == 401:
+                print("[401] Website denies auth")
+            else:
+                quit()
+
         soup = BeautifulSoup(rNSE.text, "html.parser")
         data = soup.prettify()
         try:
