@@ -7,20 +7,20 @@ from bs4 import BeautifulSoup
 from matplotlib import pyplot as plt
 import requests
 import json
-import os
-import math
 import time
-import urllib.request
-import selenium
+import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 
 # companies listed on the NASDAQ (USA)
 
-with open("NASDAQ.json","r") as fobj:
-    NASDAQ = json.load(fobj)
-    fobj.close()
+try:
+    with open("NASDAQ.json","r") as fobj:
+        NASDAQ = json.load(fobj)
+        fobj.close()
+except Exception as e:
+    print(f"[{e}]")
 
 # companies listed on the NSE (India)
 
@@ -59,6 +59,10 @@ class dataHandling():
         # # result returns None
         urlNSEpercen = f"https://www.nseindia.com/api/quote-equity?symbol={newSymbol}&section=trade_info"
         rNSE = requests.get(urlNSEpercen, headers=headers)
+        if rNSE.status_code == 401:
+            print("[401] Website denies auth")
+            print()
+            main()
         soup = BeautifulSoup(rNSE.text, "html.parser")
         data = soup.prettify()
         try:

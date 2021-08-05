@@ -3,108 +3,108 @@
             "result": [
                   {
                         "fullExchangeName": "NSE",
-                        "symbol": "ITC.NS",
+                        "symbol": "ADANIPORTS.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 0.27701253,
-                              "fmt": "27.70%"
+                              "raw": 1.2222043,
+                              "fmt": "122.22%"
                         },
                         "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
-                              "raw": 210.9,
-                              "fmt": "210.90"
+                              "raw": 695.0,
+                              "fmt": "695.00"
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1628071202,
+                              "raw": 1628157600,
                               "fmt": "3:30PM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": -0.6193367,
-                              "fmt": "-0.62%"
+                              "raw": -0.16554259,
+                              "fmt": "-0.17%"
                         },
-                        "uuid": "2d1c10cc-4829-3114-aea5-57a0600cb464",
                         "quoteType": "EQUITY",
+                        "uuid": "0e508bdb-0c93-3b9f-9c93-5d18b89cbef0",
                         "regularMarketDayRange": {
-                              "raw": "208.1 - 211.1",
-                              "fmt": "208.10 - 211.10"
+                              "raw": "684.0 - 700.5",
+                              "fmt": "684.00 - 700.50"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 45.25,
-                              "fmt": "45.25"
+                              "raw": 381.44998,
+                              "fmt": "381.45"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.12792638,
-                              "fmt": "-12.79%"
+                              "raw": -0.23024419,
+                              "fmt": "-23.02%"
                         },
                         "regularMarketDayHigh": {
-                              "raw": 211.1,
-                              "fmt": "211.10"
+                              "raw": 700.5,
+                              "fmt": "700.50"
                         },
                         "tradeable": false,
                         "currency": "INR",
                         "sharesOutstanding": {
-                              "raw": 12309699584,
-                              "fmt": "12.31B",
-                              "longFmt": "12,309,699,584"
-                        },
-                        "fiftyTwoWeekHigh": {
-                              "raw": 239.2,
-                              "fmt": "239.20"
+                              "raw": 2041750016,
+                              "fmt": "2.042B",
+                              "longFmt": "2,041,750,016"
                         },
                         "regularMarketPreviousClose": {
-                              "raw": 209.9,
-                              "fmt": "209.90"
+                              "raw": 694.7,
+                              "fmt": "694.70"
+                        },
+                        "fiftyTwoWeekHigh": {
+                              "raw": 901.0,
+                              "fmt": "901.00"
                         },
                         "exchangeTimezoneName": "Asia/Kolkata",
                         "fiftyTwoWeekHighChange": {
-                              "raw": -30.59999,
-                              "fmt": "-30.60"
+                              "raw": -207.45001,
+                              "fmt": "-207.45"
                         },
                         "marketCap": {
-                              "raw": 2567803502592,
-                              "fmt": "2.568T",
-                              "longFmt": "2,567,803,502,592"
+                              "raw": 1416055750656,
+                              "fmt": "1.416T",
+                              "longFmt": "1,416,055,750,656"
                         },
                         "fiftyTwoWeekRange": {
-                              "raw": "163.35 - 239.2",
-                              "fmt": "163.35 - 239.20"
+                              "raw": "312.1 - 901.0",
+                              "fmt": "312.10 - 901.00"
                         },
                         "regularMarketChange": {
-                              "raw": -1.2999878,
-                              "fmt": "-1.30"
+                              "raw": -1.1500244,
+                              "fmt": "-1.15"
                         },
-                        "firstTradeDateMilliseconds": 820467900000,
+                        "firstTradeDateMilliseconds": 1196135100000,
                         "exchangeDataDelayedBy": 15,
                         "exchangeTimezoneShortName": "IST",
-                        "marketState": "POSTPOST",
                         "regularMarketPrice": {
-                              "raw": 208.6,
-                              "fmt": "208.60"
+                              "raw": 693.55,
+                              "fmt": "693.55"
                         },
                         "fiftyTwoWeekLow": {
-                              "raw": 163.35,
-                              "fmt": "163.35"
+                              "raw": 312.1,
+                              "fmt": "312.10"
                         },
-                        "regularMarketVolume": {
-                              "raw": 10979920,
-                              "fmt": "10.98M",
-                              "longFmt": "10,979,920"
-                        },
+                        "marketState": "POSTPOST",
                         "market": "in_market",
+                        "regularMarketVolume": {
+                              "raw": 5850595,
+                              "fmt": "5.851M",
+                              "longFmt": "5,850,595"
+                        },
                         "quoteSourceName": "Delayed Quote",
-                        "messageBoardId": "finmb_878153",
+                        "messageBoardId": "finmb_27674009",
                         "priceHint": 2,
                         "exchange": "NSI",
-                        "sourceInterval": 15,
                         "regularMarketDayLow": {
-                              "raw": 208.1,
-                              "fmt": "208.10"
+                              "raw": 684.0,
+                              "fmt": "684.00"
                         },
-                        "shortName": "ITC LTD",
+                        "sourceInterval": 15,
                         "region": "US",
+                        "shortName": "ADANI PORT SPECIAL",
                         "triggerable": true,
-                        "longName": "ITC Limited",
-                        "delivPercen": "45.81%"
+                        "longName": "Adani Ports and Special Economic Zone Limited",
+                        "delivPercen": "82.9%"
                   }
             ],
             "error": null

@@ -4,7 +4,6 @@ from datetime import date
 import json
 import csv
 
-
 toBUY = False
 
 with open("NSE.json","r") as fobj:
