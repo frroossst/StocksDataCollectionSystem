@@ -1,0 +1,23 @@
+{
+      "Basic Info": {
+            "Name": "Macy's, Inc.",
+            "Symbol": "M",
+            "Current Price": "17.47",
+            "Change Percent": "4.42%",
+            "52 Week High": "22.30",
+            "52 Week Low": "5.57",
+            "Deliverable to Traded Quantity Percent": "NA"
+      },
+      "Technical Indicators": {
+            "RSI": "",
+            "ADX": "",
+            "MACD": [
+                  "",
+                  ""
+            ],
+            "OBV": "",
+            "MFI": "",
+            "50 day volume trend": "",
+            "MOMSQZE": ""
+      }
+}

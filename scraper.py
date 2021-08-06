@@ -70,36 +70,41 @@ class dataHandling():
         rNSE = requests.get(urlNSEpercen,headers=headers)
         if rNSE.status_code == 401:
             print("[401] Website denies auth")
-            print()
-            reResult = dataHandling.reNSE(newSymbol)
-            if rNSE.status_code == 401:
-                print("[401] Website denies auth")
-            else:
+            authDeliv = False # delivPercen will not be retrieved
+        else:
+            authDeliv = True # delivPercen will be retrieved
+
+        if authDeliv:
+
+            soup = BeautifulSoup(rNSE.text, "html.parser")
+            data = soup.prettify()
+            try:
+                data = json.loads(data)
+            except Exception as e:
+                print(f"[{e}]")
                 quit()
 
-        soup = BeautifulSoup(rNSE.text, "html.parser")
-        data = soup.prettify()
-        try:
-            data = json.loads(data)
-        except Exception as e:
-            print(f"[{e}]")
-            quit()
-        delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
-        delivPercen = str(round(delivPercen,2)) + "%"
+        else:
+            pass
+
+        if authDeliv:
+            delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
+            delivPercen = str(round(delivPercen,2)) + "%"
         # print(delivPercen)
 
         result = json.loads(result)
  
-        result["quoteResponse"]["result"][0]["delivPercen"] = delivPercen
+        if authDeliv:
+            result["quoteResponse"]["result"][0]["delivPercen"] = delivPercen
         # print(result)
 
         with open("data.json","w") as fobj:
             json.dump(result,fobj,indent=6)
             fobj.close()
 
-        dataHandling.getAttributes(self)
+        dataHandling.getAttributes(self,authDeliv)
 
-    def getAttributes(self):
+    def getAttributes(self,authDeliv):
 
         global dump
         dump = True
@@ -118,7 +123,8 @@ class dataHandling():
             currentPrice = (content["quoteResponse"]["result"][0]["regularMarketPrice"]["fmt"])
             name = (content["quoteResponse"]["result"][0]["longName"])
             percentChange = (content["quoteResponse"]["result"][0]["regularMarketChangePercent"]["fmt"])
-            delivPercen = (content["quoteResponse"]["result"][0]["delivPercen"])
+            if authDeliv:
+                delivPercen = (content["quoteResponse"]["result"][0]["delivPercen"])
             dump = True
         except Exception as e:
             print(f"[{e}]")
@@ -126,6 +132,8 @@ class dataHandling():
 
         try:
             filename = ticker + ".json"
+            if authDeliv == False:
+                delivPercen = "NA"
             dataDump = {
                 "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
             "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow, "Deliverable to Traded Quantity Percent" : delivPercen},
