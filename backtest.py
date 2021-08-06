@@ -107,7 +107,7 @@ def main(company):
     if momsqze == "TRNDd":
         momsqzeInd = True
 
-    if rsi > 70.00:
+    if rsi > 75.00:
         rsiInd = True
 
     if adx > 21.00:
@@ -119,16 +119,15 @@ def main(company):
     profitSELL = False
     toSELL = False
 
-    if momsqzeInd:
-        sureSELL = True
     if rsiInd:
         sureSELL = True
     if changeInd:
         sureSELL = True
+
     if fiftyTwoWeekInd:
         sureSELL = True
 
-    if (rsi) or (momsqzeInd and adx):
+    if (rsiInd) or (momsqzeInd and adx):
         profitSELL = True
 
     if sureSELL:
@@ -148,16 +147,17 @@ def main(company):
 
         dateB = date.today()
         dateB = dateB.strftime("%d/%m/%Y")
+
         qtyB = 1
         priceB = currentPrice_mod
 
-        dumper = ("BUY","💸",dateB,qtyB,priceB)
+        dumper = ("BUY","ENTRY",dateB,qtyB,priceB)
 
         if symbol not in content:
             content[symbol] = dumper 
 
         else:
-            if content[symbol][1] == str(dateB):
+            if content[symbol][2] == str(dateB):
                 pass
             else:
                 content[symbol].extend(dumper)
@@ -178,15 +178,15 @@ def main(company):
         priceB = currentPrice_mod
 
         if sureSELL:
-            dumper = ("SELL","CRASH",dateB,qtyB,priceB,)
+            dumper = ("SELL","EXIT",dateB,qtyB,priceB,)
         else:
-            dumper = ("SELL","🔻",dateB,qtyB,priceB)
+            dumper = ("SELL","BOOK",dateB,qtyB,priceB)
 
         if symbol not in content:
             content[symbol] = dumper 
 
         else:
-            if content[symbol][1] == str(dateB):
+            if content[symbol][2] == str(dateB):
                 pass
             else:
                 content[symbol].extend(dumper)
