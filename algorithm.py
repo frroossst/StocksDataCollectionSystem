@@ -76,11 +76,13 @@ def get_momentum_squeeze(symbol,dataF):
     if dataF["BB high"].iloc[-1] > dataF["KC high"].iloc[-1] or dataF["BB low"].iloc[-1] < dataF["KC low"].iloc[-1] and (dataF["Close"].iloc[-1] >= dataF["KC middle"].iloc[-1]):
         if dataF["Close"].iloc[-2] < dataF["KC middle"].iloc[-1]:
             print("market is in a downwards trend")
+            liMOMSQZE = "TRNDd"
         elif dataF["Close"].iloc[-2] > dataF["KC middle"].iloc[-1]:
             print("market is in an upwards trend")
+            liMOMSQZE = "TRNDu"
         else: 
             print("the market is in a trend")
-        liMOMSQZE = "TRND"
+            liMOMSQZE = "TRND"
     elif dataF["BB low"].iloc[-1] > dataF["KC low"].iloc[-1] or dataF["BB high"].iloc[-1] < dataF["KC high"].iloc[-1] and (dataF["Close"].iloc[-1] <= dataF["KC middle"].iloc[-1]):
         print("market is in a squeeze")
         liMOMSQZE = "SQZE"
@@ -133,19 +135,19 @@ def main(symbol):
     get_bollinger_bands(symbol,dataF)
     kc_middle, kc_high, kc_low = dataF["KC middle"], dataF["KC high"], dataF["KC low"]
     bb_up, bb_down= dataF["BB high"], dataF["BB low"]
-    print(dataF)
+    # print(dataF)
     get_momentum_squeeze(symbol,dataF)
     get_avg_volume(symbol,dataF)
-    plt.title(symbol + ' Momentum Squeeze')
-    plt.style.use("seaborn")
-    plt.xlabel('Time Frame')
-    plt.ylabel('Closing Prices')
-    plt.plot(bb_up, label='Bollinger Up', c='k')
-    plt.plot(bb_down, label='Bollinger Down', c='k')
-    plt.plot(kc_middle,label="KC middle",c="b")
-    plt.plot(kc_high,label="KC high",c="b")
-    plt.plot(kc_low,label="KC low",c="b")
-    plt.legend()
+    # plt.title(symbol + ' Momentum Squeeze')
+    # plt.style.use("seaborn")
+    # plt.xlabel('Time Frame')
+    # plt.ylabel('Closing Prices')
+    # plt.plot(bb_up, label='Bollinger Up', c='k')
+    # plt.plot(bb_down, label='Bollinger Down', c='k')
+    # plt.plot(kc_middle,label="KC middle",c="b")
+    # plt.plot(kc_high,label="KC high",c="b")
+    # plt.plot(kc_low,label="KC low",c="b")
+    # plt.legend()
     # plt.show()
 
 
