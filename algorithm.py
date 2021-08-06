@@ -146,13 +146,12 @@ def main(symbol):
     plt.plot(kc_high,label="KC high",c="b")
     plt.plot(kc_low,label="KC low",c="b")
     plt.legend()
-    plt.show()
+    # plt.show()
 
 
 
-company = NSE[0]
-
-main(company)
+for i in NSE:
+    main(i)
 
 # dataF = yf.Ticker(company).history(period="1y")
 # get_avg_volume(dataF)

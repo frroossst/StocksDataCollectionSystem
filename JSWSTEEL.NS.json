@@ -21,7 +21,7 @@
             ],
             "OBV": 3781345285.0,
             "MFI": 61.2551,
-            "50 day volume trend": "",
-            "MOMSQZE": ""
+            "50 day volume trend": false,
+            "MOMSQZE": "TRND"
       }
 }

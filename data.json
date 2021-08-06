@@ -2,108 +2,108 @@
       "quoteResponse": {
             "result": [
                   {
-                        "fullExchangeName": "NYSE",
-                        "symbol": "M",
+                        "fullExchangeName": "NSE",
+                        "symbol": "WIPRO.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 2.136445,
-                              "fmt": "213.64%"
+                              "raw": 1.2313433,
+                              "fmt": "123.13%"
                         },
-                        "gmtOffSetMilliseconds": -14400000,
+                        "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
-                              "raw": 16.85,
-                              "fmt": "16.85"
+                              "raw": 603.75,
+                              "fmt": "603.75"
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1628193602,
-                              "fmt": "4:00PM EDT"
+                              "raw": 1628243999,
+                              "fmt": "3:29PM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": 4.4231906,
-                              "fmt": "4.42%"
+                              "raw": -0.48261344,
+                              "fmt": "-0.48%"
                         },
                         "quoteType": "EQUITY",
-                        "uuid": "69691c7b-dcc3-3e6d-9d8a-1361f22d04ac",
+                        "uuid": "9b2184f0-c004-3a57-8738-9263da046c6c",
                         "regularMarketDayRange": {
-                              "raw": "16.835 - 17.53",
-                              "fmt": "16.83 - 17.53"
+                              "raw": "596.3 - 606.4",
+                              "fmt": "596.30 - 606.40"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 11.9,
-                              "fmt": "11.90"
+                              "raw": 330.0,
+                              "fmt": "330.00"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.21659194,
-                              "fmt": "-21.66%"
+                              "raw": -0.026851099,
+                              "fmt": "-2.69%"
                         },
                         "regularMarketDayHigh": {
-                              "raw": 17.53,
-                              "fmt": "17.53"
+                              "raw": 606.4,
+                              "fmt": "606.40"
                         },
                         "tradeable": false,
-                        "currency": "USD",
+                        "currency": "INR",
                         "sharesOutstanding": {
-                              "raw": 311868000,
-                              "fmt": "311.868M",
-                              "longFmt": "311,868,000"
-                        },
-                        "fiftyTwoWeekHigh": {
-                              "raw": 22.3,
-                              "fmt": "22.30"
+                              "raw": 5460579840,
+                              "fmt": "5.461B",
+                              "longFmt": "5,460,579,840"
                         },
                         "regularMarketPreviousClose": {
-                              "raw": 16.73,
-                              "fmt": "16.73"
+                              "raw": 600.9,
+                              "fmt": "600.90"
                         },
-                        "exchangeTimezoneName": "America/New_York",
+                        "fiftyTwoWeekHigh": {
+                              "raw": 614.5,
+                              "fmt": "614.50"
+                        },
+                        "exchangeTimezoneName": "Asia/Kolkata",
                         "marketCap": {
-                              "raw": 5448333824,
-                              "fmt": "5.448B",
-                              "longFmt": "5,448,333,824"
+                              "raw": 3265971093504,
+                              "fmt": "3.266T",
+                              "longFmt": "3,265,971,093,504"
                         },
                         "fiftyTwoWeekHighChange": {
-                              "raw": -4.83,
-                              "fmt": "-4.83"
-                        },
-                        "regularMarketChange": {
-                              "raw": 0.7399998,
-                              "fmt": "0.74"
+                              "raw": -16.5,
+                              "fmt": "-16.50"
                         },
                         "fiftyTwoWeekRange": {
-                              "raw": "5.57 - 22.3",
-                              "fmt": "5.57 - 22.30"
+                              "raw": "268.0 - 614.5",
+                              "fmt": "268.00 - 614.50"
                         },
-                        "exchangeDataDelayedBy": 0,
-                        "firstTradeDateMilliseconds": 697300200000,
-                        "exchangeTimezoneShortName": "EDT",
+                        "regularMarketChange": {
+                              "raw": -2.9000244,
+                              "fmt": "-2.90"
+                        },
+                        "firstTradeDateMilliseconds": 820467900000,
+                        "exchangeDataDelayedBy": 15,
+                        "exchangeTimezoneShortName": "IST",
                         "fiftyTwoWeekLow": {
-                              "raw": 5.57,
-                              "fmt": "5.57"
+                              "raw": 268.0,
+                              "fmt": "268.00"
                         },
-                        "marketState": "PRE",
+                        "marketState": "POSTPOST",
                         "regularMarketPrice": {
-                              "raw": 17.47,
-                              "fmt": "17.47"
+                              "raw": 598.0,
+                              "fmt": "598.00"
                         },
-                        "market": "us_market",
+                        "market": "in_market",
                         "regularMarketVolume": {
-                              "raw": 10428879,
-                              "fmt": "10.429M",
-                              "longFmt": "10,428,879"
+                              "raw": 5269609,
+                              "fmt": "5.27M",
+                              "longFmt": "5,269,609"
                         },
                         "quoteSourceName": "Delayed Quote",
-                        "messageBoardId": "finmb_318091",
+                        "messageBoardId": "finmb_598611",
                         "priceHint": 2,
-                        "regularMarketDayLow": {
-                              "raw": 16.835,
-                              "fmt": "16.83"
-                        },
+                        "exchange": "NSI",
                         "sourceInterval": 15,
-                        "exchange": "NYQ",
+                        "regularMarketDayLow": {
+                              "raw": 596.3,
+                              "fmt": "596.30"
+                        },
+                        "shortName": "WIPRO LTD",
                         "region": "US",
-                        "shortName": "Macy's Inc",
                         "triggerable": true,
-                        "longName": "Macy's, Inc."
+                        "longName": "Wipro Limited"
                   }
             ],
             "error": null
