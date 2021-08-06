@@ -79,7 +79,7 @@ def main(company):
 
     # Weighted Indicator Decision
 
-    if (fiftyTwoWeekInd) and (rsiInd and adxInd) and (delivInd or fiftyDayVolInd) and (momsqzeInd):
+    if (fiftyTwoWeekInd or changeInd) and (rsiInd and adxInd) and (delivInd or fiftyDayVolInd) and (momsqzeInd):
         toBUY = True
     else:
         toBUY = False
@@ -95,7 +95,7 @@ def main(company):
         dateB = date.today()
         dateB = dateB.strftime("%d/%m/%Y")
         qtyB = 1
-        priceB = currentPrice
+        priceB = currentPrice_mod
 
         dumper = ("BUY",dateB,qtyB,priceB)
 
