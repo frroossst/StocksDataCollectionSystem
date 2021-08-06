@@ -87,7 +87,7 @@ def main(company):
     # Updating trades.json file
 
     if toBUY:
-        print("BUYING THIS STOCK")
+        print(f"BUYING {symbol} STOCK")
         with open("trades.json","r") as fobj:
             content = json.load(fobj)
             fobj.close()
@@ -102,7 +102,11 @@ def main(company):
         if symbol not in content:
             content[symbol] = dumper 
 
-        content[symbol] = dumper
+        else:
+            if content[symbol][1] == str(dateB):
+                pass
+            else:
+                content[symbol].extend(dumper)
 
         with open("trades.json","w") as fobj:
             json.dump(content,fobj,indent=6)
