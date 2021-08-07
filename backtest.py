@@ -18,9 +18,9 @@ def main(company):
 
     # Only accounts for Saturdays and Sundays not for other festive holidays
     weekDay = datetime.datetime.today().weekday()
-    if weekDay == 5 or weekDay == 6:
-        print("The markets remain closed on weekends")
-        quit()
+    # if weekDay == 5 or weekDay == 6:
+    #     print("The markets remain closed on weekends")
+    #     quit()
 
     filename = company + ".json"
 
@@ -34,16 +34,10 @@ def main(company):
     delivPercen = content["Basic Info"]["Deliverable to Traded Quantity Percent"]
     rsi = content["Technical Indicators"]["RSI"]
     adx = content["Technical Indicators"]["ADX"]
+    macdl = content["Technical Indicators"]["MACD"][0]["Line"]
+    macds = content["Technical Indicators"]["MACD"][1]["Signal"]
     fiftyDayVol = content["Technical Indicators"]["50 day volume trend"]
     momsqze = content["Technical Indicators"]["MOMSQZE"]
-
-    changeInd = False
-    fiftyTwoWeekInd = False
-    delivInd = False
-    fiftyDayVolInd = False
-    momsqzeInd = False
-    rsiInd = False
-    adxInd = False
 
     # Manipulating data
     changePercen = changePercen[:-1]
@@ -59,6 +53,18 @@ def main(company):
     fiftyTwoWeekLow_mod = remComma(fiftyTwoWeekLow)
     
     # [BUY] Setup
+
+    changeInd = False
+    fiftyTwoWeekInd = False
+    delivInd = False
+    fiftyDayVolInd = False
+    momsqzeInd = False
+    rsiInd = False
+    adxInd = False
+    macdInd = False
+
+    if (macdl > 0.0 and macds > 0.0) and (macds > macdl):
+        macdInd = True
 
     if changePercen > 0.0:
         changeInd = True
@@ -84,7 +90,7 @@ def main(company):
 
     # [BUY] Weighted Indicator Decision 
 
-    if (fiftyTwoWeekInd) and (rsiInd and adxInd) and (delivInd or fiftyDayVolInd) and (momsqzeInd):
+    if (fiftyTwoWeekInd) and (rsiInd and adxInd and macdInd) and (delivInd or fiftyDayVolInd) and (momsqzeInd):
         toBUY = True
     else:
         toBUY = False
@@ -98,6 +104,10 @@ def main(company):
     momsqzeInd = False
     rsiInd = False
     adxInd = False
+    macdInd = False
+
+    if macdl < 0.0 and macds < 0.0:
+        macdInd = True
 
     if changePercen < -5.00:
         changeInd = True
@@ -127,11 +137,12 @@ def main(company):
     profitSELL = False
     toSELL = False
 
+    if macdInd:
+        sureSELL = True
     if rsiInd:
         sureSELL = True
     if changeInd:
         sureSELL = True
-
     if fiftyTwoWeekInd:
         sureSELL = True
 

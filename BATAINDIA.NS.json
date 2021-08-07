@@ -1,0 +1,27 @@
+{
+      "Basic Info": {
+            "Name": "Bata India Limited",
+            "Symbol": "BATAINDIA.NS",
+            "Current Price": "1,671.40",
+            "Change Percent": "1.22%",
+            "52 Week High": "1,737.00",
+            "52 Week Low": "1,213.80",
+            "Deliverable to Traded Quantity Percent": "NA"
+      },
+      "Technical Indicators": {
+            "RSI": 63.9285,
+            "ADX": 22.1102,
+            "MACD": [
+                  {
+                        "Line": 20.9005
+                  },
+                  {
+                        "Signal": 13.2904
+                  }
+            ],
+            "OBV": 596598801.0,
+            "MFI": 74.3334,
+            "50 day volume trend": false,
+            "MOMSQZE": "TRNDu"
+      }
+}

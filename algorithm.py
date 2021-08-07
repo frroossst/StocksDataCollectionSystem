@@ -91,15 +91,18 @@ def get_momentum_squeeze(symbol,dataF):
 
     filename = symbol + ".json"
 
-    with open(filename,"r") as fobj:
-        content = json.load(fobj)
-        fobj.close()
+    try:
+        with open(filename,"r") as fobj:
+            content = json.load(fobj)
+            fobj.close()
 
-    content["Technical Indicators"].update({"MOMSQZE" : liMOMSQZE})
+        content["Technical Indicators"].update({"MOMSQZE" : liMOMSQZE})
 
-    with open(filename,"w") as fobj:
-        json.dump(content,fobj,indent=6)
-        fobj.close()
+        with open(filename,"w") as fobj:
+            json.dump(content,fobj,indent=6)
+            fobj.close()
+    except Exception as e:
+        print(f"[{e}]")
 
 def get_avg_volume(symbol,dataF,timeperiod=50):
     dataF_vol = dataF["Volume"].tail(timeperiod)
@@ -116,15 +119,18 @@ def get_avg_volume(symbol,dataF,timeperiod=50):
 
     filename = symbol + ".json"
 
-    with open(filename,"r") as fobj:
-        content = json.load(fobj)
-        fobj.close()
+    try:
+        with open(filename,"r") as fobj:
+            content = json.load(fobj)
+            fobj.close()
 
-    content["Technical Indicators"].update({"50 day volume trend" : volTrend})
+        content["Technical Indicators"].update({"50 day volume trend" : volTrend})
 
-    with open(filename,"w") as fobj:
-        json.dump(content,fobj,indent=6)
-        fobj.close()
+        with open(filename,"w") as fobj:
+            json.dump(content,fobj,indent=6)
+            fobj.close()
+    except Exception as e:
+        print(f"[{e}]")
 
 
 

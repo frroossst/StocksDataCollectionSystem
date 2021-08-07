@@ -202,7 +202,7 @@ class technicalIndicators():
     # method to get RSI
     def getRSI(self,ticker):
         self.ticker = ticker
-
+        
         dataF = yf.Ticker(self.ticker).history(period="max").reset_index()[["Date","Close"]]
         dataF["RSI"] = ta.momentum.RSIIndicator(dataF["Close"], window = 14).rsi()
         lastDataF = dataF.iloc[-1]
