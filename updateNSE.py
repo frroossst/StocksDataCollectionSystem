@@ -8,6 +8,8 @@ newNSE = data["Symbol"]
 
 fmtNSE = []
 
+# '&' => '_'
+
 for i in newNSE:
     fmt = i + ".NS"
     fmtNSE.append(fmt)

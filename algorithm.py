@@ -61,7 +61,6 @@ def get_bollinger_bands(symbol,dataF):
     # bollinger_up = sma + std * 2 # Calculate top band
     # bollinger_down = sma - std * 2 # Calculate bottom band
     # return bollinger_up, bollinger_down
-    print(dataF)
     dataF["BB high"] = ta.volatility.BollingerBands(dataF["Close"], window=20,window_dev=2).bollinger_hband()
     dataF["BB low"] = ta.volatility.BollingerBands(dataF["Close"],window=20,window_dev=2).bollinger_lband()
 
