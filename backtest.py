@@ -4,7 +4,6 @@ from datetime import date, datetime
 import datetime
 import json
 
-
 def remComma(string):
     modStr = ""
     for i in string:
@@ -15,12 +14,12 @@ def remComma(string):
     return modStr
 
 def main(company):
-
+    
     # Only accounts for Saturdays and Sundays not for other festive holidays
     weekDay = datetime.datetime.today().weekday()
-    # if weekDay == 5 or weekDay == 6:
-    #     print("The markets remain closed on weekends")
-    #     quit()
+    if weekDay == 5 or weekDay == 6:
+        print("The markets remain closed on weekends")
+        quit()
 
     filename = company + ".json"
 
