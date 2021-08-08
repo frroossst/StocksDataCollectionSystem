@@ -22,8 +22,8 @@
                               "raw": -0.679836,
                               "fmt": "-0.68%"
                         },
-                        "uuid": "a2bc4c23-7fc7-3f0b-a11b-2ceff973b483",
                         "quoteType": "EQUITY",
+                        "uuid": "a2bc4c23-7fc7-3f0b-a11b-2ceff973b483",
                         "regularMarketDayRange": {
                               "raw": "2225.0 - 2280.0",
                               "fmt": "2,225.00 - 2,280.00"
@@ -57,9 +57,9 @@
                         },
                         "exchangeTimezoneName": "Asia/Kolkata",
                         "marketCap": {
-                              "raw": 142997438464,
-                              "fmt": "142.997B",
-                              "longFmt": "142,997,438,464"
+                              "raw": 142233649152,
+                              "fmt": "142.234B",
+                              "longFmt": "142,233,649,152"
                         },
                         "fiftyTwoWeekHighChange": {
                               "raw": -65.75,
@@ -73,33 +73,33 @@
                               "raw": "1585.55 - 2301.0",
                               "fmt": "1,585.55 - 2,301.00"
                         },
-                        "firstTradeDateMilliseconds": 1258083900000,
                         "exchangeDataDelayedBy": 15,
+                        "firstTradeDateMilliseconds": 1258083900000,
                         "exchangeTimezoneShortName": "IST",
+                        "fiftyTwoWeekLow": {
+                              "raw": 1585.55,
+                              "fmt": "1,585.55"
+                        },
                         "marketState": "CLOSED",
                         "regularMarketPrice": {
                               "raw": 2235.25,
                               "fmt": "2,235.25"
                         },
-                        "fiftyTwoWeekLow": {
-                              "raw": 1585.55,
-                              "fmt": "1,585.55"
-                        },
+                        "market": "in_market",
                         "regularMarketVolume": {
                               "raw": 17468,
                               "fmt": "17,468",
                               "longFmt": "17,468"
                         },
-                        "market": "in_market",
                         "quoteSourceName": "Delayed Quote",
                         "messageBoardId": "finmb_20334150",
                         "priceHint": 2,
-                        "exchange": "NSI",
-                        "sourceInterval": 15,
                         "regularMarketDayLow": {
                               "raw": 2225.0,
                               "fmt": "2,225.00"
                         },
+                        "sourceInterval": 15,
+                        "exchange": "NSI",
                         "region": "US",
                         "shortName": "ZYDUS WELLNESS LTD",
                         "triggerable": true,

@@ -105,11 +105,14 @@ def get_momentum_squeeze(symbol,dataF):
         print(f"[{e}]")
 
 def get_avg_volume(symbol,dataF,timeperiod=50):
-    dataF_vol = dataF["Volume"].tail(timeperiod)
-    sumVol = dataF_vol.sum(axis=0, skipna=True)
     lastVol = dataF.iloc[-1]
+    mod_dataF = dataF[:-1]
 
-    if lastVol["Volume"] > sumVol:
+    mod_dataF = dataF["Volume"].tail(timeperiod)
+    sumVol = mod_dataF.sum(axis=0, skipna=True)
+    avgVol = sumVol/50
+
+    if lastVol["Volume"] > avgVol:
         print("There is a volume trend")
         volTrend = True
 
