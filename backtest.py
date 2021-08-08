@@ -98,7 +98,7 @@ def main(company):
     if (delivInd or fiftyDayVolInd):
         toBUY = True
 
-    if (fiftyTwoWeekInd) and (rsiInd and adxInd and macdInd and mfiInd) and (momsqzeInd):
+    if ((fiftyTwoWeekInd) and (rsiInd and adxInd and macdInd and mfiInd) and (momsqzeInd) or fiftyDayVolInd):
         toBUY = True
     else:
         toBUY = False
@@ -231,7 +231,7 @@ def main(company):
 
 
 toBUY = False
-ovrwrt = False
+ovrwrt = True
 authDeliv = True
 
 with open("NSE.json","r") as fobj:
