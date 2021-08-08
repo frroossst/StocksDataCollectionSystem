@@ -16,10 +16,11 @@ def remComma(string):
 def main(company):
     
     # Only accounts for Saturdays and Sundays not for other festive holidays
-    weekDay = datetime.datetime.today().weekday()
-    if weekDay == 5 or weekDay == 6:
-        print("The markets remain closed on weekends")
-        quit()
+    if not ovrwrt:
+        weekDay = datetime.datetime.today().weekday()
+        if weekDay == 5 or weekDay == 6:
+            print("The markets remain closed on weekends")
+            quit()
 
     filename = company + ".json"
 
@@ -37,6 +38,7 @@ def main(company):
     macds = content["Technical Indicators"]["MACD"][1]["Signal"]
     fiftyDayVol = content["Technical Indicators"]["50 day volume trend"]
     momsqze = content["Technical Indicators"]["MOMSQZE"]
+    mfi = content["Technical Indicators"]["MFI"]
 
     # Manipulating data
     changePercen = changePercen[:-1]
@@ -61,8 +63,9 @@ def main(company):
     rsiInd = False
     adxInd = False
     macdInd = False
+    mfiInd = False
 
-    if (macdl > 0.0 and macds > 0.0) and (macds > macdl):
+    if (macdl > 0.0 and macds > 0.0) and (macds > macdl) and (abs(macds - macdl) > 1):
         macdInd = True
 
     if changePercen > 0.0:
@@ -81,15 +84,21 @@ def main(company):
     if momsqze == "TRNDu":
         momsqzeInd = True
 
-    if rsi < 70.00:
+    if rsi <= 70.00: # just for human
         rsiInd = True
 
     if adx > 21.00:
         adxInd = True
 
+    if mfi < 70.00:
+        mfiInd = True
+
     # [BUY] Weighted Indicator Decision 
 
-    if (fiftyTwoWeekInd) and (rsiInd and adxInd and macdInd) and (delivInd or fiftyDayVolInd) and (momsqzeInd):
+    if (delivInd or fiftyDayVolInd):
+        toBUY = True
+
+    if (fiftyTwoWeekInd) and (rsiInd and adxInd and macdInd and mfiInd) and (momsqzeInd):
         toBUY = True
     else:
         toBUY = False
@@ -104,6 +113,7 @@ def main(company):
     rsiInd = False
     adxInd = False
     macdInd = False
+    mfiInd = False
 
     if macdl < 0.0 and macds < 0.0:
         macdInd = True
@@ -130,6 +140,9 @@ def main(company):
     if adx > 21.00:
         adxInd = True
 
+    if mfi > 80.00:
+        mfiInd = True
+
     # [SELL] Weighted Indicator Decision 
 
     sureSELL = False
@@ -144,13 +157,15 @@ def main(company):
         sureSELL = True
     if fiftyTwoWeekInd:
         sureSELL = True
+    if mfiInd:
+        sureSELL = True
 
     if (rsiInd) or (momsqzeInd and adx):
         profitSELL = True
 
     if sureSELL:
         toSELL = True
-    if profitSELL:
+    elif profitSELL:
         toSELL = True
     else:
         toSELL = False
@@ -213,7 +228,10 @@ def main(company):
             json.dump(content,fobj,indent=6)
             fobj.close()
 
+
+
 toBUY = False
+ovrwrt = False
 authDeliv = True
 
 with open("NSE.json","r") as fobj:
