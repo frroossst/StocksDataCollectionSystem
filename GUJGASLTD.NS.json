@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Gujarat Gas Limited",
             "Symbol": "GUJGASLTD.NS",
-            "Current Price": "726.05",
-            "Change Percent": "-1.54%",
+            "Current Price": "723.00",
+            "Change Percent": "-1.95%",
             "52 Week High": "786.00",
             "52 Week Low": "281.00",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "74.13%"
       },
       "Technical Indicators": {
-            "RSI": 56.4212,
-            "ADX": 51.3398,
+            "RSI": 55.4098,
+            "ADX": 50.4575,
             "MACD": [
                   {
-                        "Line": 24.7576
+                        "Line": 24.5143
                   },
                   {
-                        "Signal": 25.0598
+                        "Signal": 25.0112
                   }
             ],
-            "OBV": 242154755.0,
-            "MFI": 66.5078,
-            "50 day volume trend": "",
-            "MOMSQZE": ""
+            "OBV": 240575127.0,
+            "MFI": 63.7228,
+            "50 day volume trend": true,
+            "MOMSQZE": "TRNDu"
       }
 }

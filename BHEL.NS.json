@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Bharat Heavy Electricals Limited",
             "Symbol": "BHEL.NS",
-            "Current Price": "56.25",
-            "Change Percent": "-2.26%",
+            "Current Price": "56.00",
+            "Change Percent": "-2.69%",
             "52 Week High": "79.55",
             "52 Week Low": "26.75",
-            "Deliverable to Traded Quantity Percent": "58.28%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 27.6248,
-            "ADX": 29.1537,
+            "RSI": 27.1339,
+            "ADX": 29.2555,
             "MACD": [
                   {
-                        "Line": -2.4185
+                        "Line": -2.4384
                   },
                   {
-                        "Signal": -1.925
+                        "Signal": -1.929
                   }
             ],
-            "OBV": 7456160435.0,
-            "MFI": 22.9825,
-            "50 day volume trend": "",
-            "MOMSQZE": ""
+            "OBV": 7444694380.0,
+            "MFI": 22.5171,
+            "50 day volume trend": false,
+            "MOMSQZE": "TRNDd"
       }
 }

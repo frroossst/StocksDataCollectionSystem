@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "BSE Limited",
             "Symbol": "BSE.NS",
-            "Current Price": "1,200.00",
-            "Change Percent": "-1.44%",
+            "Current Price": "1,194.20",
+            "Change Percent": "-1.92%",
             "52 Week High": "1,410.00",
             "52 Week Low": "466.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 58.4612,
-            "ADX": 35.8377,
+            "RSI": 57.603,
+            "ADX": 35.74,
             "MACD": [
                   {
-                        "Line": 61.5055
+                        "Line": 61.0428
                   },
                   {
-                        "Signal": 76.041
+                        "Signal": 75.9485
                   }
             ],
-            "OBV": 101652886.0,
-            "MFI": 68.7796,
-            "50 day volume trend": "",
-            "MOMSQZE": ""
+            "OBV": 101507402.0,
+            "MFI": 68.2763,
+            "50 day volume trend": false,
+            "MOMSQZE": "TRNDu"
       }
 }

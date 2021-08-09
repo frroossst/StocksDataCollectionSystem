@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Titan Company Limited",
             "Symbol": "TITAN.NS",
-            "Current Price": "1,803.25",
-            "Change Percent": "0.87%",
+            "Current Price": "1,799.15",
+            "Change Percent": "0.64%",
             "52 Week High": "1,858.65",
             "52 Week Low": "1,048.55",
-            "Deliverable to Traded Quantity Percent": "73.74%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 62.4256,
+            "RSI": 61.8433,
             "ADX": 22.7032,
             "MACD": [
                   {
-                        "Line": 25.2025
+                        "Line": 24.8754
                   },
                   {
-                        "Signal": 17.6807
+                        "Signal": 17.6153
                   }
             ],
-            "OBV": 4434852626.0,
-            "MFI": 69.7446,
-            "50 day volume trend": "",
-            "MOMSQZE": ""
+            "OBV": 4435317699.0,
+            "MFI": 70.3292,
+            "50 day volume trend": true,
+            "MOMSQZE": "TRNDu"
       }
 }

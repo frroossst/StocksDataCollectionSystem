@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Dr. Lal PathLabs Limited",
             "Symbol": "LALPATHLAB.NS",
-            "Current Price": "3,886.00",
-            "Change Percent": "-1.95%",
+            "Current Price": "3,889.45",
+            "Change Percent": "-1.86%",
             "52 Week High": "4,050.00",
             "52 Week Low": "1,736.60",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 66.5332,
-            "ADX": 60.0348,
+            "RSI": 66.7606,
+            "ADX": 59.7024,
             "MACD": [
                   {
-                        "Line": 165.9425
+                        "Line": 166.2576
                   },
                   {
-                        "Signal": 138.2661
+                        "Signal": 138.3291
                   }
             ],
-            "OBV": 54266447.0,
-            "MFI": 70.095,
-            "50 day volume trend": "",
-            "MOMSQZE": ""
+            "OBV": 54158678.0,
+            "MFI": 69.2431,
+            "50 day volume trend": false,
+            "MOMSQZE": "TRNDu"
       }
 }

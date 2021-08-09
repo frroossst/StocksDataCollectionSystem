@@ -215,14 +215,20 @@ def main(company):
         else:
             dumper = ("SELL","BOOK",dateB,qtyB,priceB)
 
-        if symbol not in content:
-            content[symbol] = dumper 
+        # if symbol not in content:
+        #     content[symbol] = dumper 
 
+        # else:
+        #     if str(content[symbol][2]) == str(dateB):
+        #         pass
+        #     else:
+        #         content[symbol].extend(dumper)
+
+        if symbol not in content: # we do not have that stock in our portfolio
+            pass
         else:
-            if content[symbol][2] == str(dateB):
-                pass
-            else:
-                content[symbol].extend(dumper)
+            content[symbol].extend(dumper)
+
 
         with open("trades.json","w") as fobj:
             json.dump(content,fobj,indent=6)
@@ -240,3 +246,4 @@ with open("NSE.json","r") as fobj:
 
 for company in NSE:
     main(company)
+
