@@ -65,7 +65,7 @@ def main(company):
     macdInd = False
     mfiInd = False
 
-    if (macdl > 0.0 and macds > 0.0) and (macds > macdl) and (abs(macds - macdl) > 1):
+    if (macdl > 0.0 and macds > 0.0) and (macds > macdl):
         macdInd = True
 
     if changePercen > 0.0:
@@ -173,7 +173,7 @@ def main(company):
     # Updating trades.json file
 
     if toBUY:
-        print(f"BUYING {symbol} STOCK")
+        print(f"* BUYING {symbol} STOCK")
         with open("trades.json","r") as fobj:
             content = json.load(fobj)
             fobj.close()

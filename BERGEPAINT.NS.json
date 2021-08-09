@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Berger Paints India Limited",
             "Symbol": "BERGEPAINT.NS",
-            "Current Price": "827.80",
-            "Change Percent": "-1.24%",
+            "Current Price": "816.05",
+            "Change Percent": "-1.42%",
             "52 Week High": "872.95",
             "52 Week Low": "527.30",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "57.26%"
       },
       "Technical Indicators": {
-            "RSI": 44.9979,
-            "ADX": 25.9042,
+            "RSI": 39.1808,
+            "ADX": 24.7257,
             "MACD": [
                   {
-                        "Line": 4.5984
+                        "Line": 2.3148
                   },
                   {
-                        "Signal": 8.0452
+                        "Signal": 6.8991
                   }
             ],
-            "OBV": 1247975446.0,
-            "MFI": 51.3366,
-            "50 day volume trend": true,
-            "MOMSQZE": "SQZE"
+            "OBV": 1247414429.0,
+            "MFI": 50.8799,
+            "50 day volume trend": "",
+            "MOMSQZE": ""
       }
 }
