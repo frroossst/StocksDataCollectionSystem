@@ -114,10 +114,12 @@ def get_avg_volume(symbol,dataF,timeperiod=50):
 
     if lastVol["Volume"] > avgVol:
         print("There is a volume trend")
+        print()
         volTrend = True
 
     else:
         print("There is no particular volume trend")
+        print()
         volTrend = False
 
     filename = symbol + ".json"
@@ -144,6 +146,7 @@ def main(symbol):
     kc_middle, kc_high, kc_low = dataF["KC middle"], dataF["KC high"], dataF["KC low"]
     bb_up, bb_down= dataF["BB high"], dataF["BB low"]
     # print(dataF)
+    print(symbol)
     get_momentum_squeeze(symbol,dataF)
     get_avg_volume(symbol,dataF)
     # plt.title(symbol + ' Momentum Squeeze')

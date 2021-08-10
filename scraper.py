@@ -69,10 +69,10 @@ class dataHandling():
         urlNSEpercen = f"https://www.nseindia.com/api/quote-equity?symbol={newSymbol}&section=trade_info"
         rNSE = requests.get(urlNSEpercen,headers=headers)
         if rNSE.status_code == 401:
-            print("[401] Website denies auth")
+            print(f"[401] Website denies auth for {newSymbol}")
             authDeliv = False # delivPercen will not be retrieved
         else:
-            print("Fetching delivery percentage")
+            print(f"Fetching delivery percentage for {newSymbol}")
             authDeliv = True # delivPercen will be retrieved
 
         if authDeliv:

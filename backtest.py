@@ -4,6 +4,8 @@ from datetime import date, datetime
 import datetime
 import json
 
+hotli = []
+
 def remComma(string):
     modStr = ""
     for i in string:
@@ -12,6 +14,12 @@ def remComma(string):
         else:
             pass
     return modStr
+
+def hotlist():
+    print()
+    print("---HOT LIST---")
+    for i in hotli:
+        print(i)
 
 def main(company):
     
@@ -102,6 +110,9 @@ def main(company):
         toBUY = True
     else:
         toBUY = False
+
+    if fiftyDayVolInd and momsqzeInd:
+        hotli.append(symbol)
 
     # [SELL] Setup
 
@@ -247,3 +258,4 @@ with open("NSE.json","r") as fobj:
 for company in NSE:
     main(company)
 
+hotlist()
