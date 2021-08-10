@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Kotak Mahindra Bank Limited",
             "Symbol": "KOTAKBANK.NS",
-            "Current Price": "1,812.20",
-            "Change Percent": "1.76%",
+            "Current Price": "1,813.25",
+            "Change Percent": "1.82%",
             "52 Week High": "2,049.00",
             "52 Week Low": "1,230.60",
-            "Deliverable to Traded Quantity Percent": "48.66%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 66.1201,
+            "RSI": 66.2551,
             "ADX": 20.1652,
             "MACD": [
                   {
-                        "Line": 9.0727
+                        "Line": 9.1565
                   },
                   {
-                        "Signal": -5.5851
+                        "Signal": -5.5684
                   }
             ],
-            "OBV": 1132804711.0,
-            "MFI": 76.5651,
-            "50 day volume trend": true,
-            "MOMSQZE": "TRNDu"
+            "OBV": 1133424503.0,
+            "MFI": 76.8579,
+            "50 day volume trend": "",
+            "MOMSQZE": ""
       }
 }

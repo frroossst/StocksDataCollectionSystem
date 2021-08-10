@@ -279,16 +279,24 @@ class technicalIndicators():
 
 
 
-def main():
+def main(num=1,exch="NSE",auto=False):
 
-    print("1. Scrape Data")
-    print("2. Add a company")
-    # print("3. Remove a company")
-    ch = int(input("enter choice : "))
+    if not auto:
+        print("1. Scrape Data")
+        print("2. Add a company")
+        # print("3. Remove a company")
+        ch = int(input("enter choice : "))
+
+    elif auto:
+        ch = 1
+        exchange = "NSE"
+
+    else:
+        pass
 
     if ch == 1:
-
-        exchange = input("enter exchange to scrape : ")
+        if not auto:
+            exchange = input("enter exchange to scrape : ")
 
         if exchange == "nasdaq":
             for i in NASDAQ:
@@ -310,10 +318,11 @@ def main():
                 # T.get_avg_volume(symbol)
 
         elif exchange == "nse":
-            for i in NSE:
-                i = i + ".json"
-                if os.path.exists(i):
-                    os.remove(i)
+            if not auto:
+                for i in NSE:
+                    i = i + ".json"
+                    if os.path.exists(i):
+                        os.remove(i)
 
             print("collecting data...")
             for i in NSE:
