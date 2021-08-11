@@ -18,8 +18,11 @@ def remComma(string):
 def hotlist():
     print()
     print("---HOT LIST---")
-    for i in hotli:
-        print(i)
+    if hotlist == []:
+        print("Empty")
+    else:
+        for i in hotli:
+            print(i)
 
 def main(company):
     
@@ -184,72 +187,77 @@ def main(company):
     # Updating trades.json file
 
     if toBUY:
-        print(f"* BUYING {symbol} STOCK")
-        with open("trades.json","r") as fobj:
-            content = json.load(fobj)
-            fobj.close()
+        if not onlySell:
+            print(f"* BUYING {symbol} STOCK")
+            with open("trades.json","r") as fobj:
+                content = json.load(fobj)
+                fobj.close()
 
-        dateB = date.today()
-        dateB = dateB.strftime("%d/%m/%Y")
+            dateB = date.today()
+            dateB = dateB.strftime("%d/%m/%Y")
 
-        qtyB = 1
-        priceB = currentPrice_mod
+            qtyB = 1
+            priceB = currentPrice_mod
 
-        dumper = ("BUY","ENTRY",dateB,qtyB,priceB)
+            dumper = ("BUY","ENTRY",dateB,qtyB,priceB)
 
-        if symbol not in content:
-            content[symbol] = dumper 
+            if symbol not in content:
+                content[symbol] = dumper 
 
-        else:
-            if content[symbol][2] == str(dateB):
+            else:
+                if content[symbol][2] == str(dateB):
+                    pass
+                else:
+                    content[symbol].extend(dumper)
+
+            with open("trades.json","w") as fobj:
+                json.dump(content,fobj,indent=6)
+                fobj.close()
+
+    if toSELL:
+        if not onlyBuy:
+            print(f"SELLING {symbol} STOCK")
+            with open("trades.json","r") as fobj:
+                content = json.load(fobj)
+                fobj.close()
+
+            dateB = date.today()
+            dateB = dateB.strftime("%d/%m/%Y")
+            qtyB = 1
+            priceB = currentPrice_mod
+
+            if sureSELL:
+                dumper = ("SELL","EXIT",dateB,qtyB,priceB,)
+            else:
+                dumper = ("SELL","BOOK",dateB,qtyB,priceB)
+
+            # if symbol not in content:
+            #     content[symbol] = dumper 
+
+            # else:
+            #     if str(content[symbol][2]) == str(dateB):
+            #         pass
+            #     else:
+            #         content[symbol].extend(dumper)
+
+            if symbol not in content: # we do not have that stock in our portfolio
                 pass
             else:
                 content[symbol].extend(dumper)
 
-        with open("trades.json","w") as fobj:
-            json.dump(content,fobj,indent=6)
-            fobj.close()
 
-    if toSELL:
-        print(f"SELLING {symbol} STOCK")
-        with open("trades.json","r") as fobj:
-            content = json.load(fobj)
-            fobj.close()
-
-        dateB = date.today()
-        dateB = dateB.strftime("%d/%m/%Y")
-        qtyB = 1
-        priceB = currentPrice_mod
-
-        if sureSELL:
-            dumper = ("SELL","EXIT",dateB,qtyB,priceB,)
-        else:
-            dumper = ("SELL","BOOK",dateB,qtyB,priceB)
-
-        # if symbol not in content:
-        #     content[symbol] = dumper 
-
-        # else:
-        #     if str(content[symbol][2]) == str(dateB):
-        #         pass
-        #     else:
-        #         content[symbol].extend(dumper)
-
-        if symbol not in content: # we do not have that stock in our portfolio
-            pass
-        else:
-            content[symbol].extend(dumper)
-
-
-        with open("trades.json","w") as fobj:
-            json.dump(content,fobj,indent=6)
-            fobj.close()
+            with open("trades.json","w") as fobj:
+                json.dump(content,fobj,indent=6)
+                fobj.close()
 
 
 
 toBUY = False
 ovrwrt = True
 authDeliv = True
+onlyBuy = False
+onlySell = False
+
 
 with open("NSE.json","r") as fobj:
     NSE = json.load(fobj)

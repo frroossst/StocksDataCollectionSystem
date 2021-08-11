@@ -89,8 +89,11 @@ class dataHandling():
             pass
 
         if authDeliv:
-            delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
-            delivPercen = str(round(delivPercen,2)) + "%"
+            try:
+                delivPercen = ((int(data["securityWiseDP"]["quantityTraded"]) - int(data["securityWiseDP"]["deliveryQuantity"])) / int(data["securityWiseDP"]["quantityTraded"])) * 100
+                delivPercen = str(round(delivPercen,2)) + "%"
+            except ZeroDivisionError:
+                delivPercen = "0.0%"
         # print(delivPercen)
 
         result = json.loads(result)
