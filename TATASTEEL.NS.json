@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Tata Steel Limited",
             "Symbol": "TATASTEEL.NS",
-            "Current Price": "1,427.40",
-            "Change Percent": "0.08%",
+            "Current Price": "1,435.35",
+            "Change Percent": "0.64%",
             "52 Week High": "1,481.80",
             "52 Week Low": "342.75",
-            "Deliverable to Traded Quantity Percent": "61.72%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 64.5668,
-            "ADX": 36.5442,
+            "RSI": 65.4501,
+            "ADX": 34.5772,
             "MACD": [
                   {
-                        "Line": 57.5893
+                        "Line": 58.982
                   },
                   {
-                        "Signal": 60.5087
+                        "Signal": 61.6595
                   }
             ],
-            "OBV": 4202819844.0,
-            "MFI": 79.6168,
+            "OBV": 4205584610.0,
+            "MFI": 79.9512,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

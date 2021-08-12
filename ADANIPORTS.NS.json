@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Adani Ports and Special Economic Zone Limited",
             "Symbol": "ADANIPORTS.NS",
-            "Current Price": "702.00",
-            "Change Percent": "0.41%",
+            "Current Price": "704.05",
+            "Change Percent": "0.70%",
             "52 Week High": "901.00",
             "52 Week Low": "312.10",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 51.3157,
+            "RSI": 52.0158,
             "ADX": 14.9196,
             "MACD": [
                   {
-                        "Line": -3.465
+                        "Line": -3.3015
                   },
                   {
-                        "Signal": -7.8571
+                        "Signal": -7.8244
                   }
             ],
-            "OBV": 988813761.0,
-            "MFI": 53.1885,
+            "OBV": 989666050.0,
+            "MFI": 53.4997,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }
