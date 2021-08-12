@@ -1,0 +1,27 @@
+{
+      "Basic Info": {
+            "Name": "Wipro Limited",
+            "Symbol": "WIPRO.NS",
+            "Current Price": "605.25",
+            "Change Percent": "0.67%",
+            "52 Week High": "614.50",
+            "52 Week Low": "268.00",
+            "Deliverable to Traded Quantity Percent": "61.33%"
+      },
+      "Technical Indicators": {
+            "RSI": 67.8264,
+            "ADX": 39.4833,
+            "MACD": [
+                  {
+                        "Line": 13.3201
+                  },
+                  {
+                        "Signal": 13.5395
+                  }
+            ],
+            "OBV": 3476052658.0,
+            "MFI": 56.4869,
+            "50 day volume trend": false,
+            "MOMSQZE": "SQZE"
+      }
+}

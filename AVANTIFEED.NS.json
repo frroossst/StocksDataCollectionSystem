@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Avanti Feeds Limited",
             "Symbol": "AVANTIFEED.NS",
-            "Current Price": "582.50",
-            "Change Percent": "-3.50%",
+            "Current Price": "592.25",
+            "Change Percent": "2.08%",
             "52 Week High": "674.85",
             "52 Week Low": "410.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 36.6552,
-            "ADX": 18.0826,
+            "RSI": 42.167,
+            "ADX": 18.6079,
             "MACD": [
                   {
-                        "Line": 1.3868
+                        "Line": -0.8604
                   },
                   {
-                        "Signal": 8.7445
+                        "Signal": 6.8133
                   }
             ],
-            "OBV": 150528940.0,
-            "MFI": 59.1621,
-            "50 day volume trend": "",
-            "MOMSQZE": ""
+            "OBV": 151332009.0,
+            "MFI": 60.7279,
+            "50 day volume trend": true,
+            "MOMSQZE": "SQZE"
       }
 }

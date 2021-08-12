@@ -63,6 +63,8 @@ def get_bollinger_bands(symbol,dataF):
     # return bollinger_up, bollinger_down
     dataF["BB high"] = ta.volatility.BollingerBands(dataF["Close"], window=20,window_dev=2).bollinger_hband()
     dataF["BB low"] = ta.volatility.BollingerBands(dataF["Close"],window=20,window_dev=2).bollinger_lband()
+    dataF["BB middle"] = ta.volatility.BollingerBands(dataF["Close"],window=20,window_dev=2).bollinger_mavg()
+
 
 def get_momentum_squeeze(symbol,dataF):
     print("BB low",dataF["BB low"].iloc[-1])
@@ -73,12 +75,12 @@ def get_momentum_squeeze(symbol,dataF):
     print("KC middle",dataF["KC middle"].iloc[-1])
 
     if dataF["BB high"].iloc[-1] > dataF["KC high"].iloc[-1] or dataF["BB low"].iloc[-1] < dataF["KC low"].iloc[-1] and (dataF["Close"].iloc[-1] >= dataF["KC middle"].iloc[-1]):
-        if dataF["Close"].iloc[-2] < dataF["KC middle"].iloc[-1]:
-            print("market is in a downwards trend")
-            liMOMSQZE = "TRNDd"
-        elif dataF["Close"].iloc[-2] > dataF["KC middle"].iloc[-1]:
-            print("market is in an upwards trend")
+        if dataF["Close"].iloc[-2] > dataF["KC middle"].iloc[-1] and dataF["KC middle"].iloc[-1] > dataF["BB middle"].iloc[-1]:
+            print("There is in an upwards market trend")
             liMOMSQZE = "TRNDu"
+        elif dataF["Close"].iloc[-2] < dataF["KC middle"].iloc[-1]:
+            print("There is in a downwards market trend")
+            liMOMSQZE = "TRNDd"
         else: 
             print("the market is in a trend")
             liMOMSQZE = "TRND"

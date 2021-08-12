@@ -18,7 +18,7 @@ def remComma(string):
 def hotlist():
     print()
     print("---HOT LIST---")
-    if hotlist == []:
+    if hotli == []:
         print("Empty")
     else:
         for i in hotli:

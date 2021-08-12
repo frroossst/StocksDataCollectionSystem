@@ -1,0 +1,27 @@
+{
+      "Basic Info": {
+            "Name": "Oil and Natural Gas Corporation Limited",
+            "Symbol": "ONGC.NS",
+            "Current Price": "115.50",
+            "Change Percent": "-1.28%",
+            "52 Week High": "128.50",
+            "52 Week Low": "64.10",
+            "Deliverable to Traded Quantity Percent": "56.8%"
+      },
+      "Technical Indicators": {
+            "RSI": 45.9184,
+            "ADX": 9.4427,
+            "MACD": [
+                  {
+                        "Line": -0.5942
+                  },
+                  {
+                        "Signal": -0.7209
+                  }
+            ],
+            "OBV": 3675954045.0,
+            "MFI": 60.54,
+            "50 day volume trend": false,
+            "MOMSQZE": "SQZE"
+      }
+}
