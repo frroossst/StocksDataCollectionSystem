@@ -24,6 +24,10 @@ def hotlist():
         for i in hotli:
             print(i)
 
+    with open("hotlist.json","w") as fobj:
+        json.dump(hotli,fobj)
+        fobj.close()
+
 def main(company):
     
     # Only accounts for Saturdays and Sundays not for other festive holidays
@@ -188,7 +192,7 @@ def main(company):
 
     if toBUY:
         if not onlySell:
-            print(f"* BUYING {symbol} STOCK")
+            print(f"+ BUYING {symbol} STOCK")
             with open("trades.json","r") as fobj:
                 content = json.load(fobj)
                 fobj.close()
@@ -216,7 +220,7 @@ def main(company):
 
     if toSELL:
         if not onlyBuy:
-            print(f"SELLING {symbol} STOCK")
+            print(f"- SELLING {symbol} STOCK")
             with open("trades.json","r") as fobj:
                 content = json.load(fobj)
                 fobj.close()
@@ -231,20 +235,10 @@ def main(company):
             else:
                 dumper = ("SELL","BOOK",dateB,qtyB,priceB)
 
-            # if symbol not in content:
-            #     content[symbol] = dumper 
-
-            # else:
-            #     if str(content[symbol][2]) == str(dateB):
-            #         pass
-            #     else:
-            #         content[symbol].extend(dumper)
-
             if symbol not in content: # we do not have that stock in our portfolio
                 pass
             else:
                 content[symbol].extend(dumper)
-
 
             with open("trades.json","w") as fobj:
                 json.dump(content,fobj,indent=6)

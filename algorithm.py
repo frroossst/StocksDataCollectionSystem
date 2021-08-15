@@ -73,6 +73,7 @@ def get_momentum_squeeze(symbol,dataF):
     print("KC high",dataF["KC high"].iloc[-1])
     print("Close",dataF["Close"].iloc[-1])
     print("KC middle",dataF["KC middle"].iloc[-1])
+    print("BB middle",dataF["BB middle"].iloc[-1])
 
     if dataF["BB high"].iloc[-1] > dataF["KC high"].iloc[-1] or dataF["BB low"].iloc[-1] < dataF["KC low"].iloc[-1] and (dataF["Close"].iloc[-1] >= dataF["KC middle"].iloc[-1]):
         if dataF["Close"].iloc[-2] > dataF["KC middle"].iloc[-1] and dataF["KC middle"].iloc[-1] > dataF["BB middle"].iloc[-1]:

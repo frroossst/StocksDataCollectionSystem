@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Mahindra CIE Automotive Limited",
             "Symbol": "MAHINDCIE.NS",
-            "Current Price": "248.00",
-            "Change Percent": "-0.18%",
+            "Current Price": "244.25",
+            "Change Percent": "-1.51%",
             "52 Week High": "280.70",
-            "52 Week Low": "113.50",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "52 Week Low": "115.35",
+            "Deliverable to Traded Quantity Percent": "56.86%"
       },
       "Technical Indicators": {
-            "RSI": 48.1015,
-            "ADX": 39.9545,
+            "RSI": 45.3168,
+            "ADX": 37.6389,
             "MACD": [
                   {
-                        "Line": 5.4273
+                        "Line": 4.0646
                   },
                   {
-                        "Signal": 8.8166
+                        "Signal": 7.8662
                   }
             ],
-            "OBV": 163891754.0,
-            "MFI": 80.5325,
+            "OBV": 163772443.0,
+            "MFI": 56.6263,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDd"
       }
