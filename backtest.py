@@ -246,12 +246,11 @@ def main(company):
 
 
 
-toBUY = False
-ovrwrt = True
-authDeliv = True
-onlyBuy = False
-onlySell = False
-
+with open("settings.json","r") as fobj:
+    settings = json.load(fobj)
+    ovrwrt = settings["ovrwrt"]
+    onlyBuy = settings["onlyBuy"]
+    onlySell = settings["onlySell"]
 
 with open("NSE.json","r") as fobj:
     NSE = json.load(fobj)

@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "VST Industries Limited",
             "Symbol": "VSTIND.NS",
-            "Current Price": "3,383.00",
-            "Change Percent": "0.27%",
+            "Current Price": "3,387.00",
+            "Change Percent": "0.25%",
             "52 Week High": "4,538.20",
             "52 Week Low": "3,140.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 49.1945,
-            "ADX": 36.3553,
+            "RSI": 50.0031,
+            "ADX": 35.0641,
             "MACD": [
                   {
-                        "Line": -43.6545
+                        "Line": -39.0499
                   },
                   {
-                        "Signal": -37.8243
+                        "Signal": -38.6923
                   }
             ],
-            "OBV": 3892893.0,
-            "MFI": 17.2577,
+            "OBV": 3892878.0,
+            "MFI": 25.3302,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDd"
       }

@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Relaxo Footwears Limited",
             "Symbol": "RELAXO.NS",
-            "Current Price": "1,179.20",
-            "Change Percent": "1.45%",
-            "52 Week High": "1,242.90",
+            "Current Price": "1,211.65",
+            "Change Percent": "0.15%",
+            "52 Week High": "1,253.95",
             "52 Week Low": "610.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 58.8186,
-            "ADX": 24.4475,
+            "RSI": 67.0468,
+            "ADX": 26.5527,
             "MACD": [
                   {
-                        "Line": 3.492
+                        "Line": 10.4056
                   },
                   {
-                        "Signal": 4.4542
+                        "Signal": 6.105
                   }
             ],
-            "OBV": 78556045.0,
-            "MFI": 33.424,
-            "50 day volume trend": false,
+            "OBV": 79966189.0,
+            "MFI": 69.3231,
+            "50 day volume trend": true,
             "MOMSQZE": "SQZE"
       }
 }
