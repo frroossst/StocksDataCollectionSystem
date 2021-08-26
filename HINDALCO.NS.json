@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Hindalco Industries Limited",
             "Symbol": "HINDALCO.NS",
-            "Current Price": "435.60",
-            "Change Percent": "-1.39%",
+            "Current Price": "423.35",
+            "Change Percent": "-1.71%",
             "52 Week High": "474.00",
             "52 Week Low": "154.40",
-            "Deliverable to Traded Quantity Percent": "79.53%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 58.5497,
-            "ADX": 35.0532,
+            "RSI": 51.3802,
+            "ADX": 25.8422,
             "MACD": [
                   {
-                        "Line": 11.2818
+                        "Line": 3.3186
                   },
                   {
-                        "Signal": 12.6081
+                        "Signal": 6.6909
                   }
             ],
-            "OBV": 3019750434.0,
-            "MFI": 57.9411,
+            "OBV": 3025460206.0,
+            "MFI": 57.2719,
             "50 day volume trend": false,
-            "MOMSQZE": "TRNDu"
+            "MOMSQZE": "TRND"
       }
 }

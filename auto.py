@@ -15,4 +15,4 @@ for i in NSE:
 for j in NSE:
     backtest.main(j)
 
-backtest.hotlist()
+# backtest.hotlist()

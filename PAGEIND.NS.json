@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Page Industries Limited",
             "Symbol": "PAGEIND.NS",
-            "Current Price": "30,300.00",
-            "Change Percent": "-0.02%",
+            "Current Price": "30,324.85",
+            "Change Percent": "-2.37%",
             "52 Week High": "33,989.00",
             "52 Week Low": "17,685.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 36.7664,
-            "ADX": 22.9957,
+            "RSI": 39.5758,
+            "ADX": 18.5707,
             "MACD": [
                   {
-                        "Line": -105.2996
+                        "Line": -294.0232
                   },
                   {
-                        "Signal": 222.6612
+                        "Signal": -109.6763
                   }
             ],
-            "OBV": 17198211.0,
-            "MFI": 24.731,
-            "50 day volume trend": true,
+            "OBV": 17258476.0,
+            "MFI": 35.4493,
+            "50 day volume trend": false,
             "MOMSQZE": "TRNDd"
       }
 }

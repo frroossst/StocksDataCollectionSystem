@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Zydus Wellness Limited",
             "Symbol": "ZYDUSWELL.NS",
-            "Current Price": "2,217.80",
-            "Change Percent": "-1.28%",
-            "52 Week High": "2,301.00",
+            "Current Price": "2,300.40",
+            "Change Percent": "3.36%",
+            "52 Week High": "2,396.10",
             "52 Week Low": "1,585.55",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 52.0507,
-            "ADX": 30.9475,
+            "RSI": 64.5438,
+            "ADX": 24.7362,
             "MACD": [
                   {
-                        "Line": 20.6487
+                        "Line": 15.531
                   },
                   {
-                        "Signal": 23.4494
+                        "Signal": 14.9731
                   }
             ],
-            "OBV": 26104600.0,
-            "MFI": 39.9849,
-            "50 day volume trend": false,
+            "OBV": 26643635.0,
+            "MFI": 71.7649,
+            "50 day volume trend": true,
             "MOMSQZE": "SQZE"
       }
 }

@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Hero MotoCorp Limited",
             "Symbol": "HEROMOTOCO.NS",
-            "Current Price": "2,748.00",
-            "Change Percent": "0.02%",
+            "Current Price": "2,661.05",
+            "Change Percent": "-0.48%",
             "52 Week High": "3,629.05",
-            "52 Week Low": "2,713.00",
-            "Deliverable to Traded Quantity Percent": "51.76%"
+            "52 Week Low": "2,652.00",
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 33.6694,
-            "ADX": 25.6065,
+            "RSI": 27.1292,
+            "ADX": 36.0579,
             "MACD": [
                   {
-                        "Line": -31.0594
+                        "Line": -47.4208
                   },
                   {
-                        "Signal": -29.3156
+                        "Signal": -38.1324
                   }
             ],
-            "OBV": 188232198.0,
-            "MFI": 45.1158,
+            "OBV": 185162361.0,
+            "MFI": 39.2783,
             "50 day volume trend": false,
-            "MOMSQZE": "SQZE"
+            "MOMSQZE": "TRNDd"
       }
 }

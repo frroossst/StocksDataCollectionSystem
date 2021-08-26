@@ -5,40 +5,40 @@
                         "fullExchangeName": "NSE",
                         "symbol": "ZYDUSWELL.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 0.39875752,
-                              "fmt": "39.88%"
+                              "raw": 0.4508529,
+                              "fmt": "45.09%"
                         },
                         "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
-                              "raw": 2236.7,
-                              "fmt": "2,236.70"
+                              "raw": 2231.7,
+                              "fmt": "2,231.70"
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1629188678,
-                              "fmt": "1:54PM IST"
+                              "raw": 1629966036,
+                              "fmt": "1:50PM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": -1.2775407,
-                              "fmt": "-1.28%"
+                              "raw": 3.3632069,
+                              "fmt": "3.36%"
                         },
                         "quoteType": "EQUITY",
                         "uuid": "a2bc4c23-7fc7-3f0b-a11b-2ceff973b483",
                         "regularMarketDayRange": {
-                              "raw": "2215.0 - 2236.7",
-                              "fmt": "2,215.00 - 2,236.70"
+                              "raw": "2224.25 - 2396.1",
+                              "fmt": "2,224.25 - 2,396.10"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 632.25,
-                              "fmt": "632.25"
+                              "raw": 714.84985,
+                              "fmt": "714.85"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.03615817,
-                              "fmt": "-3.62%"
+                              "raw": -0.03993998,
+                              "fmt": "-3.99%"
                         },
                         "regularMarketDayHigh": {
-                              "raw": 2236.7,
-                              "fmt": "2,236.70"
+                              "raw": 2396.1,
+                              "fmt": "2,396.10"
                         },
                         "tradeable": false,
                         "currency": "INR",
@@ -47,58 +47,58 @@
                               "fmt": "63.632M",
                               "longFmt": "63,632,100"
                         },
-                        "fiftyTwoWeekHigh": {
-                              "raw": 2301.0,
-                              "fmt": "2,301.00"
-                        },
                         "regularMarketPreviousClose": {
-                              "raw": 2246.5,
-                              "fmt": "2,246.50"
+                              "raw": 2225.55,
+                              "fmt": "2,225.55"
+                        },
+                        "fiftyTwoWeekHigh": {
+                              "raw": 2396.1,
+                              "fmt": "2,396.10"
                         },
                         "exchangeTimezoneName": "Asia/Kolkata",
-                        "fiftyTwoWeekHighChange": {
-                              "raw": -83.19995,
-                              "fmt": "-83.20"
-                        },
                         "marketCap": {
-                              "raw": 141123272704,
-                              "fmt": "141.123B",
-                              "longFmt": "141,123,272,704"
+                              "raw": 146379276288,
+                              "fmt": "146.379B",
+                              "longFmt": "146,379,276,288"
+                        },
+                        "fiftyTwoWeekHighChange": {
+                              "raw": -95.700195,
+                              "fmt": "-95.70"
                         },
                         "regularMarketChange": {
-                              "raw": -28.699951,
-                              "fmt": "-28.70"
+                              "raw": 74.84985,
+                              "fmt": "74.85"
                         },
                         "fiftyTwoWeekRange": {
-                              "raw": "1585.55 - 2301.0",
-                              "fmt": "1,585.55 - 2,301.00"
+                              "raw": "1585.55 - 2396.1",
+                              "fmt": "1,585.55 - 2,396.10"
                         },
                         "exchangeDataDelayedBy": 15,
                         "firstTradeDateMilliseconds": 1258083900000,
                         "exchangeTimezoneShortName": "IST",
-                        "regularMarketPrice": {
-                              "raw": 2217.8,
-                              "fmt": "2,217.80"
-                        },
-                        "marketState": "REGULAR",
                         "fiftyTwoWeekLow": {
                               "raw": 1585.55,
                               "fmt": "1,585.55"
                         },
-                        "regularMarketVolume": {
-                              "raw": 5660,
-                              "fmt": "5,660",
-                              "longFmt": "5,660"
+                        "regularMarketPrice": {
+                              "raw": 2300.4,
+                              "fmt": "2,300.40"
                         },
+                        "marketState": "REGULAR",
                         "market": "in_market",
+                        "regularMarketVolume": {
+                              "raw": 300018,
+                              "fmt": "300,018",
+                              "longFmt": "300,018"
+                        },
                         "quoteSourceName": "Free Realtime Quote",
                         "messageBoardId": "finmb_20334150",
                         "priceHint": 2,
                         "exchange": "NSI",
                         "sourceInterval": 15,
                         "regularMarketDayLow": {
-                              "raw": 2215.0,
-                              "fmt": "2,215.00"
+                              "raw": 2224.25,
+                              "fmt": "2,224.25"
                         },
                         "shortName": "ZYDUS WELLNESS LTD",
                         "region": "US",
