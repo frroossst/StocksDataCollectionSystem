@@ -3,6 +3,7 @@
 from datetime import date, datetime
 import datetime
 import json
+import math
 
 hotli = []
 
@@ -68,6 +69,20 @@ def main(company):
     currentPrice_mod = remComma(currentPrice)
     fiftyTwoWeekLow_mod = remComma(fiftyTwoWeekLow)
     
+    # dealing with NaN params
+    if math.isnan(rsi):
+        rsiNaN = True
+    elif math.isnan(adx):
+        adxNaN = True
+    elif math.isnan(macdl):
+        macdlNaN = True
+    elif math.isnan(macds):
+        macdsNaN = True
+    elif math.isnan(mfi):
+        MFINaN = True
+    else:
+        pass
+
     # [BUY] Setup
 
     changeInd = False
@@ -117,6 +132,13 @@ def main(company):
         toBUY = True
     else:
         toBUY = False
+
+    # Check for NaN values (NaN values result in auto reject BUY)
+
+    if rsiNaN or adxNaN or macdlNaN or macdsNaN or MFINaN:
+        toBUY = False
+
+    # Hotlist 
 
     if fiftyDayVolInd and momsqzeInd:
         hotli.append(symbol)
@@ -256,7 +278,9 @@ with open("NSE.json","r") as fobj:
     NSE = json.load(fobj)
     fobj.close()
 
-for company in NSE:
-    main(company)
+# for company in NSE:
+#     main(company)
 
-hotlist()
+main("EXXARO.NS")
+
+# hotlist()

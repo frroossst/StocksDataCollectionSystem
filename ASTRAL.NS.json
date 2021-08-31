@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Astral Limited",
             "Symbol": "ASTRAL.NS",
-            "Current Price": "1,983.50",
-            "Change Percent": "0.15%",
+            "Current Price": "2,040.05",
+            "Change Percent": "1.70%",
             "52 Week High": "2,294.40",
             "52 Week Low": "799.16",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "29.77%"
       },
       "Technical Indicators": {
-            "RSI": 42.4911,
-            "ADX": 19.7103,
+            "RSI": 50.338,
+            "ADX": 19.1388,
             "MACD": [
                   {
-                        "Line": -16.2014
+                        "Line": -15.9904
                   },
                   {
-                        "Signal": 0.2956
+                        "Signal": -8.7321
                   }
             ],
-            "OBV": 197171788.0,
-            "MFI": 39.6812,
-            "50 day volume trend": false,
+            "OBV": 197978117.0,
+            "MFI": 53.3482,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDd"
       }
 }
