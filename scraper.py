@@ -282,7 +282,7 @@ class technicalIndicators():
 
 
 
-def main(num=1,exch="NSE",auto=False):
+def main(num=1,exch="ind",auto=False):
 
     if not auto:
         print("1. Scrape Data")
@@ -292,7 +292,7 @@ def main(num=1,exch="NSE",auto=False):
 
     elif auto:
         ch = 1
-        exchange = "NSE"
+        exchange = "ind"
 
     else:
         pass
@@ -301,7 +301,7 @@ def main(num=1,exch="NSE",auto=False):
         if not auto:
             exchange = input("enter exchange to scrape : ")
 
-        if exchange == "nasdaq":
+        if exchange == "usa" or exchange == "nasdaq":
             for i in NASDAQ:
                 i = i + ".json"
                 if os.path.exists(i):
@@ -320,7 +320,7 @@ def main(num=1,exch="NSE",auto=False):
                 T.getMFI(symbol)
                 # T.get_avg_volume(symbol)
 
-        elif exchange == "nse":
+        elif exchange == "ind" or exchange == "nse":
             if not auto:
                 for i in NSE:
                     i = i + ".json"
@@ -344,7 +344,7 @@ def main(num=1,exch="NSE",auto=False):
 
         exchange = input("enter exchange to scrape : ")
 
-        if exchange == "nasdaq":
+        if exchange == "usa" or exchange == "nasdaq":
             print(f"Companies List : {NASDAQ}")
             fmtTicker = "For examples : NVIDIA Corp => NVDA"
             print(fmtTicker)
@@ -354,7 +354,7 @@ def main(num=1,exch="NSE",auto=False):
                 json.dump(NASDAQ,fobj,indent=6)
                 fobj.close()
 
-        elif exchange == "nse":
+        elif exchange == "ind" or exchange == "nse":
             print(f"Companies List : {NSE}")
             fmtTicker = "For examples : ITC => ITC.NS"
             print(fmtTicker)
@@ -368,14 +368,14 @@ def main(num=1,exch="NSE",auto=False):
 
         exchange = input("enter exchange to scrape : ")
 
-        if exchange == "nasdaq":
+        if exchange == "usa" or exchange == "nasdaq":
             print(f"Companies List : {NASDAQ}")
             fmtTicker = "For examples : NVIDIA Corp => NVDA"
             print(fmtTicker)
             compRem = input("enter ticker : ")
             NASDAQ.remove(compRem)
 
-        elif exchange == "nse":
+        elif exchange == "ind" or exchange == "nse":
             print(f"Companies List : {NSE}")
             fmtTicker = "For examples : ITC => ITC.NS"
             print(fmtTicker)
