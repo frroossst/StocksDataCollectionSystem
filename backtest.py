@@ -156,7 +156,7 @@ def main(company):
     macdInd = False
     mfiInd = False
 
-    if macdl < 0.0 and macds < 0.0:
+    if (macdl < 0.0 and macds < 0.0) and (macds < macdl):
         macdInd = True
 
     if changePercen < -5.00:
@@ -175,13 +175,13 @@ def main(company):
     if momsqze == "TRNDd":
         momsqzeInd = True
 
-    if rsi > 75.00:
+    if rsi > 80.00:
         rsiInd = True
 
-    if adx > 21.00:
+    if adx > 24.00:
         adxInd = True
 
-    if mfi > 80.00:
+    if mfi > 85.00:
         mfiInd = True
 
     # [SELL] Weighted Indicator Decision 
