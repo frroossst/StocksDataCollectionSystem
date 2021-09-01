@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "GAIL (India) Limited",
             "Symbol": "GAIL.NS",
-            "Current Price": "147.00",
-            "Change Percent": "0.68%",
+            "Current Price": "147.35",
+            "Change Percent": "0.82%",
             "52 Week High": "170.30",
             "52 Week Low": "81.20",
-            "Deliverable to Traded Quantity Percent": "69.45%"
+            "Deliverable to Traded Quantity Percent": "40.91%"
       },
       "Technical Indicators": {
-            "RSI": 53.4599,
+            "RSI": 54.223,
             "ADX": NaN,
             "MACD": [
                   {
-                        "Line": -0.3074
+                        "Line": -0.1413
                   },
                   {
-                        "Signal": -0.5746
+                        "Signal": -0.4981
                   }
             ],
-            "OBV": 2891165441.0,
-            "MFI": 67.3239,
-            "50 day volume trend": true,
+            "OBV": 2892993449.0,
+            "MFI": 65.1123,
+            "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }
 }

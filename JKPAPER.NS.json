@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "JK Paper Ltd",
             "Symbol": "JKPAPER.NS",
-            "Current Price": "244.00",
-            "Change Percent": "-1.31%",
+            "Current Price": "245.70",
+            "Change Percent": "0.51%",
             "52 Week High": "284.90",
             "52 Week Low": "86.30",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "81.54%"
       },
       "Technical Indicators": {
-            "RSI": 51.0184,
-            "ADX": 29.1572,
+            "RSI": 51.7604,
+            "ADX": 27.5267,
             "MACD": [
                   {
-                        "Line": 2.2001
+                        "Line": 2.034
                   },
                   {
-                        "Signal": 5.3646
+                        "Signal": 4.7043
                   }
             ],
-            "OBV": 488106670.0,
-            "MFI": 54.6508,
+            "OBV": 488159305.0,
+            "MFI": 60.1581,
             "50 day volume trend": false,
-            "MOMSQZE": "TRND"
+            "MOMSQZE": "TRNDd"
       }
 }

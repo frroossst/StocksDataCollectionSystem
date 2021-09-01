@@ -70,6 +70,7 @@ def main(company):
     fiftyTwoWeekLow_mod = remComma(fiftyTwoWeekLow)
     
     # dealing with NaN params
+    rsiNaN, adxNaN, macdlNaN, macdsNaN, MFINaN = False, False, False, False, False
     if math.isnan(rsi):
         rsiNaN = True
     elif math.isnan(adx):
@@ -278,9 +279,8 @@ with open("NSE.json","r") as fobj:
     NSE = json.load(fobj)
     fobj.close()
 
-# for company in NSE:
-#     main(company)
+for company in NSE:
+    main(company)
 
-main("EXXARO.NS")
 
-# hotlist()
+hotlist()
