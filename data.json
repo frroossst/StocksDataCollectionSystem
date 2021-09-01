@@ -3,107 +3,108 @@
             "result": [
                   {
                         "fullExchangeName": "NSE",
-                        "symbol": "ZYDUSWELL.NS",
+                        "symbol": "YESBANK.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 0.48050314,
-                              "fmt": "48.05%"
+                              "raw": 0.038095202,
+                              "fmt": "3.81%"
                         },
                         "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
-                              "raw": 2308.0,
-                              "fmt": "2,308.00"
+                              "raw": 10.8,
+                              "fmt": "10.80"
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1630468715,
-                              "fmt": "9:28AM IST"
+                              "raw": 1630470664,
+                              "fmt": "10:01AM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": 1.7373996,
-                              "fmt": "1.74%"
+                              "raw": 0.9259206,
+                              "fmt": "0.93%"
                         },
-                        "uuid": "a2bc4c23-7fc7-3f0b-a11b-2ceff973b483",
+                        "uuid": "4a22ab6a-17b2-3225-870d-20f9e83a1249",
                         "quoteType": "EQUITY",
                         "regularMarketDayRange": {
-                              "raw": "2308.0 - 2358.5",
-                              "fmt": "2,308.00 - 2,358.50"
+                              "raw": "10.75 - 10.9",
+                              "fmt": "10.75 - 10.90"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 764.0,
-                              "fmt": "764.00"
+                              "raw": 0.39999962,
+                              "fmt": "0.40"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.017570259,
-                              "fmt": "-1.76%"
+                              "raw": -0.4746988,
+                              "fmt": "-47.47%"
                         },
                         "regularMarketDayHigh": {
-                              "raw": 2358.5,
-                              "fmt": "2,358.50"
+                              "raw": 10.9,
+                              "fmt": "10.90"
                         },
                         "tradeable": false,
                         "currency": "INR",
                         "sharesOutstanding": {
-                              "raw": 63632100,
-                              "fmt": "63.632M",
-                              "longFmt": "63,632,100"
-                        },
-                        "regularMarketPreviousClose": {
-                              "raw": 2313.8,
-                              "fmt": "2,313.80"
+                              "raw": 25054900224,
+                              "fmt": "25.055B",
+                              "longFmt": "25,054,900,224"
                         },
                         "fiftyTwoWeekHigh": {
-                              "raw": 2396.1,
-                              "fmt": "2,396.10"
+                              "raw": 20.75,
+                              "fmt": "20.75"
+                        },
+                        "regularMarketPreviousClose": {
+                              "raw": 10.8,
+                              "fmt": "10.80"
                         },
                         "exchangeTimezoneName": "Asia/Kolkata",
-                        "marketCap": {
-                              "raw": 149789966336,
-                              "fmt": "149.79B",
-                              "longFmt": "149,789,966,336"
-                        },
                         "fiftyTwoWeekHighChange": {
-                              "raw": -42.100098,
-                              "fmt": "-42.10"
+                              "raw": -9.85,
+                              "fmt": "-9.85"
+                        },
+                        "marketCap": {
+                              "raw": 273098407936,
+                              "fmt": "273.098B",
+                              "longFmt": "273,098,407,936"
                         },
                         "regularMarketChange": {
-                              "raw": 40.19995,
-                              "fmt": "40.20"
+                              "raw": 0.09999943,
+                              "fmt": "0.10"
                         },
                         "fiftyTwoWeekRange": {
-                              "raw": "1590.0 - 2396.1",
-                              "fmt": "1,590.00 - 2,396.10"
+                              "raw": "10.5 - 20.75",
+                              "fmt": "10.50 - 20.75"
                         },
                         "exchangeDataDelayedBy": 15,
-                        "firstTradeDateMilliseconds": 1258083900000,
+                        "firstTradeDateMilliseconds": 1121139900000,
                         "exchangeTimezoneShortName": "IST",
                         "regularMarketPrice": {
-                              "raw": 2354.0,
-                              "fmt": "2,354.00"
+                              "raw": 10.9,
+                              "fmt": "10.90"
                         },
                         "fiftyTwoWeekLow": {
-                              "raw": 1590.0,
-                              "fmt": "1,590.00"
+                              "raw": 10.5,
+                              "fmt": "10.50"
                         },
                         "marketState": "REGULAR",
                         "regularMarketVolume": {
-                              "raw": 7606,
-                              "fmt": "7,606",
-                              "longFmt": "7,606"
+                              "raw": 14686407,
+                              "fmt": "14.686M",
+                              "longFmt": "14,686,407"
                         },
                         "market": "in_market",
                         "quoteSourceName": "Free Realtime Quote",
-                        "messageBoardId": "finmb_20334150",
+                        "messageBoardId": "finmb_9674016",
                         "priceHint": 2,
-                        "exchange": "NSI",
-                        "sourceInterval": 15,
                         "regularMarketDayLow": {
-                              "raw": 2308.0,
-                              "fmt": "2,308.00"
+                              "raw": 10.75,
+                              "fmt": "10.75"
                         },
-                        "shortName": "ZYDUS WELLNESS LTD",
+                        "sourceInterval": 15,
+                        "exchange": "NSI",
                         "region": "US",
+                        "shortName": "YES BANK",
                         "triggerable": true,
-                        "longName": "Zydus Wellness Limited"
+                        "longName": "Yes Bank Limited",
+                        "delivPercen": "55.28%"
                   }
             ],
             "error": null

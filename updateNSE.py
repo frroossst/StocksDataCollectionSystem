@@ -1,9 +1,9 @@
 import pandas as pd
 import json
 
-""" To update the NSE.json simply download the nifty50 csv file from the official NSE website """
+""" To update the NSE.json simply download the nifty50 csv file from the official NSE website """ 
 
-data = pd.read_csv("ind_nifty50list.csv")
+data = pd.read_csv("ind_nifty100list.csv")
 newNSE = data["Symbol"]
 
 fmtNSE = []
