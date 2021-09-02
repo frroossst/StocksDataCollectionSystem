@@ -5,40 +5,40 @@
                         "fullExchangeName": "NSE",
                         "symbol": "ACC.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 0.88056636,
-                              "fmt": "88.06%"
+                              "raw": 0.9194724,
+                              "fmt": "91.95%"
                         },
                         "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
-                              "raw": 2420.0,
-                              "fmt": "2,420.00"
+                              "raw": 2428.9,
+                              "fmt": "2,428.90"
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1630490390,
+                              "raw": 1630576791,
                               "fmt": "3:29PM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": 0.44961455,
-                              "fmt": "0.45%"
+                              "raw": 2.0688477,
+                              "fmt": "2.07%"
                         },
-                        "uuid": "6d4ebf5e-ede8-36f1-b882-ab0f9673eaa6",
                         "quoteType": "EQUITY",
+                        "uuid": "6d4ebf5e-ede8-36f1-b882-ab0f9673eaa6",
                         "regularMarketDayRange": {
-                              "raw": "2393.05 - 2437.4",
-                              "fmt": "2,393.05 - 2,437.40"
+                              "raw": "2413.15 - 2498.0",
+                              "fmt": "2,413.15 - 2,498.00"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 1135.05,
-                              "fmt": "1,135.05"
+                              "raw": 1185.2,
+                              "fmt": "1,185.20"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.012586775,
-                              "fmt": "-1.26%"
+                              "raw": -0.009527641,
+                              "fmt": "-0.95%"
                         },
                         "regularMarketDayHigh": {
-                              "raw": 2437.4,
-                              "fmt": "2,437.40"
+                              "raw": 2498.0,
+                              "fmt": "2,498.00"
                         },
                         "tradeable": false,
                         "currency": "INR",
@@ -47,61 +47,61 @@
                               "fmt": "187.787M",
                               "longFmt": "187,787,008"
                         },
-                        "regularMarketPreviousClose": {
-                              "raw": 2413.2,
-                              "fmt": "2,413.20"
-                        },
                         "fiftyTwoWeekHigh": {
-                              "raw": 2454.95,
-                              "fmt": "2,454.95"
+                              "raw": 2498.0,
+                              "fmt": "2,498.00"
+                        },
+                        "regularMarketPreviousClose": {
+                              "raw": 2424.05,
+                              "fmt": "2,424.05"
                         },
                         "exchangeTimezoneName": "Asia/Kolkata",
                         "marketCap": {
-                              "raw": 455367491584,
-                              "fmt": "455.367B",
-                              "longFmt": "455,367,491,584"
+                              "raw": 464622616576,
+                              "fmt": "464.623B",
+                              "longFmt": "464,622,616,576"
                         },
                         "fiftyTwoWeekHighChange": {
-                              "raw": -30.899902,
-                              "fmt": "-30.90"
-                        },
-                        "regularMarketChange": {
-                              "raw": 10.850098,
-                              "fmt": "10.85"
+                              "raw": -23.800049,
+                              "fmt": "-23.80"
                         },
                         "fiftyTwoWeekRange": {
-                              "raw": "1289.0 - 2454.95",
-                              "fmt": "1,289.00 - 2,454.95"
+                              "raw": "1289.0 - 2498.0",
+                              "fmt": "1,289.00 - 2,498.00"
+                        },
+                        "regularMarketChange": {
+                              "raw": 50.149902,
+                              "fmt": "50.15"
                         },
                         "exchangeDataDelayedBy": 15,
                         "firstTradeDateMilliseconds": 1025495100000,
                         "exchangeTimezoneShortName": "IST",
+                        "marketState": "POSTPOST",
+                        "regularMarketPrice": {
+                              "raw": 2474.2,
+                              "fmt": "2,474.20"
+                        },
                         "fiftyTwoWeekLow": {
                               "raw": 1289.0,
                               "fmt": "1,289.00"
                         },
-                        "regularMarketPrice": {
-                              "raw": 2424.05,
-                              "fmt": "2,424.05"
-                        },
-                        "marketState": "POSTPOST",
-                        "regularMarketVolume": {
-                              "raw": 418424,
-                              "fmt": "418,424",
-                              "longFmt": "418,424"
-                        },
                         "market": "in_market",
+                        "regularMarketVolume": {
+                              "raw": 589542,
+                              "fmt": "589,542",
+                              "longFmt": "589,542"
+                        },
                         "quoteSourceName": "Delayed Quote",
                         "messageBoardId": "finmb_873802",
                         "priceHint": 2,
-                        "regularMarketDayLow": {
-                              "raw": 2393.05,
-                              "fmt": "2,393.05"
-                        },
                         "sourceInterval": 15,
+                        "regularMarketDayLow": {
+                              "raw": 2413.15,
+                              "fmt": "2,413.15"
+                        },
                         "exchange": "NSI",
-                        "shortName": "ACC LIMITED",
                         "region": "US",
+                        "shortName": "ACC LIMITED",
                         "triggerable": true,
                         "longName": "ACC Limited"
                   }

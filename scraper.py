@@ -196,6 +196,20 @@ class dataHandling():
         else:
             print("dump attribute is false")
 
+    def saveData(self,ticker):
+
+        filename = ticker + ".json"
+        with open(filename,"r") as fobj:
+            content = json.load(fobj)
+            fobj.close()
+
+        data = yf.Ticker(ticker).history(period="1y")
+        dataJ = data.to_dict()
+        content["rawData"] = dataJ
+        
+        with open(filename,"w") as fobj:
+            json.dump(content,fobj)
+            fobj.close()
 
 class technicalIndicators():
 
@@ -338,6 +352,7 @@ def main(num=1,exch="ind",auto=False):
                 T.getADX(symbol)
                 T.getOBV(symbol)
                 T.getMFI(symbol)
+                # D.saveData(symbol)
                 # T.get_avg_volume(symbol)
 
     elif ch == 2:
