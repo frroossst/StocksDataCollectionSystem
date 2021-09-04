@@ -8,6 +8,7 @@ from matplotlib import pyplot as plt
 import requests
 import json
 import time
+import csv
 import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -198,17 +199,17 @@ class dataHandling():
 
     def saveData(self,ticker):
 
-        filename = ticker + ".json"
+        filename = ticker + ".csv"
         with open(filename,"r") as fobj:
-            content = json.load(fobj)
+            content = csv.reader(fobj)
             fobj.close()
 
         data = yf.Ticker(ticker).history(period="1y")
-        dataJ = data.to_dict()
-        content["rawData"] = dataJ
+        dataC = data.to_csv()
+        content["rawData"] = dataC
         
         with open(filename,"w") as fobj:
-            json.dump(content,fobj)
+            csv.writer(dataC)
             fobj.close()
 
 class technicalIndicators():
@@ -217,10 +218,10 @@ class technicalIndicators():
         pass
 
     # method to get RSI
-    def getRSI(self,ticker):
+    def getRSI(self,ticker,data):
         self.ticker = ticker
         
-        dataF = yf.Ticker(self.ticker).history(period="max").reset_index()[["Date","Close"]]
+        dataF = data.reset_index()[["Date","Close"]]
         dataF["RSI"] = ta.momentum.RSIIndicator(dataF["Close"], window = 14).rsi()
         lastDataF = dataF.iloc[-1]
         # print(lastDataF["RSI"])
@@ -228,10 +229,9 @@ class technicalIndicators():
         dataHandling.dumpData(self.ticker,lastDataF["RSI"],"RSI")
 
     # method to get MACD
-    def getMACD(self,ticker):
+    def getMACD(self,ticker,data):
         self.ticker = ticker
-
-        dataF = yf.download(self.ticker)
+        dataF = data
 
         dataF["MACD Line"] = ta.trend.MACD(dataF["Close"],window_slow = 26, window_fast = 12, window_sign = 9).macd()
         dataF["MACD Signal"] = ta.trend.MACD(dataF["Close"],window_slow = 26, window_fast = 12, window_sign = 9).macd_signal()
@@ -242,12 +242,11 @@ class technicalIndicators():
         dataHandling.dumpData(self.ticker,data,"MACD")
 
     # method to return ADX values
-    def getADX(self,ticker):
+    def getADX(self,ticker,data):
         self.ticker = ticker
 
         self.ticker = ticker
-
-        dataF = yf.download(self.ticker)
+        dataF = data
 
         dataF["ADX"] = talib.ADX(dataF["High"],dataF["Low"],dataF["Close"],timeperiod = 14)
         
@@ -256,10 +255,10 @@ class technicalIndicators():
 
         dataHandling.dumpData(self.ticker,data,"ADX")
 
-    def getMFI(self,ticker):
+    def getMFI(self,ticker,data):
         self.ticker = ticker
+        dataF = data
 
-        dataF = yf.download(self.ticker)
         dataF["MFI"] = talib.MFI(dataF["High"],dataF["Low"],dataF["Close"],dataF["Volume"],timeperiod=14)
 
         lastDataF = dataF.iloc[-1]
@@ -267,10 +266,10 @@ class technicalIndicators():
         dataHandling.dumpData(self.ticker,data,"MFI") 
 
 ### [FATAL] returns suspicious values
-    def getOBV(self,ticker):
+    def getOBV(self,ticker,data):
         self.ticker = ticker
+        dataF = data
 
-        dataF = yf.download(self.ticker)
         dataF["OBV"] = talib.OBV(dataF["Close"],dataF["Volume"])
 
         lastDataF = dataF.iloc[-1]
@@ -327,11 +326,12 @@ def main(num=1,exch="ind",auto=False):
                 D = dataHandling()
                 D.getData(symbol)
                 T = technicalIndicators()
-                T.getRSI(symbol)
-                T.getMACD(symbol)
-                T.getADX(symbol)
-                T.getOBV(symbol)
-                T.getMFI(symbol)
+                dataF = yf.download(symbol)
+                T.getRSI(symbol,dataF)
+                T.getMACD(symbol,dataF)
+                T.getADX(symbol,dataF)
+                T.getOBV(symbol,dataF)
+                T.getMFI(symbol,dataF)
                 # T.get_avg_volume(symbol)
 
         elif exchange == "ind" or exchange == "nse":
@@ -347,11 +347,12 @@ def main(num=1,exch="ind",auto=False):
                 D = dataHandling()
                 D.getData(symbol)
                 T = technicalIndicators()
-                T.getRSI(symbol)
-                T.getMACD(symbol)
-                T.getADX(symbol)
-                T.getOBV(symbol)
-                T.getMFI(symbol)
+                dataF = yf.download(symbol)
+                T.getRSI(symbol,dataF)
+                T.getMACD(symbol,dataF)
+                T.getADX(symbol,dataF)
+                T.getOBV(symbol,dataF)
+                T.getMFI(symbol,dataF)
                 # D.saveData(symbol)
                 # T.get_avg_volume(symbol)
 
