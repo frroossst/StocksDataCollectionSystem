@@ -1,0 +1,27 @@
+{
+      "Basic Info": {
+            "Name": "Ashok Leyland Limited",
+            "Symbol": "ASHOKLEY.NS",
+            "Current Price": "121.80",
+            "Change Percent": "1.00%",
+            "52 Week High": "143.30",
+            "52 Week Low": "64.15",
+            "Deliverable to Traded Quantity Percent": "NA"
+      },
+      "Technical Indicators": {
+            "RSI": 45.0314,
+            "ADX": 20.5117,
+            "MACD": [
+                  {
+                        "Line": -1.7588
+                  },
+                  {
+                        "Signal": -1.6132
+                  }
+            ],
+            "OBV": 5586667307.0,
+            "MFI": 40.291,
+            "50 day volume trend": false,
+            "MOMSQZE": "TRNDd"
+      }
+}

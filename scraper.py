@@ -295,7 +295,7 @@ class technicalIndicators():
 
 
 
-def main(exch="ind",auto=False):
+def main(exch="ind",auto=True):
 
     if not auto:
         print("1. Scrape Data")
@@ -305,6 +305,10 @@ def main(exch="ind",auto=False):
 
     elif auto:
         ch = 1
+        with open("settings.json","r") as fobj:
+            content = json.load(fobj)
+            fobj.close()
+        exchange = content["exchg"]
 
     else:
         raise ValueError ("value not found for auto")
@@ -398,7 +402,7 @@ def main(exch="ind",auto=False):
             NSE.remove(compRem)
 
 
-main()
+main(auto=True)
 
 
 

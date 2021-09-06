@@ -1,0 +1,27 @@
+{
+      "Basic Info": {
+            "Name": "Eicher Motors Limited",
+            "Symbol": "EICHERMOT.NS",
+            "Current Price": "2,844.90",
+            "Change Percent": "1.51%",
+            "52 Week High": "3,037.00",
+            "52 Week Low": "2,015.20",
+            "Deliverable to Traded Quantity Percent": "NA"
+      },
+      "Technical Indicators": {
+            "RSI": 70.1153,
+            "ADX": 24.737,
+            "MACD": [
+                  {
+                        "Line": 34.3775
+                  },
+                  {
+                        "Signal": 3.9998
+                  }
+            ],
+            "OBV": 375792620.0,
+            "MFI": 76.2006,
+            "50 day volume trend": true,
+            "MOMSQZE": "TRNDu"
+      }
+}

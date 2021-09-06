@@ -46,18 +46,21 @@ def main(company):
     with open(filename,"r") as fobj:
         content = json.load(fobj)
 
-    symbol = content["Basic Info"]["Symbol"]
-    currentPrice = content["Basic Info"]["Current Price"]
-    changePercen = content["Basic Info"]["Change Percent"]
-    fiftyTwoWeekLow = content["Basic Info"]["52 Week Low"]
-    delivPercen = content["Basic Info"]["Deliverable to Traded Quantity Percent"]
-    rsi = content["Technical Indicators"]["RSI"]
-    adx = content["Technical Indicators"]["ADX"]
-    macdl = content["Technical Indicators"]["MACD"][0]["Line"]
-    macds = content["Technical Indicators"]["MACD"][1]["Signal"]
-    fiftyDayVol = content["Technical Indicators"]["50 day volume trend"]
-    momsqze = content["Technical Indicators"]["MOMSQZE"]
-    mfi = content["Technical Indicators"]["MFI"]
+    try:
+        symbol = content["Basic Info"]["Symbol"]
+        currentPrice = content["Basic Info"]["Current Price"]
+        changePercen = content["Basic Info"]["Change Percent"]
+        fiftyTwoWeekLow = content["Basic Info"]["52 Week Low"]
+        delivPercen = content["Basic Info"]["Deliverable to Traded Quantity Percent"]
+        rsi = content["Technical Indicators"]["RSI"]
+        adx = content["Technical Indicators"]["ADX"]
+        macdl = content["Technical Indicators"]["MACD"][0]["Line"]
+        macds = content["Technical Indicators"]["MACD"][1]["Signal"]
+        fiftyDayVol = content["Technical Indicators"]["50 day volume trend"]
+        momsqze = content["Technical Indicators"]["MOMSQZE"]
+        mfi = content["Technical Indicators"]["MFI"]
+    except Exception:
+        raise ValueError ("corrupt or incomplete data")
 
     # Manipulating data
     changePercen = changePercen[:-1]
@@ -284,6 +287,5 @@ with open("NSE.json","r") as fobj:
 
 for company in NSE:
     main(company)
-
 
 hotlist()

@@ -9,15 +9,19 @@
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": "",
-            "ADX": "",
+            "RSI": 66.1859,
+            "ADX": 20.0685,
             "MACD": [
-                  "",
-                  ""
+                  {
+                        "Line": 36.2478
+                  },
+                  {
+                        "Signal": 23.3363
+                  }
             ],
-            "OBV": "",
-            "MFI": "",
-            "50 day volume trend": "",
-            "MOMSQZE": ""
+            "OBV": 5413329898.0,
+            "MFI": 81.2717,
+            "50 day volume trend": true,
+            "MOMSQZE": "TRNDu"
       }
 }

@@ -1,4 +1,5 @@
 {
+    "exchg" : "nse",
     "ovrwrt" : true,
     "onlyBuy" : false,
     "onlySell" : false
