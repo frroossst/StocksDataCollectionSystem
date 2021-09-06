@@ -295,7 +295,7 @@ class technicalIndicators():
 
 
 
-def main(num=1,exch="ind",auto=False):
+def main(exch="ind",auto=False):
 
     if not auto:
         print("1. Scrape Data")
@@ -305,10 +305,9 @@ def main(num=1,exch="ind",auto=False):
 
     elif auto:
         ch = 1
-        exchange = "ind"
 
     else:
-        pass
+        raise ValueError ("value not found for auto")
 
     if ch == 1:
         if not auto:

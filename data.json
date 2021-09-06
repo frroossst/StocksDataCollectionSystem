@@ -5,40 +5,40 @@
                         "fullExchangeName": "NSE",
                         "symbol": "ADANIENT.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 5.079806,
-                              "fmt": "507.98%"
+                              "raw": 5.143689,
+                              "fmt": "514.37%"
                         },
                         "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
-                              "raw": 1578.5,
-                              "fmt": "1,578.50"
+                              "raw": 1572.0,
+                              "fmt": "1,572.00"
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1630663198,
-                              "fmt": "3:29PM IST"
+                              "raw": 1630922400,
+                              "fmt": "3:30PM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": -0.3183598,
-                              "fmt": "-0.32%"
+                              "raw": 1.0507458,
+                              "fmt": "1.05%"
                         },
                         "uuid": "89927796-44d5-31a1-abc2-b83ed0472098",
                         "quoteType": "EQUITY",
                         "regularMarketDayRange": {
-                              "raw": "1551.55 - 1581.4",
-                              "fmt": "1,551.55 - 1,581.40"
+                              "raw": "1566.05 - 1628.45",
+                              "fmt": "1,566.05 - 1,628.45"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 1308.05,
-                              "fmt": "1,308.05"
+                              "raw": 1324.5,
+                              "fmt": "1,324.50"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.08831231,
-                              "fmt": "-8.83%"
+                              "raw": -0.078732796,
+                              "fmt": "-7.87%"
                         },
                         "regularMarketDayHigh": {
-                              "raw": 1581.4,
-                              "fmt": "1,581.40"
+                              "raw": 1628.45,
+                              "fmt": "1,628.45"
                         },
                         "tradeable": false,
                         "currency": "INR",
@@ -48,8 +48,8 @@
                               "longFmt": "1,099,810,048"
                         },
                         "regularMarketPreviousClose": {
-                              "raw": 1570.55,
-                              "fmt": "1,570.55"
+                              "raw": 1565.55,
+                              "fmt": "1,565.55"
                         },
                         "fiftyTwoWeekHigh": {
                               "raw": 1717.2,
@@ -57,17 +57,17 @@
                         },
                         "exchangeTimezoneName": "Asia/Kolkata",
                         "marketCap": {
-                              "raw": 1721807667200,
-                              "fmt": "1.722T",
-                              "longFmt": "1,721,807,667,200"
+                              "raw": 1739899535360,
+                              "fmt": "1.74T",
+                              "longFmt": "1,739,899,535,360"
                         },
                         "fiftyTwoWeekHighChange": {
-                              "raw": -151.6499,
-                              "fmt": "-151.65"
+                              "raw": -135.19995,
+                              "fmt": "-135.20"
                         },
                         "regularMarketChange": {
-                              "raw": -5.0,
-                              "fmt": "-5.00"
+                              "raw": 16.449951,
+                              "fmt": "16.45"
                         },
                         "fiftyTwoWeekRange": {
                               "raw": "257.5 - 1717.2",
@@ -77,18 +77,18 @@
                         "firstTradeDateMilliseconds": 1025495100000,
                         "exchangeTimezoneShortName": "IST",
                         "regularMarketPrice": {
-                              "raw": 1565.55,
-                              "fmt": "1,565.55"
+                              "raw": 1582.0,
+                              "fmt": "1,582.00"
                         },
                         "fiftyTwoWeekLow": {
                               "raw": 257.5,
                               "fmt": "257.50"
                         },
-                        "marketState": "CLOSED",
+                        "marketState": "POSTPOST",
                         "regularMarketVolume": {
-                              "raw": 1687392,
-                              "fmt": "1.687M",
-                              "longFmt": "1,687,392"
+                              "raw": 5561207,
+                              "fmt": "5.561M",
+                              "longFmt": "5,561,207"
                         },
                         "market": "in_market",
                         "quoteSourceName": "Delayed Quote",
@@ -97,8 +97,8 @@
                         "exchange": "NSI",
                         "sourceInterval": 15,
                         "regularMarketDayLow": {
-                              "raw": 1551.55,
-                              "fmt": "1,551.55"
+                              "raw": 1566.05,
+                              "fmt": "1,566.05"
                         },
                         "shortName": "ADANI ENTERPRISES",
                         "region": "US",

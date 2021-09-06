@@ -164,8 +164,6 @@ def main(symbol):
     # plt.legend()
     # plt.show()
 
-
-
 for i in NSE:
     main(i)
 

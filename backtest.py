@@ -1,6 +1,7 @@
 ### Currently only testing NSE
 
 from datetime import date, datetime
+from datetime import datetime
 import datetime
 import json
 import math
@@ -18,7 +19,9 @@ def remComma(string):
 
 def hotlist():
     print()
-    print("---HOT LIST---")
+    now = datetime.datetime.now()
+    todayDate = now.strftime("%d/%m/%Y %H:%M:%S")
+    print("---HOT LIST---",todayDate)
     if hotli == []:
         print("Empty")
     else:
