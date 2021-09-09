@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "HDFC Asset Management Company Limited",
             "Symbol": "HDFCAMC.NS",
-            "Current Price": "3,188.75",
-            "Change Percent": "0.78%",
-            "52 Week High": "3,358.90",
+            "Current Price": "3,293.95",
+            "Change Percent": "0.80%",
+            "52 Week High": "3,365.00",
             "52 Week Low": "2,070.05",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 74.4817,
-            "ADX": 16.9264,
+            "RSI": 74.4314,
+            "ADX": 21.8446,
             "MACD": [
                   {
-                        "Line": 55.7502
+                        "Line": 77.3807
                   },
                   {
-                        "Signal": 32.8865
+                        "Signal": 50.2909
                   }
             ],
-            "OBV": 39778124.0,
-            "MFI": 86.9995,
+            "OBV": 40988813.0,
+            "MFI": 88.8904,
             "50 day volume trend": true,
             "MOMSQZE": "TRNDu"
       }

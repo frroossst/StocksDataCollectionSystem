@@ -28,6 +28,8 @@ def hotlist():
         for i in hotli:
             print(i)
 
+    hotli.insert(0,str(date.today()))
+    
     with open("hotlist.json","w") as fobj:
         json.dump(hotli,fobj)
         fobj.close()
