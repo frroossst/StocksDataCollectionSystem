@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Alkem Laboratories Limited",
             "Symbol": "ALKEM.NS",
-            "Current Price": "3,795.00",
-            "Change Percent": "1.16%",
+            "Current Price": "3,795.55",
+            "Change Percent": "1.17%",
             "52 Week High": "3,947.00",
             "52 Week Low": "2,540.05",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 57.6964,
-            "ADX": 47.6512,
+            "RSI": 57.5997,
+            "ADX": 47.7602,
             "MACD": [
                   {
-                        "Line": 78.2047
+                        "Line": 78.1089
                   },
                   {
-                        "Signal": 103.5282
+                        "Signal": 103.5091
                   }
             ],
-            "OBV": 29698912.0,
-            "MFI": 55.0568,
-            "50 day volume trend": false,
-            "MOMSQZE": "TRNDd"
+            "OBV": 29887240.0,
+            "MFI": 59.743,
+            "50 day volume trend": true,
+            "MOMSQZE": "SQZE"
       }
 }

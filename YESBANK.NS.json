@@ -6,21 +6,21 @@
             "Change Percent": "0.46%",
             "52 Week High": "20.75",
             "52 Week Low": "10.50",
-            "Deliverable to Traded Quantity Percent": "66.09%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 30.6428,
+            "RSI": 32.7581,
             "ADX": 26.8688,
             "MACD": [
                   {
-                        "Line": -0.3934
+                        "Line": -0.3894
                   },
                   {
-                        "Signal": -0.4504
+                        "Signal": -0.4496
                   }
             ],
-            "OBV": -1612004569.0,
-            "MFI": 50.1588,
+            "OBV": -1522694428.0,
+            "MFI": 47.5926,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

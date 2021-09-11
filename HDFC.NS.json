@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Housing Development Finance Corporation Limited",
             "Symbol": "HDFC.NS",
-            "Current Price": "2,831.30",
-            "Change Percent": "0.07%",
+            "Current Price": "2,830.10",
+            "Change Percent": "0.03%",
             "52 Week High": "2,896.00",
             "52 Week Low": "1,623.00",
-            "Deliverable to Traded Quantity Percent": "42.9%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 68.3317,
-            "ADX": 37.4574,
+            "RSI": 68.2214,
+            "ADX": 37.4797,
             "MACD": [
                   {
-                        "Line": 58.3539
+                        "Line": 58.2582
                   },
                   {
-                        "Signal": 54.7699
+                        "Signal": 54.7508
                   }
             ],
-            "OBV": 181958789.0,
-            "MFI": 64.3206,
+            "OBV": 183668906.0,
+            "MFI": 66.9436,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

@@ -5,6 +5,7 @@ from datetime import datetime
 import datetime
 import json
 import math
+from typing_extensions import TypeGuard
 
 hotli = []
 
@@ -18,20 +19,29 @@ def remComma(string):
     return modStr
 
 def hotlist():
+
+    with open("hotlist.json","r") as fobj:
+        content = json.load(fobj)
+        fobj.close()
+
     print()
     now = datetime.datetime.now()
-    todayDate = now.strftime("%d/%m/%Y %H:%M:%S")
+    todayDate = now.strftime("%d/%m/%Y")
+    todayDate = str(todayDate)
     print("---HOT LIST---",todayDate)
-    if hotli == []:
-        print("Empty")
-    else:
-        for i in hotli:
-            print(i)
+    try:
+        if hotli == []:
+            raise ValueError ("Hot list is empty")
+        else:
+            for i in hotli:
+                print(i)
+    except ValueError:
+        print("Hotlist is empty")
 
-    hotli.insert(0,str(date.today()))
-    
+    content[todayDate] = hotli
+
     with open("hotlist.json","w") as fobj:
-        json.dump(hotli,fobj)
+        json.dump(content,fobj,indent=6)
         fobj.close()
 
 def main(company):
@@ -62,7 +72,7 @@ def main(company):
         momsqze = content["Technical Indicators"]["MOMSQZE"]
         mfi = content["Technical Indicators"]["MFI"]
     except Exception:
-        raise ValueError ("corrupt or incomplete data")
+        raise ValueError (f"corrupt or incomplete data for {company}")
 
     # Manipulating data
     changePercen = changePercen[:-1]

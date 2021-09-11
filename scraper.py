@@ -1,18 +1,20 @@
+from selenium.webdriver.common.keys import Keys
+from requests_html import HTMLSession
+from matplotlib import pyplot as plt
+from selenium import webdriver
+from bs4 import BeautifulSoup
 import yfinance as yf
 import pandas as pd
-import ta
-import talib
 import numpy as np
-from bs4 import BeautifulSoup
-from matplotlib import pyplot as plt
 import requests
+import talib
 import json
 import time
 import csv
 import os
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from requests_html import HTMLSession
+import ta
+
+
 
 # companies listed on the NASDAQ (USA)
 
