@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Divi's Laboratories Limited",
             "Symbol": "DIVISLAB.NS",
-            "Current Price": "5,054.90",
-            "Change Percent": "-0.59%",
+            "Current Price": "5,094.85",
+            "Change Percent": "0.19%",
             "52 Week High": "5,271.65",
             "52 Week Low": "2,985.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 55.3941,
-            "ADX": 31.1213,
+            "RSI": 58.2128,
+            "ADX": 28.9358,
             "MACD": [
                   {
-                        "Line": 91.0425
+                        "Line": 78.9857
                   },
                   {
-                        "Signal": 92.378
+                        "Signal": 88.8893
                   }
             ],
-            "OBV": 1007678690.0,
-            "MFI": 68.7824,
-            "50 day volume trend": false,
+            "OBV": 1007793780.0,
+            "MFI": 69.134,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDu"
       }
 }

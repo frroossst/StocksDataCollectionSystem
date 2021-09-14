@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "United Spirits Limited",
             "Symbol": "MCDOWELL-N.NS",
-            "Current Price": "755.40",
-            "Change Percent": "0.98%",
+            "Current Price": "758.90",
+            "Change Percent": "0.57%",
             "52 Week High": "777.00",
             "52 Week Low": "494.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 71.5307,
-            "ADX": 39.3524,
+            "RSI": 72.1466,
+            "ADX": 41.7201,
             "MACD": [
                   {
-                        "Line": 24.8868
+                        "Line": 24.9056
                   },
                   {
-                        "Signal": 20.6184
+                        "Signal": 22.1551
                   }
             ],
-            "OBV": 2607015767.0,
-            "MFI": 65.5966,
+            "OBV": 2608147636.0,
+            "MFI": 73.7947,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Bajaj Finance Limited",
             "Symbol": "BAJFINANCE.NS",
-            "Current Price": "7,430.65",
-            "Change Percent": "-0.44%",
+            "Current Price": "7,417.55",
+            "Change Percent": "-0.38%",
             "52 Week High": "7,674.50",
             "52 Week Low": "3,006.90",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "58.25%"
       },
       "Technical Indicators": {
-            "RSI": 76.4228,
-            "ADX": 46.39,
+            "RSI": 74.3304,
+            "ADX": 46.9971,
             "MACD": [
                   {
-                        "Line": 323.1943
+                        "Line": 298.1426
                   },
                   {
-                        "Signal": 300.8454
+                        "Signal": 303.4338
                   }
             ],
-            "OBV": 667525387.0,
-            "MFI": 75.6545,
+            "OBV": 665940514.0,
+            "MFI": 72.0786,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

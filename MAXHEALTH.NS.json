@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Max Healthcare Institute Limited",
             "Symbol": "MAXHEALTH.NS",
-            "Current Price": "381.50",
-            "Change Percent": "-0.90%",
-            "52 Week High": "398.85",
+            "Current Price": "397.10",
+            "Change Percent": "2.73%",
+            "52 Week High": "402.50",
             "52 Week Low": "97.15",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 69.9881,
-            "ADX": 53.8002,
+            "RSI": 74.2704,
+            "ADX": 56.8232,
             "MACD": [
                   {
-                        "Line": 23.4553
+                        "Line": 23.7232
                   },
                   {
-                        "Signal": 21.8706
+                        "Signal": 22.467
                   }
             ],
-            "OBV": 120302173.0,
-            "MFI": 72.6072,
-            "50 day volume trend": false,
+            "OBV": 124030434.0,
+            "MFI": 89.9736,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDu"
       }
 }

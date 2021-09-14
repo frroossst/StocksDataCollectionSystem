@@ -325,7 +325,7 @@ def main(exch="ind",auto=True):
                 if os.path.exists(i):
                     os.remove(i)
 
-            print("collecting data...")
+            # print("collecting data...")
             for i in NASDAQ:
                 symbol = i
                 D = dataHandling()
@@ -346,7 +346,7 @@ def main(exch="ind",auto=True):
                     if os.path.exists(i):
                         os.remove(i)
 
-            print("collecting data...")
+            # print("collecting data...")
             for i in NSE:
                 symbol = i
                 D = dataHandling()
