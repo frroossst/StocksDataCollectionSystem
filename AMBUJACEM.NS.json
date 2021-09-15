@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Ambuja Cements Limited",
             "Symbol": "AMBUJACEM.NS",
-            "Current Price": "432.45",
-            "Change Percent": "-0.87%",
+            "Current Price": "435.20",
+            "Change Percent": "0.64%",
             "52 Week High": "442.50",
             "52 Week Low": "197.45",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "44.66%"
       },
       "Technical Indicators": {
-            "RSI": 63.57,
-            "ADX": 28.1105,
+            "RSI": 65.1838,
+            "ADX": 27.1088,
             "MACD": [
                   {
-                        "Line": 11.3552
+                        "Line": 10.9556
                   },
                   {
-                        "Signal": 10.3842
+                        "Signal": 10.4097
                   }
             ],
-            "OBV": 1450025797.0,
-            "MFI": 80.2055,
+            "OBV": 1457499445.0,
+            "MFI": 79.1341,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

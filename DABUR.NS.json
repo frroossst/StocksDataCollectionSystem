@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Dabur India Limited",
             "Symbol": "DABUR.NS",
-            "Current Price": "639.20",
-            "Change Percent": "-0.16%",
+            "Current Price": "642.30",
+            "Change Percent": "0.48%",
             "52 Week High": "651.35",
             "52 Week Low": "478.80",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "36.32%"
       },
       "Technical Indicators": {
-            "RSI": 67.1964,
-            "ADX": 36.8199,
+            "RSI": 68.6368,
+            "ADX": 37.5914,
             "MACD": [
                   {
-                        "Line": 13.3771
+                        "Line": 13.2249
                   },
                   {
-                        "Signal": 11.984
+                        "Signal": 12.1514
                   }
             ],
-            "OBV": 1206580045.0,
-            "MFI": 76.6387,
+            "OBV": 1207408687.0,
+            "MFI": 75.5083,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

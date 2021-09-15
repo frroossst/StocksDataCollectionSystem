@@ -2,13 +2,16 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-with open("NSE.json","r") as fobj:
-    content = json.load(fobj)
-    fobj.close()
+urlASM = "https://www.nseindia.com/reports/asm/"
+urlGSM = "https://www.nseindia.com/reports/gsm/"
 
-for i in content:
-    symbol = i
+sourceASM = requests.get("https://www.nseindia.com/reports/asm/").text
+sourceGSM = requests.get(urlGSM).text
 
-url = f"https://www.tickertape.in/stocks/itc-ITC?checklist=basic"
+soupASM = BeautifulSoup(sourceASM,"lxml")
+soupGMS = BeautifulSoup(sourceGSM,"lxml")
 
-souce = requests.get(url)
+print(soupASM.prettify())
+
+tableASM = soupASM.find("table",id = "asmLTTable")
+print(tableASM)

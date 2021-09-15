@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Coal India Limited",
             "Symbol": "COALINDIA.NS",
-            "Current Price": "154.70",
-            "Change Percent": "0.06%",
+            "Current Price": "155.90",
+            "Change Percent": "0.78%",
             "52 Week High": "165.00",
             "52 Week Low": "109.55",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 68.861,
-            "ADX": 21.9907,
+            "RSI": 70.3686,
+            "ADX": 23.9906,
             "MACD": [
                   {
-                        "Line": 2.4042
+                        "Line": 2.8902
                   },
                   {
-                        "Signal": 0.7849
+                        "Signal": 1.2195
                   }
             ],
-            "OBV": 1082473842.0,
-            "MFI": 85.6105,
+            "OBV": 1075949212.0,
+            "MFI": 85.1811,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }
