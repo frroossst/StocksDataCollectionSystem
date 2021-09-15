@@ -1,17 +1,23 @@
 from bs4 import BeautifulSoup
+
 import requests
 import json
 
-urlASM = "https://www.nseindia.com/reports/asm/"
-urlGSM = "https://www.nseindia.com/reports/gsm/"
+headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
 
-sourceASM = requests.get("https://www.nseindia.com/reports/asm/").text
-sourceGSM = requests.get(urlGSM).text
+urlASM = "https://www.nseindia.com/reports/asm"
+urlGSM = "https://www.nseindia.com/reports/gsm"
+
+sourceASM = requests.get(urlASM, headers=headers).text
+sourceGSM = requests.get(urlGSM, headers=headers).text
 
 soupASM = BeautifulSoup(sourceASM,"lxml")
 soupGMS = BeautifulSoup(sourceGSM,"lxml")
 
-print(soupASM.prettify())
+tableASMLong = soupASM.find("div", { "id" : "asm-lt-table-container"})
+print(tableASMLong)
 
-tableASM = soupASM.find("table",id = "asmLTTable")
-print(tableASM)
+tableASMLong = soupASM.find("table",id = "asmLTTable")
+tableASMShort = soupASM.find("table",id = "asmSTTable")
+
+

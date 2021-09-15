@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Grasim Industries Limited",
             "Symbol": "GRASIM.NS",
-            "Current Price": "1,602.10",
-            "Change Percent": "-0.60%",
+            "Current Price": "1,606.05",
+            "Change Percent": "-0.36%",
             "52 Week High": "1,622.65",
             "52 Week Low": "675.50",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 67.1369,
+            "RSI": 68.3825,
             "ADX": 25.7814,
             "MACD": [
                   {
-                        "Line": 25.2721
+                        "Line": 25.5912
                   },
                   {
-                        "Signal": 10.0657
+                        "Signal": 10.1295
                   }
             ],
-            "OBV": 556100629.0,
-            "MFI": 95.0823,
+            "OBV": 556020749.0,
+            "MFI": 95.1052,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

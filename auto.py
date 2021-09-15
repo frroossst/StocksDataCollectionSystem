@@ -15,4 +15,5 @@ except Exception as e:
 
 end = time.time()
 
-print(f"completed execution in {round((end - start),2)}")
+print() 
+print(f"completed execution in {round((end - start),2)} second(s)")

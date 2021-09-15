@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Pidilite Industries Limited",
             "Symbol": "PIDILITIND.NS",
-            "Current Price": "2,420.95",
-            "Change Percent": "0.50%",
+            "Current Price": "2,419.45",
+            "Change Percent": "0.44%",
             "52 Week High": "2,424.90",
             "52 Week Low": "1,390.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 72.5987,
+            "RSI": 72.4523,
             "ADX": 26.7315,
             "MACD": [
                   {
-                        "Line": 41.5052
+                        "Line": 41.3855
                   },
                   {
-                        "Signal": 27.5872
+                        "Signal": 27.5633
                   }
             ],
-            "OBV": 224412786.0,
-            "MFI": 87.329,
+            "OBV": 224468021.0,
+            "MFI": 87.4246,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }
