@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Maruti Suzuki India Limited",
             "Symbol": "MARUTI.NS",
-            "Current Price": "6,888.00",
-            "Change Percent": "-0.09%",
+            "Current Price": "6,912.90",
+            "Change Percent": "0.06%",
             "52 Week High": "8,329.00",
             "52 Week Low": "6,270.15",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 49.7838,
-            "ADX": 22.5096,
+            "RSI": 51.5153,
+            "ADX": 20.939,
             "MACD": [
                   {
-                        "Line": -41.1422
+                        "Line": -31.4299
                   },
                   {
-                        "Signal": -68.406
+                        "Signal": -60.7427
                   }
             ],
-            "OBV": 485067494.0,
-            "MFI": 69.3098,
+            "OBV": 485907048.0,
+            "MFI": 78.1943,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Abbott India Limited",
             "Symbol": "ABBOTINDIA.NS",
-            "Current Price": "21,121.30",
-            "Change Percent": "-1.55%",
-            "52 Week High": "21,498.00",
+            "Current Price": "21,219.45",
+            "Change Percent": "0.45%",
+            "52 Week High": "21,870.00",
             "52 Week Low": "13,959.80",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 72.5232,
-            "ADX": 46.2903,
+            "RSI": 73.3153,
+            "ADX": 46.7172,
             "MACD": [
                   {
-                        "Line": 721.6671
+                        "Line": 739.8509
                   },
                   {
-                        "Signal": 568.5126
+                        "Signal": 602.8185
                   }
             ],
-            "OBV": 2832996.0,
-            "MFI": 94.0276,
+            "OBV": 2833515.0,
+            "MFI": 87.6117,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Apollo Hospitals Enterprise Limited",
             "Symbol": "APOLLOHOSP.NS",
-            "Current Price": "4,726.55",
-            "Change Percent": "-0.12%",
+            "Current Price": "4,848.70",
+            "Change Percent": "1.18%",
             "52 Week High": "5,122.00",
-            "52 Week Low": "1,678.05",
+            "52 Week Low": "1,683.40",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 55.3725,
-            "ADX": 41.966,
+            "RSI": 60.9893,
+            "ADX": 41.1079,
             "MACD": [
                   {
-                        "Line": 142.3073
+                        "Line": 140.8006
                   },
                   {
-                        "Signal": 199.3416
+                        "Signal": 188.4937
                   }
             ],
-            "OBV": 242546195.0,
-            "MFI": 52.7683,
+            "OBV": 243988452.0,
+            "MFI": 61.8001,
             "50 day volume trend": false,
             "MOMSQZE": "TRND"
       }

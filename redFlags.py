@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-
+import bs4 as bs
 import requests
 import json
 
@@ -11,13 +11,7 @@ urlGSM = "https://www.nseindia.com/reports/gsm"
 sourceASM = requests.get(urlASM, headers=headers).text
 sourceGSM = requests.get(urlGSM, headers=headers).text
 
-soupASM = BeautifulSoup(sourceASM,"lxml")
-soupGMS = BeautifulSoup(sourceGSM,"lxml")
+soupASM = bs.BeautifulSoup(sourceASM,"lxml")
+soupGMS = bs.BeautifulSoup(sourceGSM,"lxml")
 
-tableASMLong = soupASM.find("div", { "id" : "asm-lt-table-container"})
-print(tableASMLong)
-
-tableASMLong = soupASM.find("table",id = "asmLTTable")
-tableASMShort = soupASM.find("table",id = "asmSTTable")
-
-
+print(soupASM)

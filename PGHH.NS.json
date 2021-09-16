@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Procter & Gamble Hygiene and Health Care Limited",
             "Symbol": "PGHH.NS",
-            "Current Price": "14,044.90",
-            "Change Percent": "1.16%",
+            "Current Price": "14,020.00",
+            "Change Percent": "0.51%",
             "52 Week High": "14,590.45",
             "52 Week Low": "9,691.40",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 63.4569,
-            "ADX": 36.0837,
+            "RSI": 63.1244,
+            "ADX": 36.0289,
             "MACD": [
                   {
-                        "Line": 291.1046
+                        "Line": 280.3451
                   },
                   {
-                        "Signal": 250.3986
+                        "Signal": 255.1671
                   }
             ],
-            "OBV": 2733505.0,
-            "MFI": 79.9632,
-            "50 day volume trend": false,
+            "OBV": 2751685.0,
+            "MFI": 69.6766,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDu"
       }
 }
