@@ -3,7 +3,7 @@ TA_Lib==0.4.21
 pandas_datareader==0.9.0
 pandas==1.1.5
 matplotlib==3.3.0
-requests==2.18.4
+requests>=2.20.0
 yfinance==0.1.63
 requests_html==0.10.0
 ta==0.7.0
