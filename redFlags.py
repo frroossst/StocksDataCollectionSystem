@@ -17,26 +17,39 @@ PATH = content["path"]
 urlASM = "https://www.nseindia.com/reports/asm"
 urlGSM = "https://www.nseindia.com/reports/gsm"
 
-driver = webdriver.Chrome(PATH)
-driver.get(urlASM)
-time.sleep(1.5)
-search = driver.find_element_by_id("asmLTTable")
-search = search.text
-li = search.split(" ")
-leng = len(li)
-
-count = 0
-while count < leng:
-    print(li[count])
+def getASM():
     try:
-        print(type(li[count]))
-        print(int(li[count]))
-        if int(li[count]).isnum():
-            asmLong.append(li[count +1])
-        else:
-            count += 1
-    except:
-        count += 1
-        continue
+        driver = webdriver.Chrome(PATH)
+        driver.get(urlASM)
+        time.sleep(2.5)
+        search = driver.find_element_by_id("asmLTTable")
+        search = search.text
+        li = search.split(" ")
+        leng = len(li)
 
-print(asmLong)
+        count = 0
+
+        print(li)
+
+        if leng == 9:
+            driver.quit()
+            getASM()
+
+        while count < leng:
+            i = li[count]
+            try:
+                i = int(i)
+                asmLong.append(li[count + 1])
+                count += 2
+            except:
+                pass
+            finally:
+                count += 1
+
+        print(asmLong)  
+        driver.quit()    
+    except:
+        driver.quit()
+        getASM()  
+    
+getASM()
