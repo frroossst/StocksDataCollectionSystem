@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Tata Consumer Products Limited",
             "Symbol": "TATACONSUM.NS",
-            "Current Price": "872.10",
-            "Change Percent": "0.06%",
+            "Current Price": "869.90",
+            "Change Percent": "-0.47%",
             "52 Week High": "889.00",
             "52 Week Low": "458.95",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 65.936,
-            "ADX": 45.1933,
+            "RSI": 63.5138,
+            "ADX": 44.2502,
             "MACD": [
                   {
-                        "Line": 21.5712
+                        "Line": 20.1846
                   },
                   {
-                        "Signal": 23.8102
+                        "Signal": 23.1061
                   }
             ],
-            "OBV": 2665423376.0,
-            "MFI": 74.9653,
+            "OBV": 2664728996.0,
+            "MFI": 67.7116,
             "50 day volume trend": false,
             "MOMSQZE": "TRND"
       }

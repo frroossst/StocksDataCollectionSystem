@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Hindustan Unilever Limited",
             "Symbol": "HINDUNILVR.NS",
-            "Current Price": "2,777.00",
-            "Change Percent": "0.06%",
+            "Current Price": "2,761.35",
+            "Change Percent": "-0.25%",
             "52 Week High": "2,825.00",
             "52 Week Low": "2,000.05",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 71.4522,
-            "ADX": 58.957,
+            "RSI": 67.7204,
+            "ADX": 58.9274,
             "MACD": [
                   {
-                        "Line": 81.5089
+                        "Line": 75.6465
                   },
                   {
-                        "Signal": 86.6657
+                        "Signal": 84.3502
                   }
             ],
-            "OBV": 535763985.0,
-            "MFI": 63.6066,
+            "OBV": 533019350.0,
+            "MFI": 60.3268,
             "50 day volume trend": false,
             "MOMSQZE": "TRND"
       }

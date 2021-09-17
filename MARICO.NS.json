@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Marico Limited",
             "Symbol": "MARICO.NS",
-            "Current Price": "563.10",
-            "Change Percent": "0.17%",
+            "Current Price": "557.50",
+            "Change Percent": "-0.92%",
             "52 Week High": "587.35",
             "52 Week Low": "333.00",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "46.33%"
       },
       "Technical Indicators": {
-            "RSI": 60.3348,
-            "ADX": 36.2955,
+            "RSI": 56.5642,
+            "ADX": 35.505,
             "MACD": [
                   {
-                        "Line": 10.6294
+                        "Line": 9.8335
                   },
                   {
-                        "Signal": 9.0902
+                        "Signal": 9.2338
                   }
             ],
-            "OBV": 882785512.0,
-            "MFI": 74.9573,
+            "OBV": 882411174.0,
+            "MFI": 72.4119,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }
