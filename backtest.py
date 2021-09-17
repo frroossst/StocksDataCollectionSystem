@@ -5,7 +5,6 @@ from datetime import datetime
 import datetime
 import json
 import math
-from typing_extensions import TypeGuard
 
 hotli = []
 
