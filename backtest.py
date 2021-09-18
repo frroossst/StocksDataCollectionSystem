@@ -19,8 +19,6 @@ def remComma(string):
 
 def hotlist():
 
-    showRedFlags = False
-
     with open("hotlist.json","r") as fobj:
         content = json.load(fobj)
         fobj.close()
@@ -29,10 +27,11 @@ def hotlist():
         flags = json.load(fobj)
         fobj.close()
 
-    with open("settings.json","r") as fobj:
-        settings = json.load(fobj)
-        showRedFlags = settings["showFlagsHotlist"]
-        fobj.close()
+    redflags = []
+
+    flagsli = list(flags.values())
+    for i in flagsli:
+        redflags.extend(i)
 
     print()
     now = datetime.datetime.now()
@@ -44,7 +43,7 @@ def hotlist():
             raise ValueError ("Hot list is empty")
         else:
             for i in hotli:
-                if i not in flags.values():
+                if i not in redflags:
                     print(i)
                 else:
                     if showRedFlags:
@@ -306,6 +305,7 @@ with open("settings.json","r") as fobj:
     ovrwrt = settings["ovrwrt"]
     onlyBuy = settings["onlyBuy"]
     onlySell = settings["onlySell"]
+    showRedFlags = settings["showFlagsHotlist"]
 
 with open("NSE.json","r") as fobj:
     NSE = json.load(fobj)
