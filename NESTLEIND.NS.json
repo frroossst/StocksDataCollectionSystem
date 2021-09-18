@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Nestl\u00e9 India Limited",
             "Symbol": "NESTLEIND.NS",
-            "Current Price": "20,231.10",
-            "Change Percent": "1.01%",
+            "Current Price": "20,175.70",
+            "Change Percent": "0.74%",
             "52 Week High": "20,609.15",
             "52 Week Low": "15,100.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 60.71,
+            "RSI": 59.8398,
             "ADX": 41.397,
             "MACD": [
                   {
-                        "Line": 411.7956
+                        "Line": 406.6662
                   },
                   {
-                        "Signal": 473.2465
+                        "Signal": 472.2206
                   }
             ],
-            "OBV": 12624879.0,
-            "MFI": 42.1969,
-            "50 day volume trend": false,
+            "OBV": 12675113.0,
+            "MFI": 44.5915,
+            "50 day volume trend": true,
             "MOMSQZE": "SQZE"
       }
 }

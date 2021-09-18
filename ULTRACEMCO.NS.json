@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "UltraTech Cement Limited",
             "Symbol": "ULTRACEMCO.NS",
-            "Current Price": "7,691.90",
-            "Change Percent": "-0.95%",
+            "Current Price": "7,711.85",
+            "Change Percent": "-0.69%",
             "52 Week High": "8,073.30",
             "52 Week Low": "3,753.90",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 49.3465,
-            "ADX": 25.4517,
+            "RSI": 50.3106,
+            "ADX": 25.4992,
             "MACD": [
                   {
-                        "Line": 96.4114
+                        "Line": 98.0029
                   },
                   {
-                        "Signal": 123.3055
+                        "Signal": 123.6238
                   }
             ],
-            "OBV": 108214990.0,
-            "MFI": 66.5096,
-            "50 day volume trend": false,
+            "OBV": 107952018.0,
+            "MFI": 62.0423,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDu"
       }
 }

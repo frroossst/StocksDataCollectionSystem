@@ -5,8 +5,8 @@
                         "fullExchangeName": "NSE",
                         "symbol": "YESBANK.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 0.27619043,
-                              "fmt": "27.62%"
+                              "raw": 0.26190478,
+                              "fmt": "26.19%"
                         },
                         "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
@@ -15,26 +15,26 @@
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1631866611,
-                              "fmt": "1:46PM IST"
+                              "raw": 1631872802,
+                              "fmt": "3:30PM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": -8.843539,
-                              "fmt": "-8.84%"
+                              "raw": -9.863944,
+                              "fmt": "-9.86%"
                         },
-                        "uuid": "4a22ab6a-17b2-3225-870d-20f9e83a1249",
                         "quoteType": "EQUITY",
+                        "uuid": "4a22ab6a-17b2-3225-870d-20f9e83a1249",
                         "regularMarketDayRange": {
                               "raw": "12.95 - 14.5",
                               "fmt": "12.95 - 14.50"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 2.8999996,
-                              "fmt": "2.90"
+                              "raw": 2.75,
+                              "fmt": "2.75"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.35421687,
-                              "fmt": "-35.42%"
+                              "raw": -0.36144578,
+                              "fmt": "-36.14%"
                         },
                         "regularMarketDayHigh": {
                               "raw": 14.5,
@@ -47,64 +47,63 @@
                               "fmt": "25.055B",
                               "longFmt": "25,054,900,224"
                         },
-                        "regularMarketPreviousClose": {
-                              "raw": 14.7,
-                              "fmt": "14.70"
-                        },
                         "fiftyTwoWeekHigh": {
                               "raw": 20.75,
                               "fmt": "20.75"
                         },
+                        "regularMarketPreviousClose": {
+                              "raw": 14.7,
+                              "fmt": "14.70"
+                        },
                         "exchangeTimezoneName": "Asia/Kolkata",
                         "marketCap": {
-                              "raw": 336264953856,
-                              "fmt": "336.265B",
-                              "longFmt": "336,264,953,856"
+                              "raw": 332478283776,
+                              "fmt": "332.478B",
+                              "longFmt": "332,478,283,776"
                         },
                         "fiftyTwoWeekHighChange": {
-                              "raw": -7.3500004,
-                              "fmt": "-7.35"
-                        },
-                        "regularMarketChange": {
-                              "raw": -1.3000002,
-                              "fmt": "-1.30"
+                              "raw": -7.5,
+                              "fmt": "-7.50"
                         },
                         "fiftyTwoWeekRange": {
                               "raw": "10.5 - 20.75",
                               "fmt": "10.50 - 20.75"
                         },
+                        "regularMarketChange": {
+                              "raw": -1.4499998,
+                              "fmt": "-1.45"
+                        },
                         "exchangeDataDelayedBy": 15,
                         "firstTradeDateMilliseconds": 1121139900000,
                         "exchangeTimezoneShortName": "IST",
+                        "marketState": "CLOSED",
+                        "regularMarketPrice": {
+                              "raw": 13.25,
+                              "fmt": "13.25"
+                        },
                         "fiftyTwoWeekLow": {
                               "raw": 10.5,
                               "fmt": "10.50"
                         },
-                        "regularMarketPrice": {
-                              "raw": 13.4,
-                              "fmt": "13.40"
-                        },
-                        "marketState": "REGULAR",
-                        "regularMarketVolume": {
-                              "raw": 479211795,
-                              "fmt": "479.212M",
-                              "longFmt": "479,211,795"
-                        },
                         "market": "in_market",
-                        "quoteSourceName": "Free Realtime Quote",
+                        "regularMarketVolume": {
+                              "raw": 582712856,
+                              "fmt": "582.713M",
+                              "longFmt": "582,712,856"
+                        },
+                        "quoteSourceName": "Delayed Quote",
                         "messageBoardId": "finmb_9674016",
                         "priceHint": 2,
+                        "sourceInterval": 15,
                         "regularMarketDayLow": {
                               "raw": 12.95,
                               "fmt": "12.95"
                         },
-                        "sourceInterval": 15,
                         "exchange": "NSI",
-                        "shortName": "YES BANK",
                         "region": "US",
+                        "shortName": "YES BANK",
                         "triggerable": true,
-                        "longName": "Yes Bank Limited",
-                        "delivPercen": "63.18%"
+                        "longName": "Yes Bank Limited"
                   }
             ],
             "error": null

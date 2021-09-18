@@ -4,6 +4,12 @@ import time
 
 headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
 
+redflagsFMT = {
+    "asmShort" : [],
+    "asmLong" : [],
+    "gsm" : []
+}
+
 asmShort = []
 asmLong = []
 gsm = []
@@ -23,9 +29,6 @@ def fmt(li):
         st = i + ".NS"
         newLi.append(st)
     return newLi
-
-def getGSM():
-    pass
 
 def getASMLong():
     try:
@@ -51,8 +54,8 @@ def getASMLong():
                 asmLong.append(li[count + 1])
             count += 1
 
+        driver.quit()
         asmLongFMT = fmt(asmLong)
-
         return asmLongFMT    
         
     except:
@@ -72,7 +75,7 @@ def getASMShort():
 
         if leng == 9:
             driver.quit()
-            getASMLong()
+            getASMShort()
 
         eg = "\n"
 
@@ -82,13 +85,49 @@ def getASMShort():
                 asmShort.append(li[count + 1])
             count += 1
 
+        driver.quit()
         asmShortFMT = fmt(asmShort)
-
         return asmShortFMT    
         
     except:
-        getASMLong()
+        getASMShort()
+
+def getGSM():
+    try:
+        driver = webdriver.Chrome(PATH)
+        driver.get(urlGSM)
+        time.sleep(2.5)
+        search = driver.find_element_by_id("gsmTable")
+        search = search.text
+        li = search.split(" ")
+        leng = len(li)
+
+        count = 0
+
+        eg = "\n"
+
+        while count < leng:
+            i = li[count]
+            if eg in i:
+                gsm.append(li[count + 1])
+            count += 1
+
+        driver.quit()
+        gsmFMT = fmt(gsm)
+        return gsmFMT    
+        
+    except:
+        getGSM()
+
 
 asmLong = getASMLong()
 asmShort = getASMShort()
-gms = getGSM()
+gsm = getGSM()
+
+redflagsFMT["asmShort"] = asmShort
+redflagsFMT["asmLong"] = asmLong
+redflagsFMT["gsm"] = gsm
+
+with open("redflags.json","w") as fobj:
+    json.dump(redflagsFMT,fobj,indent=6)
+    fobj.close()

@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Bosch Limited",
             "Symbol": "BOSCHLTD.NS",
-            "Current Price": "15,053.30",
-            "Change Percent": "-1.48%",
+            "Current Price": "15,076.00",
+            "Change Percent": "-1.33%",
             "52 Week High": "16,830.05",
             "52 Week Low": "11,265.05",
-            "Deliverable to Traded Quantity Percent": "54.55%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 64.6221,
+            "RSI": 65.2955,
             "ADX": 20.1369,
             "MACD": [
                   {
-                        "Line": 109.3451
+                        "Line": 111.156
                   },
                   {
-                        "Signal": -44.4288
+                        "Signal": -44.0667
                   }
             ],
-            "OBV": 6767564.0,
-            "MFI": 80.7921,
+            "OBV": 6736091.0,
+            "MFI": 76.4023,
             "50 day volume trend": true,
             "MOMSQZE": "TRNDu"
       }

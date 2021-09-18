@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Bharat Petroleum Corporation Limited",
             "Symbol": "BPCL.NS",
-            "Current Price": "435.05",
-            "Change Percent": "-0.91%",
+            "Current Price": "436.25",
+            "Change Percent": "-0.64%",
             "52 Week High": "503.00",
             "52 Week Low": "325.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 32.3942,
+            "RSI": 32.7612,
             "ADX": 22.7439,
             "MACD": [
                   {
-                        "Line": 1.1396
+                        "Line": 1.2353
                   },
                   {
-                        "Signal": 5.9515
+                        "Signal": 5.9707
                   }
             ],
-            "OBV": 2333420339.0,
-            "MFI": 45.4406,
+            "OBV": 2328832141.0,
+            "MFI": 43.8377,
             "50 day volume trend": true,
             "MOMSQZE": "TRNDd"
       }

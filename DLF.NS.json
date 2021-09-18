@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "DLF Limited",
             "Symbol": "DLF.NS",
-            "Current Price": "338.00",
-            "Change Percent": "-1.29%",
+            "Current Price": "334.75",
+            "Change Percent": "-2.23%",
             "52 Week High": "359.25",
             "52 Week Low": "142.50",
-            "Deliverable to Traded Quantity Percent": "74.78%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 55.3262,
+            "RSI": 52.4786,
             "ADX": 18.7348,
             "MACD": [
                   {
-                        "Line": 4.4444
+                        "Line": 4.1852
                   },
                   {
-                        "Signal": 3.5026
+                        "Signal": 3.4507
                   }
             ],
-            "OBV": 2953259276.0,
-            "MFI": 73.6652,
+            "OBV": 2951032400.0,
+            "MFI": 72.1528,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

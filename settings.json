@@ -3,5 +3,6 @@
     "ovrwrt" : true,
     "onlyBuy" : false,
     "onlySell" : false,
-    "path" : "/home/home/Desktop/Projects/Stonks/webdriverChrome/chromedriver"
+    "path" : "/home/home/Desktop/Projects/Stonks/webdriverChrome/chromedriver",
+    "showFlagsHotlist" : false 
 }

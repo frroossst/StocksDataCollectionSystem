@@ -3,6 +3,7 @@ import time
 start = time.time()
 
 def program():
+    import flags
     import scraper
     import algorithm
     import backtest
