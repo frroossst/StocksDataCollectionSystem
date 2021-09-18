@@ -17,7 +17,17 @@ PATH = content["path"]
 urlASM = "https://www.nseindia.com/reports/asm"
 urlGSM = "https://www.nseindia.com/reports/gsm"
 
-def getASM():
+def fmt(li):
+    newLi = []
+    for i in li:
+        st = i + ".NS"
+        newLi.append(st)
+    return newLi
+
+def getGSM():
+    pass
+
+def getASMLong():
     try:
         driver = webdriver.Chrome(PATH)
         driver.get(urlASM)
@@ -29,27 +39,56 @@ def getASM():
 
         count = 0
 
-        print(li)
-
         if leng == 9:
             driver.quit()
-            getASM()
+            getASMLong()
+
+        eg = "\n"
 
         while count < leng:
             i = li[count]
-            try:
-                i = int(i)
+            if eg in i:
                 asmLong.append(li[count + 1])
-                count += 2
-            except:
-                pass
-            finally:
-                count += 1
+            count += 1
 
-        print(asmLong)  
-        driver.quit()    
+        asmLongFMT = fmt(asmLong)
+
+        return asmLongFMT    
+        
     except:
-        driver.quit()
-        getASM()  
-    
-getASM()
+        getASMLong()
+
+def getASMShort():
+    try:
+        driver = webdriver.Chrome(PATH)
+        driver.get(urlASM)
+        time.sleep(2.5)
+        search = driver.find_element_by_id("asmSTTable")
+        search = search.text
+        li = search.split(" ")
+        leng = len(li)
+
+        count = 0
+
+        if leng == 9:
+            driver.quit()
+            getASMLong()
+
+        eg = "\n"
+
+        while count < leng:
+            i = li[count]
+            if eg in i:
+                asmShort.append(li[count + 1])
+            count += 1
+
+        asmShortFMT = fmt(asmShort)
+
+        return asmShortFMT    
+        
+    except:
+        getASMLong()
+
+asmLong = getASMLong()
+asmShort = getASMShort()
+gms = getGSM()
