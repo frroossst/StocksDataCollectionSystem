@@ -19,6 +19,7 @@ with open("settings.json","r") as fobj:
     fobj.close()
 
 PATH = content["path"]
+waitPeriod = content["chromiumWait"]
 
 urlASM = "https://www.nseindia.com/reports/asm"
 urlGSM = "https://www.nseindia.com/reports/gsm"
@@ -34,7 +35,7 @@ def getASMLong():
     try:
         driver = webdriver.Chrome(PATH)
         driver.get(urlASM)
-        time.sleep(2.5)
+        time.sleep(waitPeriod)
         search = driver.find_element_by_id("asmLTTable")
         search = search.text
         li = search.split(" ")
@@ -56,6 +57,7 @@ def getASMLong():
 
         driver.quit()
         asmLongFMT = fmt(asmLong)
+        print("[OK] ASM Long Term")
         return asmLongFMT    
         
     except:
@@ -65,7 +67,7 @@ def getASMShort():
     try:
         driver = webdriver.Chrome(PATH)
         driver.get(urlASM)
-        time.sleep(2.5)
+        time.sleep(waitPeriod)
         search = driver.find_element_by_id("asmSTTable")
         search = search.text
         li = search.split(" ")
@@ -87,6 +89,7 @@ def getASMShort():
 
         driver.quit()
         asmShortFMT = fmt(asmShort)
+        print("[OK] ASM Short Term")
         return asmShortFMT    
         
     except:
@@ -114,6 +117,7 @@ def getGSM():
 
         driver.quit()
         gsmFMT = fmt(gsm)
+        print("[OK] GSM")
         return gsmFMT    
         
     except:

@@ -9,7 +9,6 @@ import numpy as np
 import requests
 import talib
 import json
-import time
 import csv
 import os
 import ta

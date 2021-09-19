@@ -22,8 +22,8 @@
                               "raw": -9.863944,
                               "fmt": "-9.86%"
                         },
-                        "quoteType": "EQUITY",
                         "uuid": "4a22ab6a-17b2-3225-870d-20f9e83a1249",
+                        "quoteType": "EQUITY",
                         "regularMarketDayRange": {
                               "raw": "12.95 - 14.5",
                               "fmt": "12.95 - 14.50"
@@ -47,36 +47,35 @@
                               "fmt": "25.055B",
                               "longFmt": "25,054,900,224"
                         },
-                        "fiftyTwoWeekHigh": {
-                              "raw": 20.75,
-                              "fmt": "20.75"
-                        },
                         "regularMarketPreviousClose": {
                               "raw": 14.7,
                               "fmt": "14.70"
                         },
+                        "fiftyTwoWeekHigh": {
+                              "raw": 20.75,
+                              "fmt": "20.75"
+                        },
                         "exchangeTimezoneName": "Asia/Kolkata",
+                        "fiftyTwoWeekHighChange": {
+                              "raw": -7.5,
+                              "fmt": "-7.50"
+                        },
                         "marketCap": {
                               "raw": 332478283776,
                               "fmt": "332.478B",
                               "longFmt": "332,478,283,776"
                         },
-                        "fiftyTwoWeekHighChange": {
-                              "raw": -7.5,
-                              "fmt": "-7.50"
+                        "regularMarketChange": {
+                              "raw": -1.4499998,
+                              "fmt": "-1.45"
                         },
                         "fiftyTwoWeekRange": {
                               "raw": "10.5 - 20.75",
                               "fmt": "10.50 - 20.75"
                         },
-                        "regularMarketChange": {
-                              "raw": -1.4499998,
-                              "fmt": "-1.45"
-                        },
-                        "exchangeDataDelayedBy": 15,
                         "firstTradeDateMilliseconds": 1121139900000,
+                        "exchangeDataDelayedBy": 15,
                         "exchangeTimezoneShortName": "IST",
-                        "marketState": "CLOSED",
                         "regularMarketPrice": {
                               "raw": 13.25,
                               "fmt": "13.25"
@@ -85,25 +84,27 @@
                               "raw": 10.5,
                               "fmt": "10.50"
                         },
-                        "market": "in_market",
+                        "marketState": "CLOSED",
                         "regularMarketVolume": {
                               "raw": 582712856,
                               "fmt": "582.713M",
                               "longFmt": "582,712,856"
                         },
+                        "market": "in_market",
                         "quoteSourceName": "Delayed Quote",
                         "messageBoardId": "finmb_9674016",
                         "priceHint": 2,
                         "sourceInterval": 15,
+                        "exchange": "NSI",
                         "regularMarketDayLow": {
                               "raw": 12.95,
                               "fmt": "12.95"
                         },
-                        "exchange": "NSI",
-                        "region": "US",
                         "shortName": "YES BANK",
+                        "region": "US",
                         "triggerable": true,
-                        "longName": "Yes Bank Limited"
+                        "longName": "Yes Bank Limited",
+                        "delivPercen": "70.38%"
                   }
             ],
             "error": null
