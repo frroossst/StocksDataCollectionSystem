@@ -123,10 +123,24 @@ def getGSM():
     except:
         getGSM()
 
+def checkNone():
+    with open("redflags.json","r") as fobj:
+        content = json.load(fobj)
+        if content["asmShort"] == None:
+            getASMShort()
+        elif content["asmLong"] == None:
+            getASMLong()
+        elif content["gsm"] == None:
+            getGSM()
+        else:
+            pass
 
-asmLong = getASMLong()
-asmShort = getASMShort()
-gsm = getGSM()
+try:
+    asmLong = getASMLong()
+    asmShort = getASMShort()
+    gsm = getGSM()
+except Exception as e:
+    print(f"[ERRPR] {e}")
 
 redflagsFMT["asmShort"] = asmShort
 redflagsFMT["asmLong"] = asmLong
@@ -135,3 +149,5 @@ redflagsFMT["gsm"] = gsm
 with open("redflags.json","w") as fobj:
     json.dump(redflagsFMT,fobj,indent=6)
     fobj.close()
+
+checkNone()

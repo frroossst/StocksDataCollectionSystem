@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Godrej Consumer Products Limited",
             "Symbol": "GODREJCP.NS",
-            "Current Price": "1,090.60",
-            "Change Percent": "-1.28%",
+            "Current Price": "1,080.00",
+            "Change Percent": "-0.97%",
             "52 Week High": "1,138.00",
             "52 Week Low": "646.15",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 57.3003,
-            "ADX": 45.2128,
+            "RSI": 53.4086,
+            "ADX": 43.0715,
             "MACD": [
                   {
-                        "Line": 29.3444
+                        "Line": 25.5099
                   },
                   {
-                        "Signal": 33.5022
+                        "Signal": 31.9037
                   }
             ],
-            "OBV": 325379839.0,
-            "MFI": 68.4682,
-            "50 day volume trend": true,
+            "OBV": 324691387.0,
+            "MFI": 58.2652,
+            "50 day volume trend": false,
             "MOMSQZE": "TRND"
       }
 }

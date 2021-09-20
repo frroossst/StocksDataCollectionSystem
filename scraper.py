@@ -74,7 +74,7 @@ class dataHandling():
             print(f"[401] Website denies auth for {newSymbol}")
             authDeliv = False # delivPercen will not be retrieved
         else:
-            print(f"Fetching delivery percentage for {newSymbol}")
+            print(f"[OK] Fetching delivery percentage for {newSymbol}")
             authDeliv = True # delivPercen will be retrieved
 
         if authDeliv:

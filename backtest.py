@@ -30,8 +30,11 @@ def hotlist():
     redflags = []
 
     flagsli = list(flags.values())
-    for i in flagsli:
-        redflags.extend(i)
+    try:
+        for i in flagsli:
+            redflags.extend(i)
+    except:
+        pass
 
     print()
     now = datetime.datetime.now()

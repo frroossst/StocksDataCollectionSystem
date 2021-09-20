@@ -239,5 +239,26 @@
             "UBL.NS",
             "VEDL.NS",
             "YESBANK.NS"
+      ],
+      "20/09/2021": [
+            "ADANIGREEN.NS",
+            "ADANITRANS.NS",
+            "DMART.NS",
+            "BOSCHLTD.NS",
+            "COALINDIA.NS",
+            "DABUR.NS",
+            "EICHERMOT.NS",
+            "HCLTECH.NS",
+            "HDFCAMC.NS",
+            "HINDALCO.NS",
+            "HINDPETRO.NS",
+            "ICICIGI.NS",
+            "IRCTC.NS",
+            "ITC.NS",
+            "INDIGO.NS",
+            "KOTAKBANK.NS",
+            "MARICO.NS",
+            "ONGC.NS",
+            "YESBANK.NS"
       ]
 }

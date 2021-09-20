@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Asian Paints Limited",
             "Symbol": "ASIANPAINT.NS",
-            "Current Price": "3,303.05",
-            "Change Percent": "-1.17%",
+            "Current Price": "3,273.00",
+            "Change Percent": "-0.91%",
             "52 Week High": "3,394.60",
             "52 Week Low": "1,907.75",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 63.3798,
-            "ADX": 46.452,
+            "RSI": 58.1897,
+            "ADX": 45.0435,
             "MACD": [
                   {
-                        "Line": 82.7809
+                        "Line": 74.4624
                   },
                   {
-                        "Signal": 81.032
+                        "Signal": 79.7181
                   }
             ],
-            "OBV": 440355742.0,
-            "MFI": 71.8961,
-            "50 day volume trend": true,
+            "OBV": 439712851.0,
+            "MFI": 66.6686,
+            "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }
 }

@@ -77,16 +77,16 @@ def get_momentum_squeeze(symbol,dataF):
 
     if dataF["BB high"].iloc[-1] > dataF["KC high"].iloc[-1] or dataF["BB low"].iloc[-1] < dataF["KC low"].iloc[-1] and (dataF["Close"].iloc[-1] >= dataF["KC middle"].iloc[-1]):
         if dataF["Close"].iloc[-2] > dataF["KC middle"].iloc[-1] and dataF["KC middle"].iloc[-1] > dataF["BB middle"].iloc[-1]:
-            print("There is in an upwards market trend")
+            print("there is in an UPWARDS market trend")
             liMOMSQZE = "TRNDu"
         elif dataF["Close"].iloc[-2] < dataF["KC middle"].iloc[-1]:
-            print("There is in a downwards market trend")
+            print("there is in a DOWNWARDS market trend")
             liMOMSQZE = "TRNDd"
         else: 
             print("the market is in a trend")
             liMOMSQZE = "TRND"
     elif dataF["BB low"].iloc[-1] > dataF["KC low"].iloc[-1] or dataF["BB high"].iloc[-1] < dataF["KC high"].iloc[-1] and (dataF["Close"].iloc[-1] <= dataF["KC middle"].iloc[-1]):
-        print("market is in a squeeze")
+        print("market is in a SQUEEZE")
         liMOMSQZE = "SQZE"
     else:
         print("inconclusive")
@@ -116,12 +116,12 @@ def get_avg_volume(symbol,dataF,timeperiod=50):
     avgVol = sumVol/50
 
     if lastVol["Volume"] > avgVol:
-        print("There is a volume trend")
+        print("there is a VOLUME trend")
         print()
         volTrend = True
 
     else:
-        print("There is no particular volume trend")
+        print("there is NO volume trend")
         print()
         volTrend = False
 

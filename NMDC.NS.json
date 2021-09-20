@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "NMDC Limited",
             "Symbol": "NMDC.NS",
-            "Current Price": "147.40",
-            "Change Percent": "-3.09%",
+            "Current Price": "136.45",
+            "Change Percent": "-7.43%",
             "52 Week High": "213.20",
             "52 Week Low": "75.60",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "55.76%"
       },
       "Technical Indicators": {
-            "RSI": 35.2341,
-            "ADX": 34.9777,
+            "RSI": 26.4468,
+            "ADX": 36.713,
             "MACD": [
                   {
-                        "Line": -4.3379
+                        "Line": -5.2967
                   },
                   {
-                        "Signal": -4.7683
+                        "Signal": -4.874
                   }
             ],
-            "OBV": 1114117880.0,
-            "MFI": 39.4279,
+            "OBV": 1093105159.0,
+            "MFI": 27.6804,
             "50 day volume trend": true,
             "MOMSQZE": "SQZE"
       }

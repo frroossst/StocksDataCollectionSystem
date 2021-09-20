@@ -2,14 +2,14 @@
       "Basic Info": {
             "Name": "Exxaro Tiles Limited",
             "Symbol": "EXXARO.NS",
-            "Current Price": "155.70",
-            "Change Percent": "-2.14%",
+            "Current Price": "151.10",
+            "Change Percent": "-2.95%",
             "52 Week High": "168.30",
             "52 Week Low": "120.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 69.2006,
+            "RSI": 62.0778,
             "ADX": NaN,
             "MACD": [
                   {
@@ -19,9 +19,9 @@
                         "Signal": NaN
                   }
             ],
-            "OBV": 6522118.0,
-            "MFI": 83.1861,
-            "50 day volume trend": true,
+            "OBV": 6132774.0,
+            "MFI": 81.1285,
+            "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }
 }

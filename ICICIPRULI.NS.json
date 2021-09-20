@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "ICICI Prudential Life Insurance Company Limited",
             "Symbol": "ICICIPRULI.NS",
-            "Current Price": "703.55",
-            "Change Percent": "0.55%",
+            "Current Price": "679.10",
+            "Change Percent": "-3.48%",
             "52 Week High": "724.30",
             "52 Week Low": "397.55",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 62.4044,
-            "ADX": 27.4586,
+            "RSI": 50.2838,
+            "ADX": 26.5304,
             "MACD": [
                   {
-                        "Line": 12.8839
+                        "Line": 10.8884
                   },
                   {
-                        "Signal": 12.4171
+                        "Signal": 12.1114
                   }
             ],
-            "OBV": 439608608.0,
-            "MFI": 76.2304,
+            "OBV": 439162485.0,
+            "MFI": 73.7072,
             "50 day volume trend": false,
-            "MOMSQZE": "TRNDu"
+            "MOMSQZE": "SQZE"
       }
 }
