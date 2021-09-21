@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Hindustan Aeronautics Limited",
             "Symbol": "HAL.NS",
-            "Current Price": "1,383.25",
-            "Change Percent": "-3.31%",
+            "Current Price": "1,395.35",
+            "Change Percent": "1.32%",
             "52 Week High": "1,486.95",
             "52 Week Low": "658.00",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "61.07%"
       },
       "Technical Indicators": {
-            "RSI": 62.2861,
-            "ADX": 48.1589,
+            "RSI": 63.2906,
+            "ADX": 46.9645,
             "MACD": [
                   {
-                        "Line": 67.486
+                        "Line": 63.1546
                   },
                   {
-                        "Signal": 71.2794
+                        "Signal": 69.5766
                   }
             ],
-            "OBV": 52529263.0,
-            "MFI": 67.1345,
-            "50 day volume trend": true,
+            "OBV": 52864228.0,
+            "MFI": 71.9437,
+            "50 day volume trend": false,
             "MOMSQZE": "TRND"
       }
 }

@@ -61,6 +61,7 @@ def getASMLong():
         return asmLongFMT    
         
     except:
+        driver.quit()
         getASMLong()
 
 def getASMShort():
@@ -74,10 +75,6 @@ def getASMShort():
         leng = len(li)
 
         count = 0
-
-        if leng == 9:
-            driver.quit()
-            getASMShort()
 
         eg = "\n"
 
@@ -93,6 +90,7 @@ def getASMShort():
         return asmShortFMT    
         
     except:
+        driver.quit()
         getASMShort()
 
 def getGSM():
@@ -121,16 +119,20 @@ def getGSM():
         return gsmFMT    
         
     except:
+        driver.quit()
         getGSM()
 
 def checkNone():
     with open("redflags.json","r") as fobj:
         content = json.load(fobj)
         if content["asmShort"] == None:
+            print("[ERROR] asmShort is None")
             getASMShort()
         elif content["asmLong"] == None:
+            print("[ERROR] asmLong is None")
             getASMLong()
         elif content["gsm"] == None:
+            print("[ERROR] gsm is None")
             getGSM()
         else:
             pass

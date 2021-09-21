@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Indus Towers Limited",
             "Symbol": "INDUSTOWER.NS",
-            "Current Price": "263.75",
-            "Change Percent": "-1.86%",
+            "Current Price": "264.90",
+            "Change Percent": "0.70%",
             "52 Week High": "282.65",
             "52 Week Low": "162.20",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 70.3334,
-            "ADX": 41.6643,
+            "RSI": 70.4624,
+            "ADX": 43.6856,
             "MACD": [
                   {
-                        "Line": 10.6604
+                        "Line": 11.2633
                   },
                   {
-                        "Signal": 5.953
+                        "Signal": 7.0061
                   }
             ],
-            "OBV": 811352255.0,
-            "MFI": 89.1322,
+            "OBV": 815620124.0,
+            "MFI": 92.801,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }
