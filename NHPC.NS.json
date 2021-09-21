@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "NHPC Limited",
             "Symbol": "NHPC.NS",
-            "Current Price": "27.75",
-            "Change Percent": "-0.72%",
+            "Current Price": "27.65",
+            "Change Percent": "-1.07%",
             "52 Week High": "28.60",
             "52 Week Low": "19.70",
-            "Deliverable to Traded Quantity Percent": "45.86%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 59.5535,
+            "RSI": 57.6948,
             "ADX": 31.7958,
             "MACD": [
                   {
-                        "Line": 0.3944
+                        "Line": 0.3865
                   },
                   {
-                        "Signal": 0.376
+                        "Signal": 0.3744
                   }
             ],
-            "OBV": 1407949362.0,
-            "MFI": 83.8287,
+            "OBV": 1406801909.0,
+            "MFI": 83.0528,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }

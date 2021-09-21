@@ -261,5 +261,13 @@
             "ONGC.NS",
             "YESBANK.NS"
       ],
-      "21/09/2021": []
+      "21/09/2021": [
+            "DMART.NS",
+            "COALINDIA.NS",
+            "IRCTC.NS",
+            "INDUSTOWER.NS",
+            "INDUSINDBK.NS",
+            "INDIGO.NS",
+            "ONGC.NS"
+      ]
 }

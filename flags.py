@@ -128,23 +128,22 @@ def checkNone():
         if content["asmShort"] == None:
             print("[ERROR] asmShort is None")
             asmShort = getASMShort()
+            redflagsFMT["asmShort"] = asmShort
         elif content["asmLong"] == None:
             print("[ERROR] asmLong is None")
             asmLong = getASMLong()
+            redflagsFMT["asmLong"] = asmLong
         elif content["gsm"] == None:
             print("[ERROR] gsm is None")
             gsm = getGSM()
+            redflagsFMT["gsm"] = gsm
         else:
             pass
 
-        redflagsFMT["asmShort"] = asmShort
-        redflagsFMT["asmLong"] = asmLong
-        redflagsFMT["gsm"] = gsm
-        
         with open("redflags.json","w") as fobj:
             json.dump(redflagsFMT,fobj,indent=6)
             fobj.close()
-        
+
 
 
 try:

@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "The Tata Power Company Limited",
             "Symbol": "TATAPOWER.NS",
-            "Current Price": "132.75",
-            "Change Percent": "-1.15%",
+            "Current Price": "134.60",
+            "Change Percent": "0.22%",
             "52 Week High": "142.30",
             "52 Week Low": "50.10",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 51.2592,
-            "ADX": 13.8519,
+            "RSI": 54.7914,
+            "ADX": 13.6442,
             "MACD": [
                   {
-                        "Line": 2.0122
+                        "Line": 2.1598
                   },
                   {
-                        "Signal": 1.9232
+                        "Signal": 1.9527
                   }
             ],
-            "OBV": 4569965286.0,
-            "MFI": 68.708,
+            "OBV": 4591947404.0,
+            "MFI": 66.5682,
             "50 day volume trend": false,
-            "MOMSQZE": "SQZE"
+            "MOMSQZE": "TRNDu"
       }
 }
