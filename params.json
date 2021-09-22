@@ -1,0 +1,4 @@
+{
+	"buy" : {"change percen" : 0.00, "deliv percen" : 30.00, "rsi value" : 70.00, "adx value" : 21.00, "mfi value" : 70.00},
+	"sell" : {"change percen" : -5.00, "deliv percen" : 30.00, "rsi value" : 80.00, "adx value" : 24.00, "mfi value" : 85.00}
+}

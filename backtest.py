@@ -130,17 +130,21 @@ def main(company):
     macdInd = False
     mfiInd = False
 
+    with open("params.json","r") as fobj:
+        buyParams = json.load(fobj)
+        fobj.close()
+
     if (macdl > 0.0 and macds > 0.0) and (macds > macdl):
         macdInd = True
 
-    if changePercen > 0.0:
+    if changePercen > buyParams["buy"]["change percen"]:
         changeInd = True
 
     if float(currentPrice_mod) > float(fiftyTwoWeekLow_mod):
         fiftyTwoWeekInd = True
 
     if authDeliv:
-        if delivPercen > 30.00:
+        if delivPercen > buyParams["buy"]["deliv percen"]:
             delivInd = True
 
     if fiftyDayVol:
@@ -149,13 +153,13 @@ def main(company):
     if momsqze == "TRNDu":
         momsqzeInd = True
 
-    if rsi <= 70.00: # just for human
+    if rsi <= buyParams["buy"]["rsi value"]: 
         rsiInd = True
 
-    if adx > 21.00:
+    if adx > buyParams["buy"]["adx value"]:
         adxInd = True
 
-    if mfi < 70.00:
+    if mfi < buyParams["buy"]["mfi value"]:
         mfiInd = True
 
     # [BUY] Weighted Indicator Decision 
@@ -190,17 +194,21 @@ def main(company):
     macdInd = False
     mfiInd = False
 
+    with open("params.json","r") as fobj:
+        sellParams = json.load(fobj)
+        fobj.close()
+
     if (macdl < 0.0 and macds < 0.0) and (macds < macdl):
         macdInd = True
 
-    if changePercen < -5.00:
+    if changePercen < sellParams["sell"]["change percen"]:
         changeInd = True
 
     if float(currentPrice_mod) < float(fiftyTwoWeekLow_mod):
         fiftyTwoWeekInd = True
 
     if authDeliv:
-        if delivPercen > 30.00:
+        if delivPercen > sellParams["sell"]["deliv percen"]:
             delivInd = True
 
     if fiftyDayVol:
@@ -209,13 +217,13 @@ def main(company):
     if momsqze == "TRNDd":
         momsqzeInd = True
 
-    if rsi > 80.00:
+    if rsi > sellParams["sell"]["rsi value"]:
         rsiInd = True
 
-    if adx > 24.00:
+    if adx > sellParams["sell"]["adx value"]:
         adxInd = True
 
-    if mfi > 85.00:
+    if mfi > sellParams["sell"]["mfi value"]:
         mfiInd = True
 
     # [SELL] Weighted Indicator Decision 

@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Bajaj Auto Limited",
             "Symbol": "BAJAJ-AUTO.NS",
-            "Current Price": "3,719.60",
-            "Change Percent": "-1.49%",
+            "Current Price": "3,755.20",
+            "Change Percent": "0.71%",
             "52 Week High": "4,361.40",
             "52 Week Low": "2,822.45",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "53.35%"
       },
       "Technical Indicators": {
-            "RSI": 43.9522,
-            "ADX": 16.3494,
+            "RSI": 48.1233,
+            "ADX": 15.4733,
             "MACD": [
                   {
-                        "Line": -10.7257
+                        "Line": -9.6474
                   },
                   {
-                        "Signal": -20.144
+                        "Signal": -17.9272
                   }
             ],
-            "OBV": 152761035.0,
-            "MFI": 65.7485,
+            "OBV": 152828388.0,
+            "MFI": 62.885,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

@@ -1,3 +1,1 @@
-1. Merge ASM funcs to reduce chrome sessions that are opened
-
-2. Allow for the creation of custom screeners
+1. Allow for the creation of custom screeners

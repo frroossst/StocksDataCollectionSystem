@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Bajaj Finserv Ltd.",
             "Symbol": "BAJAJFINSV.NS",
-            "Current Price": "17,375.10",
-            "Change Percent": "2.09%",
-            "52 Week High": "17,499.00",
+            "Current Price": "17,613.40",
+            "Change Percent": "0.15%",
+            "52 Week High": "17,780.00",
             "52 Week Low": "5,400.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 73.6229,
-            "ADX": 63.0845,
+            "RSI": 75.7303,
+            "ADX": 63.4798,
             "MACD": [
                   {
-                        "Line": 603.7429
+                        "Line": 636.1932
                   },
                   {
-                        "Signal": 664.3785
+                        "Signal": 661.4493
                   }
             ],
-            "OBV": 156345479.0,
-            "MFI": 57.9157,
+            "OBV": 156745169.0,
+            "MFI": 57.3574,
             "50 day volume trend": false,
             "MOMSQZE": "TRND"
       }
