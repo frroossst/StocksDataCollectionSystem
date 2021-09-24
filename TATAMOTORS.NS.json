@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Tata Motors Limited",
             "Symbol": "TATAMOTORS.NS",
-            "Current Price": "309.90",
-            "Change Percent": "2.63%",
+            "Current Price": "322.10",
+            "Change Percent": "0.19%",
             "52 Week High": "360.75",
-            "52 Week Low": "122.15",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "52 Week Low": "123.10",
+            "Deliverable to Traded Quantity Percent": "62.96%"
       },
       "Technical Indicators": {
-            "RSI": 58.841,
-            "ADX": 15.0828,
+            "RSI": 66.4256,
+            "ADX": 16.5636,
             "MACD": [
                   {
-                        "Line": 2.6874
+                        "Line": 4.9823
                   },
                   {
-                        "Signal": 1.2306
+                        "Signal": 2.4225
                   }
             ],
-            "OBV": 9187871616.0,
-            "MFI": 73.3841,
-            "50 day volume trend": true,
+            "OBV": 9256821191.0,
+            "MFI": 76.7226,
+            "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }
 }

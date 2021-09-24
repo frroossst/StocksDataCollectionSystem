@@ -4,6 +4,13 @@ import time
 
 headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
 
+global asmShortCounter
+global asmLongCounter
+global gsmCounter
+asmShortCounter = 0
+asmLongCounter = 0
+gsmCounter = 0
+
 redflagsFMT = {
     "asmShort" : [],
     "asmLong" : [],
@@ -123,26 +130,29 @@ def getGSM():
         getGSM()
 
 def checkNone():
+    isChange = False
     with open("redflags.json","r") as fobj:
         content = json.load(fobj)
         if content["asmShort"] == None:
             print("[ERROR] asmShort is None")
             asmShort = getASMShort()
             redflagsFMT["asmShort"] = asmShort
-        elif content["asmLong"] == None:
+            isChange = True
+        if content["asmLong"] == None:
             print("[ERROR] asmLong is None")
             asmLong = getASMLong()
             redflagsFMT["asmLong"] = asmLong
-        elif content["gsm"] == None:
+            isChange = True
+        if content["gsm"] == None:
             print("[ERROR] gsm is None")
             gsm = getGSM()
             redflagsFMT["gsm"] = gsm
-        else:
-            pass
-
-        with open("redflags.json","w") as fobj:
-            json.dump(redflagsFMT,fobj,indent=6)
-            fobj.close()
+            isChange = True
+        
+        if isChange:
+            with open("redflags.json","w") as fobj:
+                json.dump(redflagsFMT,fobj,indent=6)
+                fobj.close()
 
 
 

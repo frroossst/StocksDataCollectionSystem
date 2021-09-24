@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "3M India Limited",
             "Symbol": "3MINDIA.NS",
-            "Current Price": "24,754.35",
-            "Change Percent": "-1.33%",
+            "Current Price": "25,005.75",
+            "Change Percent": "-0.06%",
             "52 Week High": "31,000.00",
-            "52 Week Low": "18,024.25",
+            "52 Week Low": "18,100.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 52.6876,
-            "ADX": 27.2295,
+            "RSI": 55.5709,
+            "ADX": 26.2821,
             "MACD": [
                   {
-                        "Line": 295.3691
+                        "Line": 273.324
                   },
                   {
-                        "Signal": 240.1187
+                        "Signal": 253.5396
                   }
             ],
-            "OBV": 386040.0,
-            "MFI": 43.0001,
-            "50 day volume trend": true,
-            "MOMSQZE": "TRNDu"
+            "OBV": 391963.0,
+            "MFI": 52.2965,
+            "50 day volume trend": "",
+            "MOMSQZE": ""
       }
 }

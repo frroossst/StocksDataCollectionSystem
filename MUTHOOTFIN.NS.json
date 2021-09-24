@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Muthoot Finance Limited",
             "Symbol": "MUTHOOTFIN.NS",
-            "Current Price": "1,538.45",
-            "Change Percent": "4.01%",
+            "Current Price": "1,518.90",
+            "Change Percent": "-0.07%",
             "52 Week High": "1,638.85",
-            "52 Week Low": "1,008.25",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "52 Week Low": "1,023.00",
+            "Deliverable to Traded Quantity Percent": "60.28%"
       },
       "Technical Indicators": {
-            "RSI": 54.8531,
-            "ADX": 14.8489,
+            "RSI": 50.4458,
+            "ADX": 13.1403,
             "MACD": [
                   {
-                        "Line": 1.9721
+                        "Line": 2.0706
                   },
                   {
-                        "Signal": 4.092
+                        "Signal": 3.4471
                   }
             ],
-            "OBV": 374013570.0,
-            "MFI": 54.0129,
-            "50 day volume trend": true,
+            "OBV": 373212207.0,
+            "MFI": 59.0125,
+            "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }
 }
