@@ -298,9 +298,33 @@
       "24/09/2021": [
             "BHARTIARTL.NS",
             "DLF.NS",
+            "GRASIM.NS",
             "INDUSTOWER.NS",
             "LTI.NS",
             "ONGC.NS",
             "MCDOWELL-N.NS"
+      ],
+      "27/09/2021": [
+            "DMART.NS",
+            "BAJAJHLDNG.NS",
+            "BOSCHLTD.NS",
+            "DLF.NS",
+            "HCLTECH.NS",
+            "INDUSTOWER.NS",
+            "LTI.NS",
+            "ONGC.NS",
+            "TATAMOTORS.NS"
+      ],
+      "28/09/2021": [
+            "BOSCHLTD.NS",
+            "COALINDIA.NS",
+            "GAIL.NS",
+            "IRCTC.NS",
+            "IOC.NS",
+            "INDUSTOWER.NS",
+            "MARUTI.NS",
+            "NTPC.NS",
+            "ONGC.NS",
+            "PFC.NS"
       ]
 }

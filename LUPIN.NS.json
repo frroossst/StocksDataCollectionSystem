@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Lupin Limited",
             "Symbol": "LUPIN.NS",
-            "Current Price": "934.40",
-            "Change Percent": "-0.63%",
+            "Current Price": "933.65",
+            "Change Percent": "-0.27%",
             "52 Week High": "1,267.65",
             "52 Week Low": "855.35",
-            "Deliverable to Traded Quantity Percent": "53.19%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 32.7159,
-            "ADX": 38.7533,
+            "RSI": 35.0503,
+            "ADX": 39.8081,
             "MACD": [
                   {
-                        "Line": -22.4076
+                        "Line": -22.087
                   },
                   {
-                        "Signal": -23.3958
+                        "Signal": -23.082
                   }
             ],
-            "OBV": 855424320.0,
-            "MFI": 36.5552,
+            "OBV": 855575787.0,
+            "MFI": 27.0053,
             "50 day volume trend": false,
-            "MOMSQZE": "SQZE"
+            "MOMSQZE": "TRNDd"
       }
 }
