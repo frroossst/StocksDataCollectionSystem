@@ -2,8 +2,6 @@ from datetime import datetime
 import json
 import time
 
-start = time.time()
-
 def writeFlagLogs():
     with open("logs.json","r") as fobj:
         content = json.load(fobj)
@@ -47,14 +45,19 @@ def program():
     writeFlagLogs()
 
 
+def autoScript():
+    start = time.time()
 
-try:
-    program()
-except Exception as e:
-    print(f"[ERROR] {e}")
-    program()
+    try:
+        program()
+    except Exception as e:
+        print(f"[ERROR] {e}")
+        program()
 
-end = time.time()
+    end = time.time()
 
-print() 
-print(f"completed execution in {round((end - start),2)} second(s)")
+    print() 
+    print(f"completed execution in {round((end - start),2)} second(s)")
+
+if __name__ == "__main__":
+    autoScript()

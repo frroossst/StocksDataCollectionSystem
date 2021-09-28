@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Britannia Industries Limited",
             "Symbol": "BRITANNIA.NS",
-            "Current Price": "4,009.00",
-            "Change Percent": "-0.01%",
+            "Current Price": "4,010.00",
+            "Change Percent": "0.01%",
             "52 Week High": "4,153.00",
             "52 Week Low": "3,317.30",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "51.69%"
       },
       "Technical Indicators": {
-            "RSI": 55.0361,
+            "RSI": 55.1908,
             "ADX": 34.1566,
             "MACD": [
                   {
-                        "Line": 56.783
+                        "Line": 56.8628
                   },
                   {
-                        "Signal": 82.5297
+                        "Signal": 82.5457
                   }
             ],
-            "OBV": 151375202.0,
-            "MFI": 39.8989,
+            "OBV": 151721122.0,
+            "MFI": 38.714,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

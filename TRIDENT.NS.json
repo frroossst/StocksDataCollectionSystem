@@ -6,7 +6,7 @@
             "Change Percent": "1.83%",
             "52 Week High": "26.25",
             "52 Week Low": "6.65",
-            "Deliverable to Traded Quantity Percent": "56.39%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
             "RSI": 66.1222,
@@ -19,8 +19,8 @@
                         "Signal": 1.0478
                   }
             ],
-            "OBV": 5433258982.0,
-            "MFI": 65.6829,
+            "OBV": 5438981490.0,
+            "MFI": 66.2245,
             "50 day volume trend": true,
             "MOMSQZE": "TRND"
       }
