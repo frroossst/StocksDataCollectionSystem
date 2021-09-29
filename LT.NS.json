@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Larsen & Toubro Limited",
             "Symbol": "LT.NS",
-            "Current Price": "1,722.50",
-            "Change Percent": "-0.98%",
+            "Current Price": "1,738.10",
+            "Change Percent": "0.05%",
             "52 Week High": "1,810.00",
             "52 Week Low": "876.05",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 57.7207,
-            "ADX": 30.5996,
+            "RSI": 61.7627,
+            "ADX": 30.7533,
             "MACD": [
                   {
-                        "Line": 29.5521
+                        "Line": 29.5433
                   },
                   {
-                        "Signal": 28.6604
+                        "Signal": 29.0188
                   }
             ],
-            "OBV": 966510516.0,
-            "MFI": 75.2102,
+            "OBV": 966267808.0,
+            "MFI": 77.9774,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

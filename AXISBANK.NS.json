@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Axis Bank Limited",
             "Symbol": "AXISBANK.NS",
-            "Current Price": "782.50",
-            "Change Percent": "-1.81%",
+            "Current Price": "787.95",
+            "Change Percent": "-0.16%",
             "52 Week High": "820.70",
             "52 Week Low": "418.75",
-            "Deliverable to Traded Quantity Percent": "42.96%"
+            "Deliverable to Traded Quantity Percent": "40.18%"
       },
       "Technical Indicators": {
-            "RSI": 48.6852,
-            "ADX": 22.3168,
+            "RSI": 50.9823,
+            "ADX": 20.8757,
             "MACD": [
                   {
-                        "Line": 7.8739
+                        "Line": 7.2309
                   },
                   {
-                        "Signal": 10.1617
+                        "Signal": 9.6611
                   }
             ],
-            "OBV": 1998305195.0,
-            "MFI": 55.4581,
+            "OBV": 1994263839.0,
+            "MFI": 50.5781,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

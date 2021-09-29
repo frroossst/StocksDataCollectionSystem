@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "HDFC Bank Limited",
             "Symbol": "HDFCBANK.NS",
-            "Current Price": "1,586.50",
-            "Change Percent": "-2.38%",
+            "Current Price": "1,598.00",
+            "Change Percent": "-1.06%",
             "52 Week High": "1,641.00",
-            "52 Week Low": "1,051.00",
-            "Deliverable to Traded Quantity Percent": "42.37%"
+            "52 Week Low": "1,052.00",
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 56.1291,
-            "ADX": 26.4787,
+            "RSI": 58.6327,
+            "ADX": 26.269,
             "MACD": [
                   {
-                        "Line": 15.711
+                        "Line": 18.0517
                   },
                   {
-                        "Signal": 14.1497
+                        "Signal": 15.2945
                   }
             ],
-            "OBV": 2341247128.0,
-            "MFI": 51.7705,
+            "OBV": 2337898107.0,
+            "MFI": 47.8141,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

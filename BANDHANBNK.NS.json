@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Bandhan Bank Limited",
             "Symbol": "BANDHANBNK.NS",
-            "Current Price": "283.60",
-            "Change Percent": "-1.15%",
+            "Current Price": "283.95",
+            "Change Percent": "-0.94%",
             "52 Week High": "430.70",
             "52 Week Low": "259.25",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 47.3922,
-            "ADX": 12.0689,
+            "RSI": 47.4696,
+            "ADX": 12.1017,
             "MACD": [
                   {
-                        "Line": -1.1787
+                        "Line": -0.9941
                   },
                   {
-                        "Signal": -1.6571
+                        "Signal": -1.4863
                   }
             ],
-            "OBV": 123200488.0,
-            "MFI": 54.8416,
+            "OBV": 121294082.0,
+            "MFI": 50.4184,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }
