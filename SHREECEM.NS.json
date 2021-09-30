@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Shree Cement Limited",
             "Symbol": "SHREECEM.NS",
-            "Current Price": "29,322.00",
-            "Change Percent": "0.27%",
+            "Current Price": "28,996.00",
+            "Change Percent": "-1.32%",
             "52 Week High": "32,048.00",
-            "52 Week Low": "19,661.85",
+            "52 Week Low": "20,000.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 49.2658,
-            "ADX": 26.2158,
+            "RSI": 44.9544,
+            "ADX": 24.5779,
             "MACD": [
                   {
-                        "Line": 307.4529
+                        "Line": 231.8431
                   },
                   {
-                        "Signal": 531.8724
+                        "Signal": 472.6375
                   }
             ],
-            "OBV": 19795181.0,
-            "MFI": 22.0143,
+            "OBV": 19802158.0,
+            "MFI": 22.6658,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDd"
       }

@@ -61,13 +61,6 @@ def hotlist():
         fobj.close()
 
 def main(company):
-    
-    # Only accounts for Saturdays and Sundays not for other festive holidays
-    if not ovrwrt:
-        weekDay = datetime.datetime.today().weekday()
-        if weekDay == 5 or weekDay == 6:
-            print("The markets remain closed on weekends")
-            quit()
 
     filename = company + ".json"
 

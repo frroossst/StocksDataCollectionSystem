@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Jubilant FoodWorks Limited",
             "Symbol": "JUBLFOOD.NS",
-            "Current Price": "4,045.55",
-            "Change Percent": "1.10%",
+            "Current Price": "4,069.35",
+            "Change Percent": "-0.03%",
             "52 Week High": "4,272.55",
             "52 Week Low": "2,100.20",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 52.6637,
-            "ADX": 33.4281,
+            "RSI": 54.0589,
+            "ADX": 32.6325,
             "MACD": [
                   {
-                        "Line": 61.8387
+                        "Line": 57.9158
                   },
                   {
-                        "Signal": 89.9618
+                        "Signal": 83.8525
                   }
             ],
-            "OBV": 775694944.0,
-            "MFI": 58.5091,
+            "OBV": 775937418.0,
+            "MFI": 60.285,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

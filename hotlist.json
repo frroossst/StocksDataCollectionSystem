@@ -331,5 +331,20 @@
             "ONGC.NS",
             "PFC.NS"
       ],
-      "29/09/2021": []
+      "29/09/2021": [
+            "COALINDIA.NS",
+            "DLF.NS",
+            "GAIL.NS",
+            "IOC.NS",
+            "NTPC.NS",
+            "ONGC.NS",
+            "PFC.NS",
+            "POWERGRID.NS",
+            "TATAPOWER.NS"
+      ],
+      "30/09/2021": [
+            "COALINDIA.NS",
+            "TATAPOWER.NS",
+            "MCDOWELL-N.NS"
+      ]
 }

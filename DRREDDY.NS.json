@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Dr. Reddy's Laboratories Limited",
             "Symbol": "DRREDDY.NS",
-            "Current Price": "4,899.50",
-            "Change Percent": "1.37%",
+            "Current Price": "4,975.00",
+            "Change Percent": "1.93%",
             "52 Week High": "5,614.60",
             "52 Week Low": "4,135.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 55.7984,
-            "ADX": 18.6999,
+            "RSI": 61.1577,
+            "ADX": 18.442,
             "MACD": [
                   {
-                        "Line": 3.5295
+                        "Line": 12.4294
                   },
                   {
-                        "Signal": 2.6395
+                        "Signal": 4.3193
                   }
             ],
-            "OBV": 235911095.0,
-            "MFI": 44.6892,
+            "OBV": 236604334.0,
+            "MFI": 56.0931,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

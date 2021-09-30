@@ -1,4 +1,5 @@
 from datetime import datetime
+import holiday
 import json
 import time
 
@@ -32,18 +33,22 @@ def getFlagLogs() -> bool:
     return isRedFlags
 
 def program():
-    todayRedFlags = getFlagLogs()
-    if not todayRedFlags:
-        print("[OK] gathering flags")
-        import flags
-    print("[OK] collecting scrip data")
-    import scraper
-    print("[OK] running technical analysis")
-    import algorithm
-    print("[OK] running trading algorithm")
-    import backtest
-    writeFlagLogs()
-
+    contVar = holiday.mainCheck()
+    if contVar:
+        print("[OK] markets are open")
+        todayRedFlags = getFlagLogs()
+        if not todayRedFlags:
+            print("[OK] gathering flags")
+            import flags
+        print("[OK] collecting scrip data")
+        import scraper
+        print("[OK] running technical analysis")
+        import algorithm
+        print("[OK] running trading algorithm")
+        import backtest
+        writeFlagLogs()
+    else:
+        print("[ERROR] markets are closed")
 
 def autoScript():
     start = time.time()
