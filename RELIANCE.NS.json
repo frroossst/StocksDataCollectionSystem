@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Reliance Industries Limited",
             "Symbol": "RELIANCE.NS",
-            "Current Price": "2,514.10",
-            "Change Percent": "-0.54%",
+            "Current Price": "2,520.75",
+            "Change Percent": "-0.28%",
             "52 Week High": "2,570.00",
             "52 Week Low": "1,830.00",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "43.63%"
       },
       "Technical Indicators": {
-            "RSI": 69.7302,
-            "ADX": 56.5211,
+            "RSI": 71.1182,
+            "ADX": 56.3337,
             "MACD": [
                   {
-                        "Line": 75.2121
+                        "Line": 75.7426
                   },
                   {
-                        "Signal": 71.5252
+                        "Signal": 71.6313
                   }
             ],
-            "OBV": 15082881734.0,
-            "MFI": 56.6321,
+            "OBV": 15080325289.0,
+            "MFI": 54.9965,
             "50 day volume trend": false,
             "MOMSQZE": "TRND"
       }

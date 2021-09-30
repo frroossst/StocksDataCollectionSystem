@@ -27,14 +27,14 @@ def checkTimings() -> bool:
     afternoon = True
 
     if timeNowHours == 9:
-        if timeNowMinutes < 15:
+        if timeNowMinutes <= 15:
             morning = False
     if timeNowHours == 15:
         if timeNowMinutes > 30:
             afternoon = False
     if timeNowHours < 9:
         morning = False
-    if timeNowHours > 16:
+    if timeNowHours >= 16:
         afternoon = False
     
     if morning and afternoon:
