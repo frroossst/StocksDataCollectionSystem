@@ -1,9 +1,16 @@
 {
     "exchg" : "nse",
+    "=>" : "the exchange which is to be scraped",
     "ovrwrt" : false,
+    "=>" : "allows the user to run the program when the markets are closed using previous working day's data",
     "onlyBuy" : false,
+    "=>" : "shows only buy trades",
     "onlySell" : false,
+    "=>" : "shows only sell trades",
     "path" : "/home/home/Desktop/Projects/Stonks/webdriverChrome/chromedriver",
+    "=>" : "local path to chromium web drivers",
     "showFlagsHotlist" : false ,
-    "chromiumWait" : 2.5
+    "=>" : "will shows scrips that are in the GSM/ASM lists in hotlist recommendations",
+    "chromiumWait" : 2.5,
+    "=>" : "amount of time (seconds) chromium will wait before closing a website"
 }
