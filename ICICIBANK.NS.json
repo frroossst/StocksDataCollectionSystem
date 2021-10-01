@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "ICICI Bank Limited",
             "Symbol": "ICICIBANK.NS",
-            "Current Price": "692.45",
-            "Change Percent": "-1.20%",
+            "Current Price": "690.55",
+            "Change Percent": "-1.47%",
             "52 Week High": "735.40",
             "52 Week Low": "369.20",
             "Deliverable to Traded Quantity Percent": "58.84%"
       },
       "Technical Indicators": {
-            "RSI": 41.3718,
+            "RSI": 40.6209,
             "ADX": 17.7154,
             "MACD": [
                   {
-                        "Line": 1.1622
+                        "Line": 1.0106
                   },
                   {
-                        "Signal": 4.5784
+                        "Signal": 4.5481
                   }
             ],
-            "OBV": 5137171938.0,
-            "MFI": 34.4955,
+            "OBV": 5136416278.0,
+            "MFI": 34.322,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Info Edge (India) Limited",
             "Symbol": "NAUKRI.NS",
-            "Current Price": "6,472.10",
-            "Change Percent": "0.63%",
+            "Current Price": "6,430.35",
+            "Change Percent": "-0.02%",
             "52 Week High": "6,985.00",
             "52 Week Low": "3,362.65",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 53.1174,
+            "RSI": 51.7032,
             "ADX": 43.7823,
             "MACD": [
                   {
-                        "Line": 170.0582
+                        "Line": 166.7277
                   },
                   {
-                        "Signal": 242.8994
+                        "Signal": 242.2333
                   }
             ],
-            "OBV": 128454161.0,
-            "MFI": 55.207,
+            "OBV": 128353392.0,
+            "MFI": 55.3608,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDd"
       }

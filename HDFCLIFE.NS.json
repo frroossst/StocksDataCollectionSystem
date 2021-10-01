@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "HDFC Life Insurance Company Limited",
             "Symbol": "HDFCLIFE.NS",
-            "Current Price": "717.25",
-            "Change Percent": "-0.71%",
+            "Current Price": "717.70",
+            "Change Percent": "-0.65%",
             "52 Week High": "775.65",
             "52 Week Low": "556.00",
-            "Deliverable to Traded Quantity Percent": "33.75%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 47.3979,
-            "ADX": 29.0651,
+            "RSI": 47.6095,
+            "ADX": 29.048,
             "MACD": [
                   {
-                        "Line": 4.7675
+                        "Line": 4.8034
                   },
                   {
-                        "Signal": 8.8576
+                        "Signal": 8.8648
                   }
             ],
-            "OBV": 561958701.0,
-            "MFI": 40.7403,
+            "OBV": 561842087.0,
+            "MFI": 40.6303,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

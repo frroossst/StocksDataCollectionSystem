@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "MRF Limited",
             "Symbol": "MRF.NS",
-            "Current Price": "79,200.00",
-            "Change Percent": "-0.22%",
+            "Current Price": "78,864.95",
+            "Change Percent": "-0.64%",
             "52 Week High": "98,599.95",
             "52 Week Low": "57,860.05",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "60.14%"
       },
       "Technical Indicators": {
-            "RSI": 47.348,
+            "RSI": 45.9411,
             "ADX": 10.8159,
             "MACD": [
                   {
-                        "Line": 12.9289
+                        "Line": -13.7985
                   },
                   {
-                        "Signal": 93.8657
+                        "Signal": 88.5202
                   }
             ],
-            "OBV": 5730174.0,
-            "MFI": 31.3168,
+            "OBV": 5729624.0,
+            "MFI": 31.219,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

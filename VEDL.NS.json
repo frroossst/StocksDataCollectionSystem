@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Vedanta Limited",
             "Symbol": "VEDL.NS",
-            "Current Price": "286.00",
-            "Change Percent": "-0.57%",
+            "Current Price": "284.65",
+            "Change Percent": "-1.04%",
             "52 Week High": "341.45",
             "52 Week Low": "91.20",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "52.06%"
       },
       "Technical Indicators": {
-            "RSI": 42.9484,
+            "RSI": 42.4205,
             "ADX": 15.6316,
             "MACD": [
                   {
-                        "Line": -2.7601
+                        "Line": -2.8359
                   },
                   {
-                        "Signal": -0.9606
+                        "Signal": -0.9758
                   }
             ],
-            "OBV": 6749047826.0,
-            "MFI": 47.4258,
+            "OBV": 6748562290.0,
+            "MFI": 47.2421,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDd"
       }

@@ -64,6 +64,16 @@ def checkHolidays() -> bool:
             json.dump(fmt,fobj)
             fobj.close()
 
+        with open("settings.json","r") as fobj:
+            content = json.load(fobj)
+            fobj.close()
+
+        content["holidayCheck"] = dateTodayYear
+        
+        with open("settings.json","w") as fobj:
+            json.dump(content,fobj,indent=6)
+            fobj.close()
+
         checkDate = datetime.today()
         checkDate = checkDate.strftime("%d-%b-%Y")
         if checkDate in holi:
