@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Gland Pharma Limited",
             "Symbol": "GLAND.NS",
-            "Current Price": "3,690.95",
-            "Change Percent": "-0.64%",
+            "Current Price": "3,747.35",
+            "Change Percent": "0.74%",
             "52 Week High": "4,350.00",
             "52 Week Low": "1,700.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 37.5834,
-            "ADX": 16.6794,
+            "RSI": 41.5382,
+            "ADX": 17.2733,
             "MACD": [
                   {
-                        "Line": -49.1428
+                        "Line": -49.2683
                   },
                   {
-                        "Signal": -21.6463
+                        "Signal": -26.8012
                   }
             ],
-            "OBV": 29333073.0,
-            "MFI": 48.6572,
+            "OBV": 29623391.0,
+            "MFI": 56.4893,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Infosys Limited",
             "Symbol": "INFY.NS",
-            "Current Price": "1,686.05",
-            "Change Percent": "-0.37%",
+            "Current Price": "1,665.35",
+            "Change Percent": "-0.59%",
             "52 Week High": "1,788.00",
-            "52 Week Low": "1,011.75",
+            "52 Week Low": "1,017.65",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 46.7105,
-            "ADX": 22.2429,
+            "RSI": 42.7535,
+            "ADX": 21.6538,
             "MACD": [
                   {
-                        "Line": 5.9678
+                        "Line": 1.6511
                   },
                   {
-                        "Signal": 10.6844
+                        "Signal": 8.7393
                   }
             ],
-            "OBV": 3999975271.0,
-            "MFI": 39.5772,
+            "OBV": 3996048571.0,
+            "MFI": 34.9482,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }

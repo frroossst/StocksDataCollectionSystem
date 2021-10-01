@@ -2,26 +2,26 @@
       "Basic Info": {
             "Name": "Hindustan Petroleum Corporation Limited",
             "Symbol": "HINDPETRO.NS",
-            "Current Price": "299.50",
-            "Change Percent": "-0.03%",
+            "Current Price": "305.15",
+            "Change Percent": "1.72%",
             "52 Week High": "312.00",
             "52 Week Low": "162.90",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "51.85%"
       },
       "Technical Indicators": {
-            "RSI": 70.4649,
-            "ADX": 32.8763,
+            "RSI": 73.2157,
+            "ADX": 34.4691,
             "MACD": [
                   {
-                        "Line": 6.9723
+                        "Line": 8.1955
                   },
                   {
-                        "Signal": 4.4104
+                        "Signal": 5.1738
                   }
             ],
-            "OBV": 2709475526.0,
-            "MFI": 77.5241,
-            "50 day volume trend": true,
+            "OBV": 2720116646.0,
+            "MFI": 80.9556,
+            "50 day volume trend": false,
             "MOMSQZE": "TRNDu"
       }
 }

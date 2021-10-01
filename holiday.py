@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import datetime
 from selenium import webdriver
 import json
 import time
@@ -10,6 +10,7 @@ with open("settings.json","r") as fobj:
 ovrwrt = content["ovrwrt"]
 PATH = content["path"]
 waitPeriod = content["chromiumWait"]
+holidayCheckY = content["holidayCheck"]
 
 def checkWeekends() -> bool:
     weekDay = datetime.today().weekday()
@@ -46,12 +47,10 @@ def checkHolidays() -> bool:
 
     url = "https://www.nseindia.com/products-services/equity-market-timings-holidays"
     dateToday = datetime.today()
-    dateTodayDay = int(dateToday.strftime("%d"))
-    dateTodayMonth = int(dateToday.strftime("%m"))
+    dateTodayYear = int(dateToday.strftime("%Y"))
     if ovrwrt == True:
-        dateTodayDay = 1
-        dateTodayMonth = 1
-    if dateTodayDay == 1 and dateTodayMonth == 1:
+        dateTodayYear = holidayCheckY - 1
+    if dateTodayYear != holidayCheckY:
         driver = webdriver.Chrome(PATH)
         driver.get(url)
         time.sleep(waitPeriod)

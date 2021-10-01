@@ -1,16 +1,18 @@
 {
     "exchg" : "nse",
-    "=>" : "the exchange which is to be scraped",
+    "exchg_help" : "the exchange which is to be scraped",
     "ovrwrt" : false,
-    "=>" : "allows the user to run the program when the markets are closed using previous working day's data",
+    "ovrwrt_help" : "allows the user to run the program when the markets are closed using previous working day's data",
     "onlyBuy" : false,
-    "=>" : "shows only buy trades",
+    "onlyBuy_help" : "shows only buy trades",
     "onlySell" : false,
-    "=>" : "shows only sell trades",
+    "onlySell_help" : "shows only sell trades",
     "path" : "/home/home/Desktop/Projects/Stonks/webdriverChrome/chromedriver",
-    "=>" : "local path to chromium web drivers",
+    "path_help" : "local path to chromium web drivers",
     "showFlagsHotlist" : false ,
-    "=>" : "will shows scrips that are in the GSM/ASM lists in hotlist recommendations",
+    "showFlagsHotlist_help" : "will shows scrips that are in the GSM/ASM lists in hotlist recommendations",
     "chromiumWait" : 2.5,
-    "=>" : "amount of time (seconds) chromium will wait before closing a website"
+    "chromiumWait_help" : "amount of time (seconds) chromium will wait before closing a website",
+    "holidayCheck" : 2021,
+    "holidayCheck_help" : "the last time holiday check data was fetched"
 }

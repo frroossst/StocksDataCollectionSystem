@@ -2,25 +2,25 @@
       "Basic Info": {
             "Name": "Tata Coffee Limited",
             "Symbol": "TATACOFFEE.NS",
-            "Current Price": "203.90",
-            "Change Percent": "0.34%",
+            "Current Price": "203.10",
+            "Change Percent": "-0.22%",
             "52 Week High": "246.70",
             "52 Week Low": "98.40",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "73.52%"
       },
       "Technical Indicators": {
-            "RSI": 49.0397,
-            "ADX": 10.1375,
+            "RSI": 47.9659,
+            "ADX": 9.5769,
             "MACD": [
                   {
-                        "Line": 0.0095
+                        "Line": -0.1377
                   },
                   {
-                        "Signal": 0.7707
+                        "Signal": 0.5846
                   }
             ],
-            "OBV": 1940547076.0,
-            "MFI": 48.6688,
+            "OBV": 1940598008.0,
+            "MFI": 52.8793,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE"
       }
