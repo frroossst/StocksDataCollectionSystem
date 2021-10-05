@@ -28,6 +28,10 @@ def remComma(string):
 
 def selloff():
     
+    with open("selloff.json","r") as fobj:
+        content = json.load(fobj)
+        fobj.close()
+
     print()
     now = datetime.datetime.now()
     todayDate = now.strftime("%d/%m/%Y")
@@ -35,6 +39,12 @@ def selloff():
     print("---SELL OFF---",todayDate)
     for i in sellli:
         print(i)
+
+    content[todayDate] = sellli
+
+    with open("selloff.json","w") as fobj:
+        json.dump(content,fobj,indent=6)
+        fobj.close()
 
 def hotlist():
 

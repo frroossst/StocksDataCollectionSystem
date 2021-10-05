@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Cipla Limited",
             "Symbol": "CIPLA.NS",
-            "Current Price": "929.75",
-            "Change Percent": "-2.90%",
+            "Current Price": "936.10",
+            "Change Percent": "-2.23%",
             "52 Week High": "1,005.00",
             "52 Week Low": "706.50",
-            "Deliverable to Traded Quantity Percent": "39.43%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 41.1251,
+            "RSI": 42.9867,
             "ADX": 15.3244,
             "MACD": [
                   {
-                        "Line": 7.1977
+                        "Line": 7.7042
                   },
                   {
-                        "Signal": 9.7478
+                        "Signal": 9.8491
                   }
             ],
-            "OBV": 718114493.0,
-            "MFI": 57.7631,
-            "50 day volume trend": false,
+            "OBV": 717592290.0,
+            "MFI": 56.8882,
+            "50 day volume trend": true,
             "MOMSQZE": "SQZE",
-            "10 day MA": 967.9149963378907
+            "10 day MA": 968.4099975585938
       }
 }

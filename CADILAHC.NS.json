@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Cadila Healthcare Limited",
             "Symbol": "CADILAHC.NS",
-            "Current Price": "561.05",
-            "Change Percent": "-0.20%",
+            "Current Price": "562.35",
+            "Change Percent": "0.04%",
             "52 Week High": "673.70",
             "52 Week Low": "404.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 51.7769,
+            "RSI": 52.661,
             "ADX": 18.2057,
             "MACD": [
                   {
-                        "Line": -1.5416
+                        "Line": -1.4379
                   },
                   {
-                        "Signal": -2.7256
+                        "Signal": -2.7048
                   }
             ],
-            "OBV": 856729282.0,
-            "MFI": 47.2086,
+            "OBV": 858024180.0,
+            "MFI": 47.087,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 557.2699951171875
+            "10 day MA": 557.3649963378906
       }
 }

@@ -15,8 +15,8 @@
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1633413057,
-                              "fmt": "11:20AM IST"
+                              "raw": 1633414919,
+                              "fmt": "11:51AM IST"
                         },
                         "regularMarketChangePercent": {
                               "raw": -0.38168085,
@@ -87,9 +87,9 @@
                         "marketState": "REGULAR",
                         "market": "in_market",
                         "regularMarketVolume": {
-                              "raw": 41524204,
-                              "fmt": "41.524M",
-                              "longFmt": "41,524,204"
+                              "raw": 47453186,
+                              "fmt": "47.453M",
+                              "longFmt": "47,453,186"
                         },
                         "quoteSourceName": "Free Realtime Quote",
                         "messageBoardId": "finmb_9674016",
@@ -103,8 +103,7 @@
                         "shortName": "YES BANK",
                         "region": "US",
                         "triggerable": true,
-                        "longName": "Yes Bank Limited",
-                        "delivPercen": "46.27%"
+                        "longName": "Yes Bank Limited"
                   }
             ],
             "error": null

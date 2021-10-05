@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "ITC Limited",
             "Symbol": "ITC.NS",
-            "Current Price": "235.30",
-            "Change Percent": "-0.55%",
+            "Current Price": "235.05",
+            "Change Percent": "-0.66%",
             "52 Week High": "245.80",
             "52 Week Low": "163.35",
-            "Deliverable to Traded Quantity Percent": "43.03%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 64.9153,
+            "RSI": 64.3287,
             "ADX": 42.1266,
             "MACD": [
                   {
-                        "Line": 6.5039
+                        "Line": 6.484
                   },
                   {
-                        "Signal": 6.983
+                        "Signal": 6.979
                   }
             ],
-            "OBV": 24932801971.0,
-            "MFI": 74.9687,
+            "OBV": 24932369396.0,
+            "MFI": 74.9102,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 238.2300003051758
+            "10 day MA": 238.19000091552735
       }
 }
