@@ -2,26 +2,27 @@
       "Basic Info": {
             "Name": "Larsen & Toubro Infotech Limited",
             "Symbol": "LTI.NS",
-            "Current Price": "5,728.25",
-            "Change Percent": "-0.64%",
+            "Current Price": "5,707.00",
+            "Change Percent": "-0.54%",
             "52 Week High": "6,498.50",
-            "52 Week Low": "2,520.00",
+            "52 Week Low": "2,595.20",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 57.1442,
-            "ADX": 46.8644,
+            "RSI": 55.9124,
+            "ADX": 42.9166,
             "MACD": [
                   {
-                        "Line": 195.4988
+                        "Line": 162.1564
                   },
                   {
-                        "Signal": 230.1831
+                        "Signal": 208.7731
                   }
             ],
-            "OBV": 65792303.0,
-            "MFI": 64.4172,
+            "OBV": 65283330.0,
+            "MFI": 58.0715,
             "50 day volume trend": false,
-            "MOMSQZE": "TRND"
+            "MOMSQZE": "TRND",
+            "10 day MA": 5856.664990234375
       }
 }

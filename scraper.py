@@ -143,7 +143,7 @@ class dataHandling():
             dataDump = {
                 "Basic Info" : {"Name" : name,"Symbol" : ticker, "Current Price" : currentPrice, "Change Percent" : percentChange, 
             "52 Week High" : fiftyTwoWeekHigh, "52 Week Low" : fiftyTwoWeekLow, "Deliverable to Traded Quantity Percent" : delivPercen},
-                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : "","50 day volume trend" : "","MOMSQZE" : ""}
+                "Technical Indicators" : {"RSI" : "", "ADX" : "","MACD" : ["",""],"OBV" : "","MFI" : "","50 day volume trend" : "","MOMSQZE" : "", "10 day MA" : ""}
             }
         except Exception as e:
             print(f"[{e}]")

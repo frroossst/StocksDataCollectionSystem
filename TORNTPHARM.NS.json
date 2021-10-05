@@ -2,26 +2,27 @@
       "Basic Info": {
             "Name": "Torrent Pharmaceuticals Limited",
             "Symbol": "TORNTPHARM.NS",
-            "Current Price": "3,052.10",
-            "Change Percent": "-1.08%",
+            "Current Price": "3,128.70",
+            "Change Percent": "-0.03%",
             "52 Week High": "3,250.20",
             "52 Week Low": "2,311.10",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 44.7409,
-            "ADX": 19.6306,
+            "RSI": 55.9011,
+            "ADX": 20.9376,
             "MACD": [
                   {
-                        "Line": 5.1673
+                        "Line": 10.9983
                   },
                   {
-                        "Signal": 11.3571
+                        "Signal": 11.2839
                   }
             ],
-            "OBV": 137037720.0,
-            "MFI": 38.1133,
+            "OBV": 136963266.0,
+            "MFI": 37.0197,
             "50 day volume trend": false,
-            "MOMSQZE": "SQZE"
+            "MOMSQZE": "SQZE",
+            "10 day MA": 3104.2300537109377
       }
 }

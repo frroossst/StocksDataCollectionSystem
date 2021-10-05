@@ -14,5 +14,7 @@
       "chromiumWait": 2.5,
       "chromiumWait_help": "amount of time (seconds) chromium will wait before closing a website",
       "holidayCheck": 2021,
-      "holidayCheck_help": "the last time holiday check data was fetched"
+      "holidayCheck_help": "the last time holiday check data was fetched",
+      "showTrades" : false,
+      "showTrads_help" : "prints the trades in console"
 }

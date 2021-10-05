@@ -355,5 +355,21 @@
       "01/10/2021": [
             "GAIL.NS",
             "ONGC.NS"
+      ],
+      "04/10/2021": [
+            "COALINDIA.NS",
+            "DLF.NS",
+            "INDUSTOWER.NS",
+            "NTPC.NS",
+            "TATAPOWER.NS",
+            "TATAMOTORS.NS",
+            "TRIDENT.NS"
+      ],
+      "05/10/2021": [
+            "COALINDIA.NS",
+            "GAIL.NS",
+            "HINDPETRO.NS",
+            "ONGC.NS",
+            "TATAPOWER.NS"
       ]
 }

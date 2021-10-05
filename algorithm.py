@@ -140,6 +140,24 @@ def get_avg_volume(symbol,dataF,timeperiod=50):
     except Exception as e:
         print(f"[{e}]")
 
+def tenDayMA(symbol,dataF):
+        mavg = get_sma(dataF["Close"],10)
+        mavg = mavg.iloc[-1]
+        filename = symbol + ".json"
+        try:
+            with open(filename,"r") as fobj:
+                content = json.load(fobj)
+                fobj.close()
+
+            
+            content["Technical Indicators"].update({"10 day MA" : mavg})
+
+            with open(filename,"w") as fobj:
+                json.dump(content,fobj,indent=6)
+                fobj.close()
+        
+        except Exception as e:
+            print(f"[{e}]")
 
 
 def main(symbol):
@@ -152,6 +170,7 @@ def main(symbol):
     print(symbol)
     get_momentum_squeeze(symbol,dataF)
     get_avg_volume(symbol,dataF)
+    tenDayMA(symbol,dataF)
     # plt.title(symbol + ' Momentum Squeeze')
     # plt.style.use("seaborn")
     # plt.xlabel('Time Frame')

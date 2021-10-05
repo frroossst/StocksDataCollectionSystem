@@ -6,7 +6,16 @@ import datetime
 import json
 import math
 
+
+
 hotli = []
+sellli = []
+
+with open("settings.json","r") as fobj:
+    content = json.load(fobj)
+    fobj.close()
+
+showTrades = content["showTrades"]
 
 def remComma(string):
     modStr = ""
@@ -16,6 +25,16 @@ def remComma(string):
         else:
             pass
     return modStr
+
+def selloff():
+    
+    print()
+    now = datetime.datetime.now()
+    todayDate = now.strftime("%d/%m/%Y")
+    todayDate = str(todayDate)
+    print("---SELL OFF---",todayDate)
+    for i in sellli:
+        print(i)
 
 def hotlist():
 
@@ -80,6 +99,7 @@ def main(company):
         fiftyDayVol = content["Technical Indicators"]["50 day volume trend"]
         momsqze = content["Technical Indicators"]["MOMSQZE"]
         mfi = content["Technical Indicators"]["MFI"]
+        tenMA = content["Technical Indicators"]["10 day MA"]
     except Exception:
         raise ValueError (f"corrupt or incomplete data for {company}")
 
@@ -246,11 +266,17 @@ def main(company):
     else:
         toSELL = False
 
+    # Sell off
+    cp = remComma(currentPrice)
+    if float(cp) < float(tenMA):
+        sellli.append(symbol)
+
     # Updating trades.json file
 
     if toBUY:
         if not onlySell:
-            print(f"+ BUYING {symbol} STOCK")
+            if showTrades:
+                print(f"+ BUYING {symbol} STOCK")
             with open("trades.json","r") as fobj:
                 content = json.load(fobj)
                 fobj.close()
@@ -278,7 +304,8 @@ def main(company):
 
     if toSELL:
         if not onlyBuy:
-            print(f"- SELLING {symbol} STOCK")
+            if showTrades:
+                print(f"- SELLING {symbol} STOCK")
             with open("trades.json","r") as fobj:
                 content = json.load(fobj)
                 fobj.close()
@@ -318,4 +345,5 @@ with open("NSE.json","r") as fobj:
 for company in NSE:
     main(company)
 
+selloff()
 hotlist()

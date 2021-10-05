@@ -2,26 +2,27 @@
       "Basic Info": {
             "Name": "HCL Technologies Limited",
             "Symbol": "HCLTECH.NS",
-            "Current Price": "1,272.80",
-            "Change Percent": "-0.53%",
+            "Current Price": "1,272.05",
+            "Change Percent": "-0.52%",
             "52 Week High": "1,377.75",
             "52 Week Low": "800.25",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "39.1%"
       },
       "Technical Indicators": {
-            "RSI": 58.5154,
-            "ADX": 52.0795,
+            "RSI": 57.7915,
+            "ADX": 47.9754,
             "MACD": [
                   {
-                        "Line": 39.3228
+                        "Line": 33.3328
                   },
                   {
-                        "Signal": 46.3079
+                        "Signal": 42.1559
                   }
             ],
-            "OBV": 2112208366.0,
-            "MFI": 64.844,
+            "OBV": 2111077444.0,
+            "MFI": 56.6612,
             "50 day volume trend": false,
-            "MOMSQZE": "TRND"
+            "MOMSQZE": "TRND",
+            "10 day MA": 1295.0849975585938
       }
 }
