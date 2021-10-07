@@ -4,10 +4,8 @@ import pandas_datareader as pdr
 import yfinance as yf
 import pandas as pd
 import numpy as np
-import talib
 import math
 import json
-import os
 import ta
 
 # companies listed on the NASDAQ (USA)

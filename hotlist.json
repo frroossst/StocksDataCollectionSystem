@@ -4,7 +4,31 @@
             "GAIL.NS",
             "HINDPETRO.NS",
             "IOC.NS",
+            "INDUSINDBK.NS",
+            "NHPC.NS",
+            "NMDC.NS",
+            "NTPC.NS",
             "ONGC.NS",
-            "TATAPOWER.NS"
+            "PNB.NS",
+            "TATAPOWER.NS",
+            "TATAMOTORS.NS",
+            "MCDOWELL-N.NS"
+      ],
+      "06/10/2021": [
+            "BOSCHLTD.NS",
+            "COALINDIA.NS",
+            "GAIL.NS",
+            "HINDPETRO.NS",
+            "IOC.NS",
+            "NHPC.NS",
+            "ONGC.NS",
+            "PNB.NS",
+            "TATAPOWER.NS",
+            "TRIDENT.NS"
+      ],
+      "07/10/2021": [
+            "BOSCHLTD.NS",
+            "TATAMOTORS.NS",
+            "TRIDENT.NS"
       ]
 }

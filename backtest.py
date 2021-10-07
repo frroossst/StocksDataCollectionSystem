@@ -339,8 +339,6 @@ def main(company):
                 json.dump(content,fobj,indent=6)
                 fobj.close()
 
-
-
 with open("settings.json","r") as fobj:
     settings = json.load(fobj)
     ovrwrt = settings["ovrwrt"]

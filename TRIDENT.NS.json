@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Trident Limited",
             "Symbol": "TRIDENT.NS",
-            "Current Price": "32.35",
-            "Change Percent": "4.86%",
-            "52 Week High": "32.35",
+            "Current Price": "35.10",
+            "Change Percent": "3.39%",
+            "52 Week High": "35.60",
             "52 Week Low": "7.10",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "41.68%"
       },
       "Technical Indicators": {
-            "RSI": 86.6191,
-            "ADX": 35.5772,
+            "RSI": 89.6499,
+            "ADX": 41.0301,
             "MACD": [
                   {
-                        "Line": 2.1412
+                        "Line": 2.8385
                   },
                   {
-                        "Signal": 1.4872
+                        "Signal": 1.919
                   }
             ],
-            "OBV": 5670029065.0,
-            "MFI": 88.7293,
-            "50 day volume trend": false,
+            "OBV": 5749402369.0,
+            "MFI": 94.5775,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 27.01499996185303
+            "10 day MA": 29.095000076293946
       }
 }

@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Power Finance Corporation Limited",
             "Symbol": "PFC.NS",
-            "Current Price": "143.35",
-            "Change Percent": "1.06%",
+            "Current Price": "142.20",
+            "Change Percent": "1.75%",
             "52 Week High": "148.15",
             "52 Week Low": "83.50",
-            "Deliverable to Traded Quantity Percent": "48.39%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 62.9942,
-            "ADX": 28.829,
+            "RSI": 59.7473,
+            "ADX": 28.9888,
             "MACD": [
                   {
-                        "Line": 3.2112
+                        "Line": 2.9223
                   },
                   {
-                        "Signal": 2.7911
+                        "Signal": 2.8299
                   }
             ],
-            "OBV": 1299143088.0,
-            "MFI": 67.5249,
+            "OBV": 1298887859.0,
+            "MFI": 64.8484,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 139.88500061035157
+            "10 day MA": 140.64000091552734
       }
 }
