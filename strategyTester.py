@@ -14,6 +14,8 @@ def loadNSE() -> list:
 def getData(symbol):
     dataF = yf.Ticker(symbol).history(period="1y")
     print(dataF)
+    for i in dataF:
+        print(i)
 
 scrips = loadNSE()
 for i in scrips:

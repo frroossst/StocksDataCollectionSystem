@@ -3,26 +3,26 @@
             "Name": "Colgate-Palmolive (India) Limited",
             "Symbol": "COLPAL.NS",
             "Current Price": "1,689.00",
-            "Change Percent": "0.53%",
+            "Change Percent": "0.04%",
             "52 Week High": "1,823.40",
             "52 Week Low": "1,405.60",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 47.7014,
-            "ADX": 15.4479,
+            "RSI": 47.7201,
+            "ADX": 14.5523,
             "MACD": [
                   {
-                        "Line": -5.6583
+                        "Line": -5.2903
                   },
                   {
-                        "Signal": -2.7964
+                        "Signal": -3.3035
                   }
             ],
-            "OBV": 143526795.0,
-            "MFI": 32.1439,
+            "OBV": 143806503.0,
+            "MFI": 32.7501,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDd",
-            "10 day MA": 1682.2050048828125
+            "10 day MA": 1681.8900024414063
       }
 }

@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Havells India Limited",
             "Symbol": "HAVELLS.NS",
-            "Current Price": "1,402.15",
-            "Change Percent": "2.39%",
+            "Current Price": "1,377.25",
+            "Change Percent": "-1.22%",
             "52 Week High": "1,482.70",
-            "52 Week Low": "680.10",
+            "52 Week Low": "681.15",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 56.0361,
-            "ADX": 25.6614,
+            "RSI": 50.8568,
+            "ADX": 24.8545,
             "MACD": [
                   {
-                        "Line": 14.3047
+                        "Line": 11.7435
                   },
                   {
-                        "Signal": 24.9531
+                        "Signal": 22.2097
                   }
             ],
-            "OBV": 55548697178.0,
-            "MFI": 36.9593,
+            "OBV": 55548857023.0,
+            "MFI": 43.2657,
             "50 day volume trend": false,
-            "MOMSQZE": "TRNDd",
-            "10 day MA": 1382.6250122070312
+            "MOMSQZE": "TRND",
+            "10 day MA": 1377.7800048828126
       }
 }

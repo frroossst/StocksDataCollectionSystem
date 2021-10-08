@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Siemens Limited",
             "Symbol": "SIEMENS.NS",
-            "Current Price": "2,228.60",
-            "Change Percent": "1.51%",
+            "Current Price": "2,237.05",
+            "Change Percent": "0.00%",
             "52 Week High": "2,318.00",
             "52 Week Low": "1,215.90",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "66.59%"
       },
       "Technical Indicators": {
-            "RSI": 57.8329,
-            "ADX": 19.0198,
+            "RSI": 58.8151,
+            "ADX": 18.6501,
             "MACD": [
                   {
-                        "Line": 6.7416
+                        "Line": 10.9562
                   },
                   {
-                        "Signal": -0.7214
+                        "Signal": 1.7207
                   }
             ],
-            "OBV": 332002523.0,
-            "MFI": 71.6575,
+            "OBV": 332355651.0,
+            "MFI": 79.5255,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 2162.0999755859375
+            "10 day MA": 2174.419970703125
       }
 }

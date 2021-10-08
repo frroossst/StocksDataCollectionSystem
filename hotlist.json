@@ -27,8 +27,26 @@
             "TRIDENT.NS"
       ],
       "07/10/2021": [
+            "BANDHANBNK.NS",
             "BOSCHLTD.NS",
+            "DLF.NS",
+            "HINDPETRO.NS",
+            "MARUTI.NS",
+            "ONGC.NS",
+            "TATAPOWER.NS",
             "TATAMOTORS.NS",
+            "TITAN.NS",
+            "TRIDENT.NS",
+            "MCDOWELL-N.NS"
+      ],
+      "08/10/2021": [
+            "BANDHANBNK.NS",
+            "BOSCHLTD.NS",
+            "COALINDIA.NS",
+            "IRCTC.NS",
+            "ONGC.NS",
+            "TATAMOTORS.NS",
+            "TITAN.NS",
             "TRIDENT.NS"
       ]
 }

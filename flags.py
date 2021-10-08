@@ -67,7 +67,7 @@ def getASMLong():
         print("[OK] ASM Long Term")
         return asmLongFMT    
         
-    except:
+    except Exception as e:
         driver.quit()
         getASMLong()
 

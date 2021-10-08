@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "IndusInd Bank Limited",
             "Symbol": "INDUSINDBK.NS",
-            "Current Price": "1,150.50",
-            "Change Percent": "1.65%",
+            "Current Price": "1,167.50",
+            "Change Percent": "0.07%",
             "52 Week High": "1,189.35",
             "52 Week Low": "571.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 60.5214,
-            "ADX": 37.3652,
+            "RSI": 62.9097,
+            "ADX": 38.1954,
             "MACD": [
                   {
-                        "Line": 29.3092
+                        "Line": 31.3159
                   },
                   {
-                        "Signal": 30.2883
+                        "Signal": 30.7063
                   }
             ],
-            "OBV": 1090701898.0,
-            "MFI": 55.5028,
+            "OBV": 1095883501.0,
+            "MFI": 62.6429,
             "50 day volume trend": false,
             "MOMSQZE": "TRND",
-            "10 day MA": 1135.8400024414063
+            "10 day MA": 1137.8799926757813
       }
 }

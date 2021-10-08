@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Power Grid Corporation of India Limited",
             "Symbol": "POWERGRID.NS",
-            "Current Price": "190.05",
-            "Change Percent": "1.31%",
+            "Current Price": "187.90",
+            "Change Percent": "-0.21%",
             "52 Week High": "198.00",
             "52 Week Low": "115.95",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 62.3881,
-            "ADX": 28.6921,
+            "RSI": 59.5058,
+            "ADX": 29.6718,
             "MACD": [
                   {
-                        "Line": 3.892
+                        "Line": 3.6138
                   },
                   {
-                        "Signal": 2.9388
+                        "Signal": 3.0515
                   }
             ],
-            "OBV": 2203304871.0,
-            "MFI": 62.3061,
+            "OBV": 2201768736.0,
+            "MFI": 63.2238,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 187.2499984741211
+            "10 day MA": 188.21000061035156
       }
 }

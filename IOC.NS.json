@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Indian Oil Corporation Limited",
             "Symbol": "IOC.NS",
-            "Current Price": "131.15",
-            "Change Percent": "0.81%",
-            "52 Week High": "132.00",
+            "Current Price": "132.05",
+            "Change Percent": "-0.15%",
+            "52 Week High": "134.90",
             "52 Week Low": "73.75",
-            "Deliverable to Traded Quantity Percent": "68.08%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 76.2108,
-            "ADX": 52.5319,
+            "RSI": 76.4382,
+            "ADX": 54.3716,
             "MACD": [
                   {
-                        "Line": 5.1378
+                        "Line": 5.3729
                   },
                   {
-                        "Signal": 4.2204
+                        "Signal": 4.465
                   }
             ],
-            "OBV": 3497418382.0,
-            "MFI": 79.4031,
+            "OBV": 3498529073.0,
+            "MFI": 87.1058,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 125.675
+            "10 day MA": 127.225
       }
 }
