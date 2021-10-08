@@ -165,7 +165,6 @@
       ],
       "08/10/2021": [
             "ACC.NS",
-            "ADANIPORTS.NS",
             "ALKEM.NS",
             "AMBUJACEM.NS",
             "APOLLOHOSP.NS",
@@ -197,6 +196,7 @@
             "IGL.NS",
             "INDUSTOWER.NS",
             "INDIGO.NS",
+            "JSWSTEEL.NS",
             "JUBLFOOD.NS",
             "KOTAKBANK.NS",
             "LUPIN.NS",
@@ -207,10 +207,8 @@
             "PFC.NS",
             "POWERGRID.NS",
             "PGHH.NS",
-            "PNB.NS",
             "SBILIFE.NS",
             "SHREECEM.NS",
-            "TATACONSUM.NS",
             "TORNTPHARM.NS",
             "ULTRACEMCO.NS"
       ]

@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Adani Enterprises Limited",
             "Symbol": "ADANIENT.NS",
-            "Current Price": "1,552.00",
-            "Change Percent": "2.05%",
+            "Current Price": "1,546.00",
+            "Change Percent": "1.66%",
             "52 Week High": "1,717.20",
             "52 Week Low": "303.00",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "76.71%"
       },
       "Technical Indicators": {
-            "RSI": 57.8067,
+            "RSI": 57.0836,
             "ADX": 14.9319,
             "MACD": [
                   {
-                        "Line": 7.3411
+                        "Line": 6.8306
                   },
                   {
-                        "Signal": 2.0878
+                        "Signal": 1.9857
                   }
             ],
-            "OBV": 5401994454.0,
-            "MFI": 65.6445,
+            "OBV": 5402071227.0,
+            "MFI": 65.7199,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 1503.735009765625
+            "10 day MA": 1503.1300048828125
       }
 }

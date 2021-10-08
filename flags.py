@@ -4,12 +4,12 @@ import time
 
 headers = {"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0"}
 
-global asmShortCounter
-global asmLongCounter
-global gsmCounter
-asmShortCounter = 0
-asmLongCounter = 0
-gsmCounter = 0
+# global asmShortCounter
+# global asmLongCounter
+# global gsmCounter
+# asmShortCounter = 0
+# asmLongCounter = 0
+# gsmCounter = 0
 
 redflagsFMT = {
     "asmShort" : [],
