@@ -39,8 +39,8 @@ class technical():
 
     def get_momentum_squeeze(self,symbol,dataF):
         limomsqze = []
-        limomsqze += 52 * [np.nan] 
-        iterVar = 52
+        limomsqze += 20 * [np.nan] 
+        iterVar = 20
         while True:
             try:
                 if dataF["BB high"].iloc[iterVar] > dataF["KC high"].iloc[iterVar] or dataF["BB low"].iloc[iterVar] < dataF["KC low"].iloc[iterVar] and (dataF["Close"].iloc[iterVar] >= dataF["KC middle"].iloc[iterVar]):
@@ -66,23 +66,32 @@ class technical():
                 break
         dataF["MOMSQZE"] = limomsqze
 
-    def get_avg_volume(symbol,dataF,timeperiod=50):
-        lastVol = dataF.iloc[-1]
-        mod_dataF = dataF[:-1]
+    def get_avg_volume(self,symbol,dataF):
+        avgVol = [] # List stores boolean values
+        avgVol += 51 * [np.nan] 
+        initVar = 1
+        iterVar = 51
+        sumVol = 0
+        sumLi = []
 
-        mod_dataF = dataF["Volume"].tail(timeperiod)
-        sumVol = mod_dataF.sum(axis=0, skipna=True)
-        avgVol = sumVol/50
+        tempDataF = dataF["Volume"]
 
-        if lastVol["Volume"] > avgVol:
-            print("there is a VOLUME trend")
-            print()
-            volTrend = True
+        count = 0 # Variable to detect 50 day loops
+        x = 0 # Variable for iterating through the data frame
+        while True:
+            sumVol += tempDataF.iloc[x]
+            x += 
+            count += 1
+            if count == 50:
+                count = 0
+                
 
-        else:
-            print("there is NO volume trend")
-            print()
-            volTrend = False
+        # lastVol = dataF.iloc[-1]
+        # mod_dataF = dataF[:-1]
+
+        # mod_dataF = dataF["Volume"].tail(50)
+        # sumVol = mod_dataF.sum(axis=0, skipna=True)
+        # avgVol = sumVol/50
 
 
 
@@ -90,8 +99,9 @@ T = technical()
 scrips = method.loadScrips()
 for i in scrips:   
     dataF = method.getData(i)
-    T.get_keltner_bands(i,dataF)
-    T.get_bollinger_bands(i,dataF)
-    T.get_momentum_squeeze(i,dataF)
-    print(dataF)
+    # T.get_keltner_bands(i,dataF)
+    # T.get_bollinger_bands(i,dataF)
+    # T.get_momentum_squeeze(i,dataF)
+    # print(dataF)
+    T.get_avg_volume(i,dataF)
     break
