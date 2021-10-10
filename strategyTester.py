@@ -1,4 +1,6 @@
 from datetime import datetime
+from pandas.core import series
+from pandas.core.frame import DataFrame
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -9,7 +11,7 @@ import ta
 class method():
     
     @classmethod
-    def getData(self,symbol):
+    def getData(self,symbol) -> DataFrame:
         # filename = symbol + ".csv"
         dataF = yf.Ticker(symbol).history(period="max")
         return dataF
@@ -20,6 +22,12 @@ class method():
             NSE = json.load(fobj)
             fobj.close()
         return NSE
+
+    @classmethod
+    def dumpData(self,symbol,dataF):
+        filename = symbol + ".csv"
+        dataF.to_csv(filename)
+
 
 
 class technical():
@@ -69,41 +77,53 @@ class technical():
     def get_avg_volume(self,symbol,dataF):
         
         dataF["vol_avg"] = dataF["Volume"].rolling(50).mean() 
-        # avgVol = [] # List stores boolean values
-        # avgVol += 51 * [np.nan] 
-        # initVar = 1
-        # iterVar = 51
-        # sumVol = 0
-        # sumLi = []
 
-        # tempDataF = dataF["Volume"]
+    def get_10day_ma(self,symbol,dataF):
 
-        # count = 0 # Variable to detect 50 day loops
-        # x = 0 # Variable for iterating through the data frame
-        # while True:
-        #     sumVol += tempDataF.iloc[x]
-        #     x += 1
-        #     count += 1
-        #     if count == 50:
-        #         count = 0
-                
-
-        # lastVol = dataF.iloc[-1]
-        # mod_dataF = dataF[:-1]
-
-        # mod_dataF = dataF["Volume"].tail(50)
-        # sumVol = mod_dataF.sum(axis=0, skipna=True)
-        # avgVol = sumVol/50
+        dataF["10_ma"] = dataF["Close"].rolling(10).mean()
 
 
 
-T = technical()
-scrips = method.loadScrips()
-for i in scrips:   
-    dataF = method.getData(i)
-    T.get_keltner_bands(i,dataF)
-    T.get_bollinger_bands(i,dataF)
-    T.get_momentum_squeeze(i,dataF)
-    T.get_avg_volume(i,dataF)
-    print(dataF)
-    break
+class strategy():
+
+    # Add custom function to test your strategy
+
+    def __init__(self) -> None:
+        pass
+
+    def momsqzevol(self,symbol):
+        filename = symbol + ".csv"
+        data = pd.read_csv(filename)
+        print(data)
+
+def gatherData():
+    T = technical()
+    scrips = method.loadScrips()
+
+    for i in scrips:   
+        dataF = method.getData(i)
+        T.get_keltner_bands(i,dataF)
+        T.get_bollinger_bands(i,dataF)
+        T.get_momentum_squeeze(i,dataF)
+        T.get_avg_volume(i,dataF)
+        print(f"[OK] writing data to csv for {i}")
+        method.dumpData(i,dataF)
+
+def test():
+    S = strategy()
+    scrips = method.loadScrips()
+    for j in scrips:
+        S.momsqzevol(j)
+
+def main():
+    print("1. Gather data")
+    print("2. Test strategy")
+    ch = int(input("enter choice : "))
+    if ch == 1:
+        gatherData()
+    elif ch == 2:
+        test()
+    else:
+        raise ValueError ("invalud input")
+    
+main()
