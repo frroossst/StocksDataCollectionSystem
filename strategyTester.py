@@ -67,23 +67,25 @@ class technical():
         dataF["MOMSQZE"] = limomsqze
 
     def get_avg_volume(self,symbol,dataF):
-        avgVol = [] # List stores boolean values
-        avgVol += 51 * [np.nan] 
-        initVar = 1
-        iterVar = 51
-        sumVol = 0
-        sumLi = []
+        
+        dataF["vol_avg"] = dataF["Volume"].rolling(50).mean() 
+        # avgVol = [] # List stores boolean values
+        # avgVol += 51 * [np.nan] 
+        # initVar = 1
+        # iterVar = 51
+        # sumVol = 0
+        # sumLi = []
 
-        tempDataF = dataF["Volume"]
+        # tempDataF = dataF["Volume"]
 
-        count = 0 # Variable to detect 50 day loops
-        x = 0 # Variable for iterating through the data frame
-        while True:
-            sumVol += tempDataF.iloc[x]
-            x += 
-            count += 1
-            if count == 50:
-                count = 0
+        # count = 0 # Variable to detect 50 day loops
+        # x = 0 # Variable for iterating through the data frame
+        # while True:
+        #     sumVol += tempDataF.iloc[x]
+        #     x += 1
+        #     count += 1
+        #     if count == 50:
+        #         count = 0
                 
 
         # lastVol = dataF.iloc[-1]
@@ -99,9 +101,9 @@ T = technical()
 scrips = method.loadScrips()
 for i in scrips:   
     dataF = method.getData(i)
-    # T.get_keltner_bands(i,dataF)
-    # T.get_bollinger_bands(i,dataF)
-    # T.get_momentum_squeeze(i,dataF)
-    # print(dataF)
+    T.get_keltner_bands(i,dataF)
+    T.get_bollinger_bands(i,dataF)
+    T.get_momentum_squeeze(i,dataF)
     T.get_avg_volume(i,dataF)
+    print(dataF)
     break
