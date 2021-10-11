@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Bajaj Holdings & Investment Limited",
             "Symbol": "BAJAJHLDNG.NS",
-            "Current Price": "4,734.55",
-            "Change Percent": "-0.14%",
+            "Current Price": "4,731.40",
+            "Change Percent": "0.31%",
             "52 Week High": "5,100.00",
             "52 Week Low": "2,212.65",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 56.9511,
-            "ADX": 46.0782,
+            "RSI": 56.6409,
+            "ADX": 44.9402,
             "MACD": [
                   {
-                        "Line": 137.875
+                        "Line": 125.3294
                   },
                   {
-                        "Signal": 159.2597
+                        "Signal": 152.2445
                   }
             ],
-            "OBV": 55970410.0,
-            "MFI": 72.8912,
+            "OBV": 55988923.0,
+            "MFI": 65.9183,
             "50 day volume trend": false,
-            "MOMSQZE": "TRNDu",
-            "10 day MA": 4795.55498046875
+            "MOMSQZE": "TRND",
+            "10 day MA": 4776.889990234375
       }
 }

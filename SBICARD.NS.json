@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "SBI Cards and Payment Services Limited",
             "Symbol": "SBICARD.NS",
-            "Current Price": "1,139.80",
-            "Change Percent": "0.04%",
+            "Current Price": "1,131.30",
+            "Change Percent": "-0.75%",
             "52 Week High": "1,165.00",
             "52 Week Low": "766.10",
-            "Deliverable to Traded Quantity Percent": "35.35%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 66.9915,
-            "ADX": 21.2608,
+            "RSI": 64.268,
+            "ADX": 22.173,
             "MACD": [
                   {
-                        "Line": 12.6171
+                        "Line": 15.4059
                   },
                   {
-                        "Signal": 2.7236
+                        "Signal": 5.2607
                   }
             ],
-            "OBV": 65249420.0,
-            "MFI": 23.8457,
+            "OBV": 64591138.0,
+            "MFI": 54.2638,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 1069.8699890136718
+            "10 day MA": 1078.8399841308594
       }
 }

@@ -91,10 +91,65 @@ class strategy():
     def __init__(self) -> None:
         pass
 
+    @classmethod
+    def simulateBuy(self,symbol,date,price):
+        filename = symbol + ".trade"
+        
+        try:
+            with open(filename,"r") as fobj:
+                content = json.load(fobj)
+                fobj.close()
+        except:
+            dictFMT = {"Stats" : {},"BUY" : {}, "SELL" : {}}
+            with open(filename,"w") as fobj:
+                json.dump(dictFMT,fobj)
+                fobj.close()
+            with open(filename,"r") as fobj:
+                content = json.load(fobj)
+                fobj.close()
+
+        content["BUY"][date] = price
+
+        with open(filename,"w") as fobj:
+            json.dump(content,fobj,indent=6)
+            fobj.close()
+
+    @classmethod
+    def simulateSell(self,symbol,date,price):
+        filename = symbol + ".trade"
+        
+        try:
+            with open(filename,"r") as fobj:
+                content = json.load(fobj)
+                fobj.close()
+        except:
+            dictFMT = {"Stats" : {},"BUY" : {}, "SELL" : {}}
+            with open(filename,"w") as fobj:
+                json.dump(dictFMT,fobj)
+                fobj.close()
+            with open(filename,"r") as fobj:
+                content = json.load(fobj)
+                fobj.close()
+
+        content["SELL"][date] = price
+
+        with open(filename,"w") as fobj:
+            json.dump(content,fobj,indent=6)
+            fobj.close()      
+
     def momsqzevol(self,symbol):
         filename = symbol + ".csv"
-        data = pd.read_csv(filename)
-        print(data)
+        dataF = pd.read_csv(filename)
+        
+        iterVar = 51
+        while True:
+            try:
+                if (dataF["vol_avg"].iloc[iterVar] > dataF["Volume"].iloc[iterVar - 1]) and (dataF["MOMSQZE"].iloc[iterVar] == "TRNDu"):
+                    strategy.simulateBuy(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
+                
+            except:
+                break
+            iterVar += 1
 
 def gatherData():
     T = technical()
@@ -106,6 +161,7 @@ def gatherData():
         T.get_bollinger_bands(i,dataF)
         T.get_momentum_squeeze(i,dataF)
         T.get_avg_volume(i,dataF)
+        T.get_10day_ma(i,dataF)
         print(f"[OK] writing data to csv for {i}")
         method.dumpData(i,dataF)
 

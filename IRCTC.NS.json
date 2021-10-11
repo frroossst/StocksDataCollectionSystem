@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Indian Railway Catering & Tourism Corporation Limited",
             "Symbol": "IRCTC.NS",
-            "Current Price": "4,897.00",
-            "Change Percent": "4.39%",
+            "Current Price": "4,818.95",
+            "Change Percent": "-1.18%",
             "52 Week High": "4,964.20",
             "52 Week Low": "1,290.05",
-            "Deliverable to Traded Quantity Percent": "82.23%"
+            "Deliverable to Traded Quantity Percent": "74.39%"
       },
       "Technical Indicators": {
-            "RSI": 88.0369,
-            "ADX": 59.0893,
+            "RSI": 84.5594,
+            "ADX": 60.4007,
             "MACD": [
                   {
-                        "Line": 392.2859
+                        "Line": 414.0909
                   },
                   {
-                        "Signal": 315.0892
+                        "Signal": 334.6285
                   }
             ],
-            "OBV": 289114446.0,
-            "MFI": 86.5897,
+            "OBV": 284966795.0,
+            "MFI": 85.3506,
             "50 day volume trend": true,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 4128.885009765625
+            "10 day MA": 4226.194970703125
       }
 }

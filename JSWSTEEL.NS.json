@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "JSW Steel Limited",
             "Symbol": "JSWSTEEL.NS",
-            "Current Price": "667.55",
-            "Change Percent": "0.15%",
+            "Current Price": "673.00",
+            "Change Percent": "1.07%",
             "52 Week High": "776.50",
             "52 Week Low": "279.35",
-            "Deliverable to Traded Quantity Percent": "71.46%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 46.2849,
-            "ADX": 27.2748,
+            "RSI": 48.4381,
+            "ADX": 26.7928,
             "MACD": [
                   {
-                        "Line": -6.6182
+                        "Line": -6.0275
                   },
                   {
-                        "Signal": -7.7534
+                        "Signal": -7.4299
                   }
             ],
-            "OBV": 3770763386.0,
-            "MFI": 73.7793,
+            "OBV": 3765305501.0,
+            "MFI": 69.4872,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 668.4549987792968
+            "10 day MA": 670.8799926757813
       }
 }

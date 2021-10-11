@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Glenmark Pharmaceuticals Limited",
             "Symbol": "GLENMARK.NS",
-            "Current Price": "526.65",
-            "Change Percent": "1.80%",
+            "Current Price": "529.95",
+            "Change Percent": "0.54%",
             "52 Week High": "690.95",
             "52 Week Low": "442.05",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 52.0524,
-            "ADX": 33.5219,
+            "RSI": 53.6104,
+            "ADX": 31.2197,
             "MACD": [
                   {
-                        "Line": -6.4822
+                        "Line": -4.816
                   },
                   {
-                        "Signal": -10.1672
+                        "Signal": -9.0912
                   }
             ],
-            "OBV": 540629700.0,
-            "MFI": 54.6121,
-            "50 day volume trend": true,
-            "MOMSQZE": "SQZE",
-            "10 day MA": 512.1950012207031
+            "OBV": 542264679.0,
+            "MFI": 64.5645,
+            "50 day volume trend": false,
+            "MOMSQZE": "TRNDu",
+            "10 day MA": 514.8549957275391
       }
 }
