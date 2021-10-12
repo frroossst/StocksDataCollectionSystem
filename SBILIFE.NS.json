@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "SBI Life Insurance Company Limited",
             "Symbol": "SBILIFE.NS",
-            "Current Price": "1,201.50",
-            "Change Percent": "-0.38%",
+            "Current Price": "1,211.00",
+            "Change Percent": "0.41%",
             "52 Week High": "1,273.90",
             "52 Week Low": "755.25",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 50.403,
+            "RSI": 52.7348,
             "ADX": 24.9259,
             "MACD": [
                   {
-                        "Line": 9.2081
+                        "Line": 9.934
                   },
                   {
-                        "Signal": 13.3404
+                        "Signal": 13.4856
                   }
             ],
-            "OBV": 152730533.0,
-            "MFI": 46.7544,
+            "OBV": 153491155.0,
+            "MFI": 45.8204,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 1215.3549926757812
+            "10 day MA": 1216.3549926757812
       }
 }

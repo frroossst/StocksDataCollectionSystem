@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import ContextManager
 from pandas.core import series
 from pandas.core.frame import DataFrame
 import yfinance as yf
@@ -101,7 +102,7 @@ class strategy():
         except:
             dictFMT = {"Stats" : {},"BUY" : {}, "SELL" : {}}
             with open(filename,"w") as fobj:
-                json.dump(dictFMT,fobj)
+                json.dump(dictFMT,fobj,indent=6)
                 fobj.close()
             with open(filename,"r") as fobj:
                 content = json.load(fobj)
@@ -123,7 +124,7 @@ class strategy():
         except:
             dictFMT = {"Stats" : {},"BUY" : {}, "SELL" : {}}
             with open(filename,"w") as fobj:
-                json.dump(dictFMT,fobj)
+                json.dump(dictFMT,fobj,indent=6)
                 fobj.close()
             with open(filename,"r") as fobj:
                 content = json.load(fobj)
@@ -148,10 +149,58 @@ class strategy():
                 if (dataF["Close"].iloc[iterVar] < dataF["10_ma"].iloc[iterVar - 1]):
                     S.simulateSell(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
                 iterVar += 1
-                print(iterVar)
             except:
                 print(f"[OK] completed strategy test for {symbol}")
                 break
+
+    def runStats(self,symbol):
+        S = strategy()
+
+        filename = symbol + ".trade"
+        
+        with open(filename,"r") as fobj:
+            content = json.load(fobj)
+            fobj.close()
+
+        totalBuy = S.totalBuyCost(content) # Total cost for BUY opportunities
+        totalSell = S.totalSellCost(content) # Total cost for SELL opportunities
+        P_L = round(totalSell - totalBuy,2) # Profit and Loss
+
+        content["Stats"]["Total Buy"] = totalBuy
+        content["Stats"]["Total Sell"] = totalSell
+        content["Stats"]["P/L"] = P_L
+            
+        with open(filename,"w") as fobj:
+            json.dump(content,fobj,indent=6)
+            fobj.close()
+
+        print(f"[OK] completed stats for {symbol}")
+
+    def totalBuyCost(self,dataF):
+        
+        buyData = dataF["BUY"].values()
+        sum = 0.0
+        
+        for i in buyData:
+            sum += i
+
+        sum = round(sum,2)
+
+        return sum
+
+    def totalSellCost(self,dataF):
+        
+        sellData = dataF["SELL"].values()
+        sum = 0.0
+        
+        for i in sellData:
+            sum += i
+
+        sum = round(sum,2)
+
+        return sum
+
+        
             
 
 def gatherData():
@@ -173,6 +222,7 @@ def test():
     scrips = method.loadScrips()
     for j in scrips:
         S.momsqzevol(j)
+        S.runStats(j)
 
 def main():
     print("1. Gather data")
@@ -189,3 +239,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
