@@ -91,7 +91,6 @@ class strategy():
     def __init__(self) -> None:
         pass
 
-    @classmethod
     def simulateBuy(self,symbol,date,price):
         filename = symbol + ".trade"
         
@@ -114,7 +113,6 @@ class strategy():
             json.dump(content,fobj,indent=6)
             fobj.close()
 
-    @classmethod
     def simulateSell(self,symbol,date,price):
         filename = symbol + ".trade"
         
@@ -138,6 +136,7 @@ class strategy():
             fobj.close()      
 
     def momsqzevol(self,symbol):
+        S = strategy()
         filename = symbol + ".csv"
         dataF = pd.read_csv(filename)
         
@@ -145,12 +144,14 @@ class strategy():
         while True:
             try:
                 if (dataF["vol_avg"].iloc[iterVar] > dataF["Volume"].iloc[iterVar - 1]) and (dataF["MOMSQZE"].iloc[iterVar] == "TRNDu"):
-                    strategy.simulateBuy(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
+                    S.simulateBuy(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
                 if (dataF["Close"].iloc[iterVar] < dataF["10_ma"].iloc[iterVar - 1]):
-                    strategy.simulateSell(symbol,dataF["Date".iloc[iterVar]],dataF["Close"].iloc[iterVar])
+                    S.simulateSell(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
                 iterVar += 1
+                print(iterVar)
             except:
-                continue
+                print(f"[OK] completed strategy test for {symbol}")
+                break
             
 
 def gatherData():
@@ -184,4 +185,7 @@ def main():
     else:
         raise ValueError ("invalud input")
     
-main()
+
+
+if __name__ == "__main__":
+    main()
