@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Adani Transmission Limited",
             "Symbol": "ADANITRANS.NS",
-            "Current Price": "1,666.75",
-            "Change Percent": "-0.71%",
+            "Current Price": "1,680.00",
+            "Change Percent": "-0.98%",
             "52 Week High": "1,990.00",
             "52 Week Low": "280.25",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 54.8187,
-            "ADX": 22.8796,
+            "RSI": 55.5879,
+            "ADX": 21.7575,
             "MACD": [
                   {
-                        "Line": 49.9281
+                        "Line": 49.0602
                   },
                   {
-                        "Signal": 59.585
+                        "Signal": 57.8623
                   }
             ],
-            "OBV": 359028451.0,
-            "MFI": 33.9849,
+            "OBV": 359140089.0,
+            "MFI": 44.6915,
             "50 day volume trend": false,
             "MOMSQZE": "TRND",
-            "10 day MA": 1644.8150024414062
+            "10 day MA": 1659.4949951171875
       }
 }

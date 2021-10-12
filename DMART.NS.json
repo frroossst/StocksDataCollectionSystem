@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Avenue Supermarts Limited",
             "Symbol": "DMART.NS",
-            "Current Price": "4,617.05",
-            "Change Percent": "4.74%",
-            "52 Week High": "4,619.80",
+            "Current Price": "4,769.00",
+            "Change Percent": "1.05%",
+            "52 Week High": "4,895.00",
             "52 Week Low": "1,954.85",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 80.2404,
-            "ADX": 49.9264,
+            "RSI": 83.6241,
+            "ADX": 51.9356,
             "MACD": [
                   {
-                        "Line": 129.3294
+                        "Line": 160.8958
                   },
                   {
-                        "Signal": 128.4791
+                        "Signal": 136.2694
                   }
             ],
-            "OBV": 221741562.0,
-            "MFI": 57.0448,
+            "OBV": 222683674.0,
+            "MFI": 62.5541,
             "50 day volume trend": true,
             "MOMSQZE": "TRND",
-            "10 day MA": 4312.81005859375
+            "10 day MA": 4366.730078125
       }
 }

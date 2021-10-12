@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Punjab National Bank",
             "Symbol": "PNB.NS",
-            "Current Price": "40.70",
-            "Change Percent": "0.99%",
+            "Current Price": "40.30",
+            "Change Percent": "-0.37%",
             "52 Week High": "46.35",
             "52 Week Low": "26.30",
-            "Deliverable to Traded Quantity Percent": "51.16%"
+            "Deliverable to Traded Quantity Percent": "63.16%"
       },
       "Technical Indicators": {
-            "RSI": 60.0679,
-            "ADX": 25.6906,
+            "RSI": 57.4286,
+            "ADX": 25.1251,
             "MACD": [
                   {
-                        "Line": 0.6445
+                        "Line": 0.6084
                   },
                   {
-                        "Signal": 0.5364
+                        "Signal": 0.5476
                   }
             ],
-            "OBV": 5128223477.0,
-            "MFI": 81.1088,
+            "OBV": 5133179847.0,
+            "MFI": 79.9457,
             "50 day volume trend": false,
-            "MOMSQZE": "TRNDu",
-            "10 day MA": 40.25
+            "MOMSQZE": "SQZE",
+            "10 day MA": 40.33499984741211
       }
 }

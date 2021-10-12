@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "United Breweries Limited",
             "Symbol": "UBL.NS",
-            "Current Price": "1,699.05",
-            "Change Percent": "2.97%",
+            "Current Price": "1,707.20",
+            "Change Percent": "0.41%",
             "52 Week High": "1,716.40",
             "52 Week Low": "897.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 68.9275,
-            "ADX": 34.4633,
+            "RSI": 69.7433,
+            "ADX": 35.0756,
             "MACD": [
                   {
-                        "Line": 31.9523
+                        "Line": 36.6792
                   },
                   {
-                        "Signal": 27.2383
+                        "Signal": 29.1431
                   }
             ],
-            "OBV": 220421229.0,
-            "MFI": 67.2882,
+            "OBV": 220724893.0,
+            "MFI": 65.7684,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 1606.8199951171875
+            "10 day MA": 1621.1800048828125
       }
 }

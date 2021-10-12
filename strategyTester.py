@@ -146,10 +146,12 @@ class strategy():
             try:
                 if (dataF["vol_avg"].iloc[iterVar] > dataF["Volume"].iloc[iterVar - 1]) and (dataF["MOMSQZE"].iloc[iterVar] == "TRNDu"):
                     strategy.simulateBuy(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
-                
+                if (dataF["Close"].iloc[iterVar] < dataF["10_ma"].iloc[iterVar - 1]):
+                    strategy.simulateSell(symbol,dataF["Date".iloc[iterVar]],dataF["Close"].iloc[iterVar])
+                iterVar += 1
             except:
-                break
-            iterVar += 1
+                continue
+            
 
 def gatherData():
     T = technical()

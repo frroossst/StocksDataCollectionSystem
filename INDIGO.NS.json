@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "InterGlobe Aviation Limited",
             "Symbol": "INDIGO.NS",
-            "Current Price": "2,069.00",
-            "Change Percent": "5.43%",
+            "Current Price": "2,048.00",
+            "Change Percent": "-0.01%",
             "52 Week High": "2,307.15",
             "52 Week Low": "1,253.70",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 58.1767,
-            "ADX": 26.3913,
+            "RSI": 56.5833,
+            "ADX": 26.2073,
             "MACD": [
                   {
-                        "Line": 20.8502
+                        "Line": 21.2744
                   },
                   {
-                        "Signal": 40.0719
+                        "Signal": 36.0572
                   }
             ],
-            "OBV": 166075289.0,
-            "MFI": 35.2069,
-            "50 day volume trend": true,
-            "MOMSQZE": "TRNDd",
-            "10 day MA": 1989.6750122070312
+            "OBV": 166331962.0,
+            "MFI": 25.9817,
+            "50 day volume trend": false,
+            "MOMSQZE": "TRND",
+            "10 day MA": 1990.4200073242187
       }
 }

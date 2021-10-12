@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Indraprastha Gas Limited",
             "Symbol": "IGL.NS",
-            "Current Price": "515.00",
-            "Change Percent": "-0.66%",
+            "Current Price": "512.50",
+            "Change Percent": "-0.38%",
             "52 Week High": "602.05",
             "52 Week Low": "364.10",
-            "Deliverable to Traded Quantity Percent": "33.73%"
+            "Deliverable to Traded Quantity Percent": "32.26%"
       },
       "Technical Indicators": {
-            "RSI": 36.7173,
-            "ADX": 17.8844,
+            "RSI": 35.5346,
+            "ADX": 18.3129,
             "MACD": [
                   {
-                        "Line": -8.5907
+                        "Line": -9.0411
                   },
                   {
-                        "Signal": -6.3374
+                        "Signal": -6.8852
                   }
             ],
-            "OBV": 1632155034.0,
-            "MFI": 26.784,
-            "50 day volume trend": true,
+            "OBV": 1631227893.0,
+            "MFI": 27.7571,
+            "50 day volume trend": false,
             "MOMSQZE": "TRNDd",
-            "10 day MA": 522.2200012207031
+            "10 day MA": 521.7750061035156
       }
 }
