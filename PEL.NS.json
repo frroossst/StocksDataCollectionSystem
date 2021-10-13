@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Piramal Enterprises Limited",
             "Symbol": "PEL.NS",
-            "Current Price": "2,782.85",
-            "Change Percent": "1.03%",
+            "Current Price": "2,823.55",
+            "Change Percent": "1.17%",
             "52 Week High": "3,014.95",
             "52 Week Low": "1,197.90",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 55.2138,
-            "ADX": 18.6945,
+            "RSI": 57.3316,
+            "ADX": 18.8633,
             "MACD": [
                   {
-                        "Line": 51.8748
+                        "Line": 55.1215
                   },
                   {
-                        "Signal": 48.5584
+                        "Signal": 49.2078
                   }
             ],
-            "OBV": 200132386.0,
-            "MFI": 66.7969,
+            "OBV": 199454340.0,
+            "MFI": 65.828,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 2760.7749755859377
+            "10 day MA": 2764.7099853515624
       }
 }

@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "UPL Limited",
             "Symbol": "UPL.NS",
-            "Current Price": "745.00",
-            "Change Percent": "0.34%",
+            "Current Price": "751.05",
+            "Change Percent": "0.91%",
             "52 Week High": "864.70",
             "52 Week Low": "399.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 55.6492,
-            "ADX": 24.443,
+            "RSI": 58.0771,
+            "ADX": 24.6175,
             "MACD": [
                   {
-                        "Line": -3.8092
+                        "Line": -3.3266
                   },
                   {
-                        "Signal": -8.4145
+                        "Signal": -8.318
                   }
             ],
-            "OBV": 1548960074.0,
-            "MFI": 50.4348,
+            "OBV": 1548189483.0,
+            "MFI": 52.641,
             "50 day volume trend": false,
-            "MOMSQZE": "SQZE",
-            "10 day MA": 723.5550109863282
+            "MOMSQZE": "TRNDu",
+            "10 day MA": 724.1700073242188
       }
 }

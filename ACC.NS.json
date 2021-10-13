@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "ACC Limited",
             "Symbol": "ACC.NS",
-            "Current Price": "2,237.80",
-            "Change Percent": "-0.54%",
+            "Current Price": "2,258.95",
+            "Change Percent": "0.59%",
             "52 Week High": "2,509.00",
             "52 Week Low": "1,485.00",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 40.8832,
-            "ADX": 28.5872,
+            "RSI": 43.5905,
+            "ADX": 28.335,
             "MACD": [
                   {
-                        "Line": -34.3949
+                        "Line": -32.7077
                   },
                   {
-                        "Signal": -26.9503
+                        "Signal": -26.6129
                   }
             ],
-            "OBV": 399006909.0,
-            "MFI": 38.713,
+            "OBV": 399163025.0,
+            "MFI": 40.2365,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDd",
-            "10 day MA": 2249.0650146484377
+            "10 day MA": 2251.4550048828123
       }
 }

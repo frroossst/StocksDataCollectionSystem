@@ -163,22 +163,31 @@ class strategy():
             fobj.close()
 
         totalBuy = S.totalBuyCost(content) # Total cost for BUY opportunities
+        countBuy  = S.totalBuyCost(content,count=True)
+        countSell  = S.totalSellCost(content,count=True)
         totalSell = S.totalSellCost(content) # Total cost for SELL opportunities
         P_L = round(totalSell - totalBuy,2) # Profit and Loss
+        P_L_percen = round(((P_L / totalBuy) * 100), 2) # Profit and Loss percentage
+
 
         content["Stats"]["Total Buy"] = totalBuy
         content["Stats"]["Total Sell"] = totalSell
         content["Stats"]["P/L"] = P_L
-            
+        content["Stats"]["P/L percentage"] = P_L_percen
+        content["Stats"]["Buy opportunities"] = countBuy
+        content["Stats"]["Sell opportunities"] = countSell
+
+
         with open(filename,"w") as fobj:
             json.dump(content,fobj,indent=6)
             fobj.close()
 
         print(f"[OK] completed stats for {symbol}")
 
-    def totalBuyCost(self,dataF):
+    def totalBuyCost(self,dataF,count=False):
         
         buyData = dataF["BUY"].values()
+        cnt = len(buyData)
         sum = 0.0
         
         for i in buyData:
@@ -186,7 +195,10 @@ class strategy():
 
         sum = round(sum,2)
 
-        return sum
+        if not count:
+            return sum
+        else:
+            return cnt
 
     def totalSellCost(self,dataF):
         
