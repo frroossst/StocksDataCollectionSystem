@@ -6,23 +6,23 @@
             "Change Percent": "4.94%",
             "52 Week High": "39.30",
             "52 Week Low": "7.10",
-            "Deliverable to Traded Quantity Percent": "44.73%"
+            "Deliverable to Traded Quantity Percent": "41.98%"
       },
       "Technical Indicators": {
-            "RSI": 86.3829,
-            "ADX": 45.4852,
+            "RSI": 86.5016,
+            "ADX": 47.0407,
             "MACD": [
                   {
-                        "Line": 3.5315
+                        "Line": 3.733
                   },
                   {
-                        "Signal": 2.5201
+                        "Signal": 2.7391
                   }
             ],
-            "OBV": 5589710688.0,
-            "MFI": 59.2806,
-            "50 day volume trend": false,
+            "OBV": 5676371704.0,
+            "MFI": 65.4975,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 32.27000007629395
+            "10 day MA": 33.34000015258789
       }
 }

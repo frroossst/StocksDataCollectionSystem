@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Aurobindo Pharma Limited",
             "Symbol": "AUROPHARMA.NS",
-            "Current Price": "731.70",
-            "Change Percent": "0.25%",
+            "Current Price": "728.55",
+            "Change Percent": "-0.18%",
             "52 Week High": "1,063.90",
             "52 Week Low": "660.30",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 48.075,
-            "ADX": 20.6624,
+            "RSI": 46.6576,
+            "ADX": 19.5145,
             "MACD": [
                   {
-                        "Line": -10.3344
+                        "Line": -9.348
                   },
                   {
-                        "Signal": -13.349
+                        "Signal": -12.5724
                   }
             ],
-            "OBV": 1577364489.0,
-            "MFI": 48.7826,
+            "OBV": 1578602178.0,
+            "MFI": 50.9318,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 722.7099975585937
+            "10 day MA": 722.7249938964844
       }
 }

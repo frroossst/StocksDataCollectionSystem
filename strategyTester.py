@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import json
 import math
+import time
 import ta
 
 class method():
@@ -137,6 +138,7 @@ class strategy():
             fobj.close()      
 
     def momsqzevol(self,symbol):
+        startTime = time.time()
         S = strategy()
         filename = symbol + ".csv"
         dataF = pd.read_csv(filename)
@@ -150,12 +152,15 @@ class strategy():
                     S.simulateSell(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
                 iterVar += 1
             except:
-                print(f"[OK] completed strategy test for {symbol}")
+                endTime = time.time()
+                print(f"[OK] completed strategy test for {symbol} in {round(endTime - startTime,2)} second(s)")
                 break
 
     def runStats(self,symbol):
-        S = strategy()
+        
+        startTime = time.time()
 
+        S = strategy()
         filename = symbol + ".trade"
         
         with open(filename,"r") as fobj:
@@ -163,11 +168,13 @@ class strategy():
             fobj.close()
 
         totalBuy = S.totalBuyCost(content) # Total cost for BUY opportunities
-        countBuy  = S.totalBuyCost(content,count=True)
-        countSell  = S.totalSellCost(content,count=True)
+        countBuy  = S.totalBuyCost(content,count=True) # Count of opportunities
+        countSell  = S.totalSellCost(content,count=True) # Count of opportunities
         totalSell = S.totalSellCost(content) # Total cost for SELL opportunities
         P_L = round(totalSell - totalBuy,2) # Profit and Loss
         P_L_percen = round(((P_L / totalBuy) * 100), 2) # Profit and Loss percentage
+        totalTrades = S.totalTrades(totalBuy,totalSell) # Total number of trades made
+        netTrades = S.netTrades(totalBuy,totalSell) # Net trades
 
 
         content["Stats"]["Total Buy"] = totalBuy
@@ -176,13 +183,16 @@ class strategy():
         content["Stats"]["P/L percentage"] = P_L_percen
         content["Stats"]["Buy opportunities"] = countBuy
         content["Stats"]["Sell opportunities"] = countSell
+        content["Stats"]["Total trades"] = totalTrades
+        content["Stats"]["Net trades"] = netTrades
 
 
         with open(filename,"w") as fobj:
             json.dump(content,fobj,indent=6)
             fobj.close()
 
-        print(f"[OK] completed stats for {symbol}")
+        endTime = time.time()
+        print(f"[OK] completed stats for {symbol} in {round(endTime - startTime,2)} second(s)")
 
     def totalBuyCost(self,dataF,count=False):
         
@@ -200,7 +210,7 @@ class strategy():
         else:
             return cnt
 
-    def totalSellCost(self,dataF):
+    def totalSellCost(self,dataF,count=False):
         
         sellData = dataF["SELL"].values()
         sum = 0.0
@@ -212,9 +222,16 @@ class strategy():
 
         return sum
 
-        
-            
+    def totalTrades(self,buy,sell):
+        tot =  buy + sell
+        return tot
+       
+    def netTrades(self,buy,sell):
+        net = buy - sell
+        return net
 
+
+        
 def gatherData():
     T = technical()
     scrips = method.loadScrips()
@@ -233,7 +250,7 @@ def test():
     S = strategy()
     scrips = method.loadScrips()
     for j in scrips:
-        S.momsqzevol(j)
+        S.momsqzevol(j) # replace the method here for different backtest strategies
         S.runStats(j)
 
 def main():
