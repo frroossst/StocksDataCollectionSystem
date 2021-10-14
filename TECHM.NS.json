@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Tech Mahindra Limited",
             "Symbol": "TECHM.NS",
-            "Current Price": "1,402.00",
-            "Change Percent": "2.00%",
+            "Current Price": "1,428.30",
+            "Change Percent": "1.86%",
             "52 Week High": "1,547.85",
             "52 Week Low": "781.85",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 48.343,
-            "ADX": 25.2508,
+            "RSI": 52.4502,
+            "ADX": 24.2902,
             "MACD": [
                   {
-                        "Line": -3.1944
+                        "Line": -1.4693
                   },
                   {
-                        "Signal": 4.6021
+                        "Signal": 3.3897
                   }
             ],
-            "OBV": 1458888482.0,
-            "MFI": 33.3626,
-            "50 day volume trend": false,
+            "OBV": 1462797315.0,
+            "MFI": 33.4819,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDd",
-            "10 day MA": 1398.339990234375
+            "10 day MA": 1403.3049926757812
       }
 }

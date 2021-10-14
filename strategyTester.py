@@ -143,13 +143,16 @@ class strategy():
         filename = symbol + ".csv"
         dataF = pd.read_csv(filename)
         
+        buyCount = 0 # to ensure sell only when the stock is in holdings
         iterVar = 51
         while True:
             try:
                 if (dataF["vol_avg"].iloc[iterVar] > dataF["Volume"].iloc[iterVar - 1]) and (dataF["MOMSQZE"].iloc[iterVar] == "TRNDu"):
                     S.simulateBuy(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
-                if (dataF["Close"].iloc[iterVar] < dataF["10_ma"].iloc[iterVar - 1]):
+                    buyCount += 1
+                if (dataF["Close"].iloc[iterVar] < dataF["10_ma"].iloc[iterVar - 1]) and (buyCount > 0):
                     S.simulateSell(symbol,dataF["Date"].iloc[iterVar],dataF["Close"].iloc[iterVar])
+                    buyCount -= 1
                 iterVar += 1
             except:
                 endTime = time.time()
@@ -267,5 +270,7 @@ def main():
 
 
 if __name__ == "__main__":
+    start = time.time()
     main()
-    
+    end = time.time()
+    print(f"completed execution in {round(end-start,2)} second(s)")

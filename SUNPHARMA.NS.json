@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Sun Pharmaceutical Industries Limited",
             "Symbol": "SUNPHARMA.NS",
-            "Current Price": "842.45",
-            "Change Percent": "1.54%",
-            "52 Week High": "846.80",
+            "Current Price": "841.85",
+            "Change Percent": "-0.08%",
+            "52 Week High": "850.00",
             "52 Week Low": "452.25",
-            "Deliverable to Traded Quantity Percent": "42.45%"
+            "Deliverable to Traded Quantity Percent": "53.78%"
       },
       "Technical Indicators": {
-            "RSI": 67.0864,
-            "ADX": 23.0488,
+            "RSI": 66.7305,
+            "ADX": 23.5583,
             "MACD": [
                   {
-                        "Line": 16.4933
+                        "Line": 17.1798
                   },
                   {
-                        "Signal": 13.1536
+                        "Signal": 13.9601
                   }
             ],
-            "OBV": 1245746179.0,
-            "MFI": 85.31,
+            "OBV": 1244407342.0,
+            "MFI": 87.769,
             "50 day volume trend": false,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 824.7549987792969
+            "10 day MA": 827.0299987792969
       }
 }

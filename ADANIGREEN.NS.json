@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Adani Green Energy Limited",
             "Symbol": "ADANIGREEN.NS",
-            "Current Price": "1,193.20",
-            "Change Percent": "-1.25%",
+            "Current Price": "1,206.65",
+            "Change Percent": "1.10%",
             "52 Week High": "1,390.00",
             "52 Week Low": "678.00",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "31.9%"
       },
       "Technical Indicators": {
-            "RSI": 58.8192,
-            "ADX": 33.5239,
+            "RSI": 61.1112,
+            "ADX": 32.5908,
             "MACD": [
                   {
-                        "Line": 29.4956
+                        "Line": 29.5172
                   },
                   {
-                        "Signal": 32.131
+                        "Signal": 31.6223
                   }
             ],
-            "OBV": 415768039.0,
-            "MFI": 57.9084,
+            "OBV": 415897713.0,
+            "MFI": 49.2476,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 1185.7049926757813
+            "10 day MA": 1191.6699951171875
       }
 }
