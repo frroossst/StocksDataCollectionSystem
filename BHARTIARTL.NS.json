@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Bharti Airtel Limited",
             "Symbol": "BHARTIARTL.NS",
-            "Current Price": "684.35",
-            "Change Percent": "-0.80%",
+            "Current Price": "691.30",
+            "Change Percent": "1.57%",
             "52 Week High": "739.12",
-            "52 Week Low": "394.00",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "52 Week Low": "396.95",
+            "Deliverable to Traded Quantity Percent": "60.66%"
       },
       "Technical Indicators": {
-            "RSI": 50.2796,
-            "ADX": 28.333,
+            "RSI": 53.6142,
+            "ADX": 27.0733,
             "MACD": [
                   {
-                        "Line": 6.2243
+                        "Line": 4.7926
                   },
                   {
-                        "Signal": 10.8835
+                        "Signal": 8.7421
                   }
             ],
-            "OBV": 1103378340.0,
-            "MFI": 30.6404,
+            "OBV": 1096550458.0,
+            "MFI": 43.0291,
             "50 day volume trend": false,
-            "MOMSQZE": "TRND",
-            "10 day MA": 688.8000061035157
+            "MOMSQZE": "SQZE",
+            "10 day MA": 690.2949951171875
       }
 }

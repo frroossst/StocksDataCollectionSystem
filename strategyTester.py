@@ -142,7 +142,6 @@ class strategy():
         S = strategy()
         filename = symbol + ".csv"
         dataF = pd.read_csv(filename)
-        
         buyCount = 0 # to ensure sell only when the stock is in holdings
         iterVar = 51
         while True:
@@ -158,6 +157,35 @@ class strategy():
                 endTime = time.time()
                 print(f"[OK] completed strategy test for {symbol} in {round(endTime - startTime,2)} second(s)")
                 break
+
+    def momsqzevolTUPLES(self,symbol):
+        startTime = time.time()
+        S = strategy()
+        filename = symbol + ".csv"
+        dataF = pd.read_csv(filename)
+        buyCount = 0 # to ensure sell only when the stock is in holdings
+        iterVar = 51
+        # dataF = dataF.iloc[50:]
+        
+        for i in dataF.itertuples():
+            prevIndex = int(i.Index) - 1
+            # if prevIndex >= 0:
+            #     print(dataF.iloc[prevIndex])
+            # print(i)
+            if not math.isnan(i.vol_avg):
+                if i.MOMSQZE == "TRNDu":
+                    if i.vol_avg > dataF["Volume"].iloc[prevIndex]:
+                        S.simulateBuy(symbol,i.Date,i.Close)
+                        buyCount += 1
+                elif i._17 < dataF["Close"].iloc[prevIndex]:
+                    if buyCount >= 1:
+                        S.simulateSell(symbol,i.Date,i.Close)
+                        buyCount -= 1
+        
+        endTime = time.time()
+        print(f"[OK] completed strategy test for {symbol} in {round(endTime - startTime,2)} second(s)")
+
+
 
     def runStats(self,symbol):
         
@@ -253,7 +281,8 @@ def test():
     S = strategy()
     scrips = method.loadScrips()
     for j in scrips:
-        S.momsqzevol(j) # replace the method here for different backtest strategies
+        S.momsqzevolTUPLES(j) # replace the method here for different backtest strategies
+        # S.momsqzevol(j)
         S.runStats(j)
 
 def main():
@@ -269,8 +298,27 @@ def main():
     
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+#     start = time.time()
+#     main()
+#     end = time.time()
+#     print(f"completed execution in {round(end-start,2)} second(s)")
+
+S = strategy()
+scrips = method.loadScrips()
+for j in scrips:
     start = time.time()
-    main()
+    S.momsqzevolTUPLES(j) # replace the method here for different backtest strategies
     end = time.time()
-    print(f"completed execution in {round(end-start,2)} second(s)")
+    tuplTime = end -start
+print(tuplTime)
+
+for j in scrips:
+    start_ = time.time()
+    S.momsqzevol(j)
+    S.runStats(j)
+    end_ = time.time()
+    whileTime = end_ - start_
+
+print("intertuples : ", tuplTime)
+print("while loop : ",whileTime)
