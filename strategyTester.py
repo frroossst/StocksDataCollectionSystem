@@ -1,6 +1,3 @@
-from datetime import datetime
-from typing import ContextManager
-from pandas.core import series
 from pandas.core.frame import DataFrame
 import yfinance as yf
 import pandas as pd
@@ -109,7 +106,7 @@ class strategy():
                 content = json.load(fobj)
                 fobj.close()
 
-        content["BUY"][date] = price
+        content["BUY"][date] = round(price,2)
 
         with open(filename,"w") as fobj:
             json.dump(content,fobj,indent=6)
@@ -131,7 +128,7 @@ class strategy():
                 content = json.load(fobj)
                 fobj.close()
 
-        content["SELL"][date] = price
+        content["SELL"][date] = round(price,2)
 
         with open(filename,"w") as fobj:
             json.dump(content,fobj,indent=6)
@@ -168,9 +165,6 @@ class strategy():
         
         for i in dataF.itertuples():
             prevIndex = int(i.Index) - 1
-            # if prevIndex >= 0:
-            #     print(dataF.iloc[prevIndex])
-            # print(i)
             if not math.isnan(i.vol_avg):
                 if i.MOMSQZE == "TRNDu":
                     if i.vol_avg > dataF["Volume"].iloc[prevIndex]:
@@ -204,7 +198,7 @@ class strategy():
         P_L = round(totalSell - totalBuy,2) # Profit and Loss
         P_L_percen = round(((P_L / totalBuy) * 100), 2) # Profit and Loss percentage
         totalTrades = S.totalTrades(totalBuy,totalSell) # Total number of trades made
-        netTrades = S.netTrades(totalBuy,totalSell) # Net trades
+        netTrades = S.netTrades(countBuy, countSell) # Net trades
 
 
         content["Stats"]["Total Buy"] = totalBuy
@@ -227,7 +221,7 @@ class strategy():
     def totalBuyCost(self,dataF,count=False):
         
         buyData = dataF["BUY"].values()
-        cnt = len(buyData)
+        cnt = len(dataF["BUY"].keys())
         sum = 0.0
         
         for i in buyData:
@@ -243,6 +237,7 @@ class strategy():
     def totalSellCost(self,dataF,count=False):
         
         sellData = dataF["SELL"].values()
+        cnt = len(dataF["SELL"].keys())
         sum = 0.0
         
         for i in sellData:
@@ -250,7 +245,10 @@ class strategy():
 
         sum = round(sum,2)
 
-        return sum
+        if not count:
+            return sum
+        else:
+            return cnt
 
     def totalTrades(self,buy,sell):
         tot =  buy + sell
@@ -258,6 +256,8 @@ class strategy():
        
     def netTrades(self,buy,sell):
         net = buy - sell
+        if net < 0:
+            raise ValueError ("net trades cannot be negative")
         return net
 
 
