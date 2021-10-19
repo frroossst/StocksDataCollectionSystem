@@ -1,13 +1,13 @@
 {
       "Stats": {
-            "Total Buy": 2383880.77,
-            "Total Sell": 4691765.95,
-            "P/L": 2307885.18,
-            "P/L percentage": 96.81,
-            "Buy opportunities": 740,
-            "Sell opportunities": 4691765.95,
-            "Total trades": 7075646.720000001,
-            "Net trades": -2307885.18
+            "Total Buy": 2384671.92,
+            "Total Sell": 6497041.13,
+            "P/L": 4112369.21,
+            "P/L percentage": 172.45,
+            "Buy opportunities": 742,
+            "Sell opportunities": 6497041.13,
+            "Total trades": 8881713.05,
+            "Net trades": -4112369.21
       },
       "BUY": {
             "2002-10-29": 412.5414733886719,

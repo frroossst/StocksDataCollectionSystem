@@ -164,7 +164,6 @@ class strategy():
         filename = symbol + ".csv"
         dataF = pd.read_csv(filename)
         buyCount = 0 # to ensure sell only when the stock is in holdings
-        iterVar = 51
         # dataF = dataF.iloc[50:]
         
         for i in dataF.itertuples():
@@ -282,7 +281,6 @@ def test():
     scrips = method.loadScrips()
     for j in scrips:
         S.momsqzevolTUPLES(j) # replace the method here for different backtest strategies
-        # S.momsqzevol(j)
         S.runStats(j)
 
 def main():
@@ -298,27 +296,8 @@ def main():
     
 
 
-# if __name__ == "__main__":
-#     start = time.time()
-#     main()
-#     end = time.time()
-#     print(f"completed execution in {round(end-start,2)} second(s)")
-
-S = strategy()
-scrips = method.loadScrips()
-for j in scrips:
+if __name__ == "__main__":
     start = time.time()
-    S.momsqzevolTUPLES(j) # replace the method here for different backtest strategies
+    main()
     end = time.time()
-    tuplTime = end -start
-print(tuplTime)
-
-for j in scrips:
-    start_ = time.time()
-    S.momsqzevol(j)
-    S.runStats(j)
-    end_ = time.time()
-    whileTime = end_ - start_
-
-print("intertuples : ", tuplTime)
-print("while loop : ",whileTime)
+    print(f"completed execution in {round(end-start,2)} second(s)")

@@ -1,13 +1,13 @@
 {
       "Stats": {
             "Total Buy": 479037.9,
-            "Total Sell": 745662.8,
-            "P/L": 266624.9,
-            "P/L percentage": 55.66,
+            "Total Sell": 1103477.5,
+            "P/L": 624439.6,
+            "P/L percentage": 130.35,
             "Buy opportunities": 239,
-            "Sell opportunities": 745662.8,
-            "Total trades": 1224700.7000000002,
-            "Net trades": -266624.9
+            "Sell opportunities": 1103477.5,
+            "Total trades": 1582515.4,
+            "Net trades": -624439.6
       },
       "BUY": {
             "2017-06-05": 789.75,
