@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Petronet LNG Limited",
             "Symbol": "PETRONET.NS",
-            "Current Price": "232.20",
-            "Change Percent": "-0.92%",
+            "Current Price": "229.05",
+            "Change Percent": "-0.30%",
             "52 Week High": "275.35",
             "52 Week Low": "211.40",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 50.1511,
-            "ADX": 22.9719,
+            "RSI": 45.3315,
+            "ADX": 19.6131,
             "MACD": [
                   {
-                        "Line": 0.583
+                        "Line": -0.1427
                   },
                   {
-                        "Signal": 1.0614
+                        "Signal": 0.4872
                   }
             ],
-            "OBV": 2635935129.0,
-            "MFI": 36.7009,
+            "OBV": 2638195416.0,
+            "MFI": 31.4194,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 231.79000091552734
+            "10 day MA": 231.81000061035155
       }
 }

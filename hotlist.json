@@ -120,5 +120,51 @@
             "TRIDENT.NS",
             "VEDL.NS",
             "WIPRO.NS"
+      ],
+      "20/10/2021": [
+            "IRCTC.NS",
+            "MAHINDCIE.NS",
+            "MRF.NS",
+            "PNB.NS",
+            "SBIN.NS",
+            "TATACOFFEE.NS",
+            "TATAPOWER.NS",
+            "TITAN.NS",
+            "TRIDENT.NS"
+      ],
+      "21/10/2021": [
+            "DMART.NS",
+            "HINDPETRO.NS",
+            "MAHINDCIE.NS",
+            "LTI.NS",
+            "PNB.NS",
+            "TITAN.NS"
+      ],
+      "22/10/2021": [
+            "ICICIBANK.NS",
+            "NHPC.NS",
+            "PNB.NS",
+            "SBIN.NS",
+            "TATAPOWER.NS",
+            "TECHM.NS",
+            "TITAN.NS",
+            "TRIDENT.NS",
+            "VEDL.NS"
+      ],
+      "25/10/2021": [
+            "AXISBANK.NS",
+            "BANDHANBNK.NS",
+            "BPCL.NS",
+            "HDFCBANK.NS",
+            "HDFC.NS",
+            "ICICIBANK.NS",
+            "MAHINDCIE.NS",
+            "KOTAKBANK.NS",
+            "LT.NS",
+            "PNB.NS",
+            "SBIN.NS",
+            "TATAPOWER.NS",
+            "TECHM.NS",
+            "TRIDENT.NS"
       ]
 }

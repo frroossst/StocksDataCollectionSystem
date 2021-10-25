@@ -100,7 +100,15 @@ def mainCheck() -> bool:
     w = checkWeekends()
     h = checkHolidays()
 
-    if t and w and h:
+    with open("settings.json","r") as fobj:
+        content = json.load(fobj)
+        fobj.close()
+
+    ovrwrt = content["ovrwrt"]
+    
+    if ovrwrt:
+        return True
+    elif t and w and h:
         return True
     else:
         return False

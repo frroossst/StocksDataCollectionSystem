@@ -161,8 +161,7 @@ class strategy():
         filename = symbol + ".csv"
         dataF = pd.read_csv(filename)
         buyCount = 0 # to ensure sell only when the stock is in holdings
-        # dataF = dataF.iloc[50:]
-        
+
         for i in dataF.itertuples():
             prevIndex = int(i.Index) - 1
             if not math.isnan(i.vol_avg):
@@ -177,8 +176,6 @@ class strategy():
         
         endTime = time.time()
         print(f"[OK] completed strategy test for {symbol} in {round(endTime - startTime,2)} second(s)")
-
-
 
     def runStats(self,symbol):
         
@@ -250,11 +247,11 @@ class strategy():
         else:
             return cnt
 
-    def totalTrades(self,buy,sell):
+    def totalTrades(self,buy,sell) -> None:
         tot =  buy + sell
         return tot
        
-    def netTrades(self,buy,sell):
+    def netTrades(self,buy,sell) -> None:
         net = buy - sell
         if net < 0:
             raise ValueError ("net trades cannot be negative")

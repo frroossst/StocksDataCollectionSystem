@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "NTPC Limited",
             "Symbol": "NTPC.NS",
-            "Current Price": "151.30",
-            "Change Percent": "1.17%",
+            "Current Price": "143.90",
+            "Change Percent": "-0.69%",
             "52 Week High": "152.10",
-            "52 Week Low": "80.30",
-            "Deliverable to Traded Quantity Percent": "46.52%"
+            "52 Week Low": "83.05",
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 78.8297,
-            "ADX": 47.6364,
+            "RSI": 59.8027,
+            "ADX": 43.5797,
             "MACD": [
                   {
-                        "Line": 7.2073
+                        "Line": 5.4566
                   },
                   {
-                        "Signal": 6.6858
+                        "Signal": 6.2948
                   }
             ],
-            "OBV": 1677100297.0,
-            "MFI": 84.6677,
+            "OBV": 1663210751.0,
+            "MFI": 61.3189,
             "50 day volume trend": false,
-            "MOMSQZE": "TRNDu",
-            "10 day MA": 145.82000122070312
+            "MOMSQZE": "TRND",
+            "10 day MA": 146.7249984741211
       }
 }

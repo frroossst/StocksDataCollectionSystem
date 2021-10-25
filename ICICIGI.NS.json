@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "ICICI Lombard General Insurance Company Limited",
             "Symbol": "ICICIGI.NS",
-            "Current Price": "1,537.15",
-            "Change Percent": "1.16%",
+            "Current Price": "1,496.95",
+            "Change Percent": "-0.24%",
             "52 Week High": "1,675.00",
-            "52 Week Low": "1,217.00",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "52 Week Low": "1,218.80",
+            "Deliverable to Traded Quantity Percent": "51.04%"
       },
       "Technical Indicators": {
-            "RSI": 44.7463,
-            "ADX": 14.1336,
+            "RSI": 35.0764,
+            "ADX": 15.2382,
             "MACD": [
                   {
-                        "Line": -12.7362
+                        "Line": -18.7011
                   },
                   {
-                        "Signal": -6.425
+                        "Signal": -12.9353
                   }
             ],
-            "OBV": 6377446.0,
-            "MFI": 23.9756,
+            "OBV": 4967500.0,
+            "MFI": 20.7578,
             "50 day volume trend": false,
-            "MOMSQZE": "TRNDd",
-            "10 day MA": 1534.6599853515625
+            "MOMSQZE": "SQZE",
+            "10 day MA": 1516.6099853515625
       }
 }

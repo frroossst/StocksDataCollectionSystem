@@ -1,3 +1,4 @@
 1. Add dark green bar filter for current momsqze
 
 2. Allow selling only if a BUY exists in historical backtest
+[ISSUE] ABBOTINDIA shows net trades in negative

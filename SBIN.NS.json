@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "State Bank of India",
             "Symbol": "SBIN.NS",
-            "Current Price": "499.85",
-            "Change Percent": "0.38%",
-            "52 Week High": "504.20",
+            "Current Price": "506.50",
+            "Change Percent": "0.71%",
+            "52 Week High": "515.45",
             "52 Week Low": "185.90",
-            "Deliverable to Traded Quantity Percent": "61.76%"
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 74.6679,
-            "ADX": 34.631,
+            "RSI": 72.4799,
+            "ADX": 35.9834,
             "MACD": [
                   {
-                        "Line": 14.5613
+                        "Line": 16.4271
                   },
                   {
-                        "Signal": 10.7256
+                        "Signal": 13.6287
                   }
             ],
-            "OBV": 12097459964.0,
-            "MFI": 79.5614,
-            "50 day volume trend": false,
+            "OBV": 12153419887.0,
+            "MFI": 79.5434,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDu",
-            "10 day MA": 475.99000549316406
+            "10 day MA": 492.3000061035156
       }
 }
