@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Yes Bank Limited",
             "Symbol": "YESBANK.NS",
-            "Current Price": "13.35",
-            "Change Percent": "-2.91%",
+            "Current Price": "13.45",
+            "Change Percent": "0.75%",
             "52 Week High": "20.75",
             "52 Week Low": "10.50",
-            "Deliverable to Traded Quantity Percent": "NA"
+            "Deliverable to Traded Quantity Percent": "67.94%"
       },
       "Technical Indicators": {
-            "RSI": 53.0435,
-            "ADX": 41.3946,
+            "RSI": 54.1814,
+            "ADX": 41.7763,
             "MACD": [
                   {
-                        "Line": 0.3453
+                        "Line": 0.3181
                   },
                   {
-                        "Signal": 0.3382
+                        "Signal": 0.3342
                   }
             ],
-            "OBV": -925792.0,
-            "MFI": 52.5985,
+            "OBV": 99609949.0,
+            "MFI": 50.0987,
             "50 day volume trend": false,
             "MOMSQZE": "SQZE",
-            "10 day MA": 13.515000057220458
+            "10 day MA": 13.560000038146972
       }
 }

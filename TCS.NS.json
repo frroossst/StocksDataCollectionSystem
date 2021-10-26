@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Tata Consultancy Services Limited",
             "Symbol": "TCS.NS",
-            "Current Price": "3,492.95",
-            "Change Percent": "-0.17%",
+            "Current Price": "3,482.50",
+            "Change Percent": "-0.30%",
             "52 Week High": "3,989.90",
             "52 Week Low": "2,600.05",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 32.5748,
-            "ADX": 26.6929,
+            "RSI": 31.9587,
+            "ADX": 27.069,
             "MACD": [
                   {
-                        "Line": -60.1252
+                        "Line": -66.8578
                   },
                   {
-                        "Signal": -25.1731
+                        "Signal": -33.51
                   }
             ],
-            "OBV": 740799804.0,
-            "MFI": 27.4946,
-            "50 day volume trend": false,
+            "OBV": 737038621.0,
+            "MFI": 29.5679,
+            "50 day volume trend": true,
             "MOMSQZE": "TRNDd",
-            "10 day MA": 3599.849609375
+            "10 day MA": 3580.4804443359376
       }
 }

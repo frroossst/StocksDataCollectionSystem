@@ -3,107 +3,107 @@
             "result": [
                   {
                         "fullExchangeName": "NSE",
-                        "symbol": "YESBANK.NS",
+                        "symbol": "3MINDIA.NS",
                         "fiftyTwoWeekLowChangePercent": {
-                              "raw": 0.2714286,
-                              "fmt": "27.14%"
+                              "raw": 0.424891,
+                              "fmt": "42.49%"
                         },
                         "gmtOffSetMilliseconds": 19800000,
                         "regularMarketOpen": {
-                              "raw": 14.0,
-                              "fmt": "14.00"
+                              "raw": 25875.0,
+                              "fmt": "25,875.00"
                         },
                         "language": "en-US",
                         "regularMarketTime": {
-                              "raw": 1635156000,
-                              "fmt": "3:30PM IST"
+                              "raw": 1635242384,
+                              "fmt": "3:29PM IST"
                         },
                         "regularMarketChangePercent": {
-                              "raw": -2.9090881,
-                              "fmt": "-2.91%"
+                              "raw": -0.00057517574,
+                              "fmt": "-0.00%"
                         },
                         "quoteType": "EQUITY",
-                        "uuid": "4a22ab6a-17b2-3225-870d-20f9e83a1249",
+                        "uuid": "5c0fa4db-c41d-337e-b22d-5a1c081005f0",
                         "regularMarketDayRange": {
-                              "raw": "13.2 - 14.1",
-                              "fmt": "13.20 - 14.10"
+                              "raw": "25801.2 - 26350.0",
+                              "fmt": "25,801.20 - 26,350.00"
                         },
                         "fiftyTwoWeekLowChange": {
-                              "raw": 2.8500004,
-                              "fmt": "2.85"
+                              "raw": 7796.75,
+                              "fmt": "7,796.75"
                         },
                         "fiftyTwoWeekHighChangePercent": {
-                              "raw": -0.35662648,
-                              "fmt": "-35.66%"
+                              "raw": -0.15655646,
+                              "fmt": "-15.66%"
                         },
                         "regularMarketDayHigh": {
-                              "raw": 14.1,
-                              "fmt": "14.10"
+                              "raw": 26350.0,
+                              "fmt": "26,350.00"
                         },
                         "tradeable": false,
                         "currency": "INR",
                         "sharesOutstanding": {
-                              "raw": 25054900224,
-                              "fmt": "25.055B",
-                              "longFmt": "25,054,900,224"
+                              "raw": 11265100,
+                              "fmt": "11.265M",
+                              "longFmt": "11,265,100"
                         },
                         "regularMarketPreviousClose": {
-                              "raw": 13.75,
-                              "fmt": "13.75"
+                              "raw": 26146.9,
+                              "fmt": "26,146.90"
                         },
                         "fiftyTwoWeekHigh": {
-                              "raw": 20.75,
-                              "fmt": "20.75"
+                              "raw": 31000.0,
+                              "fmt": "31,000.00"
                         },
                         "exchangeTimezoneName": "Asia/Kolkata",
                         "marketCap": {
-                              "raw": 334482931712,
-                              "fmt": "334.483B",
-                              "longFmt": "334,482,931,712"
+                              "raw": 294545752064,
+                              "fmt": "294.546B",
+                              "longFmt": "294,545,752,064"
                         },
                         "fiftyTwoWeekHighChange": {
-                              "raw": -7.3999996,
-                              "fmt": "-7.40"
+                              "raw": -4853.25,
+                              "fmt": "-4,853.25"
                         },
                         "regularMarketChange": {
-                              "raw": -0.39999962,
-                              "fmt": "-0.40"
+                              "raw": -0.15039062,
+                              "fmt": "-0.15"
                         },
                         "fiftyTwoWeekRange": {
-                              "raw": "10.5 - 20.75",
-                              "fmt": "10.50 - 20.75"
+                              "raw": "18350.0 - 31000.0",
+                              "fmt": "18,350.00 - 31,000.00"
                         },
-                        "firstTradeDateMilliseconds": 1121139900000,
+                        "firstTradeDateMilliseconds": 1025495100000,
                         "exchangeDataDelayedBy": 15,
                         "exchangeTimezoneShortName": "IST",
                         "regularMarketPrice": {
-                              "raw": 13.35,
-                              "fmt": "13.35"
+                              "raw": 26146.75,
+                              "fmt": "26,146.75"
                         },
                         "fiftyTwoWeekLow": {
-                              "raw": 10.5,
-                              "fmt": "10.50"
+                              "raw": 18350.0,
+                              "fmt": "18,350.00"
                         },
                         "marketState": "POSTPOST",
                         "regularMarketVolume": {
-                              "raw": 156228011,
-                              "fmt": "156.228M",
-                              "longFmt": "156,228,011"
+                              "raw": 2876,
+                              "fmt": "2,876",
+                              "longFmt": "2,876"
                         },
                         "market": "in_market",
                         "quoteSourceName": "Delayed Quote",
-                        "messageBoardId": "finmb_9674016",
+                        "messageBoardId": "finmb_881351",
                         "priceHint": 2,
                         "sourceInterval": 15,
                         "regularMarketDayLow": {
-                              "raw": 13.2,
-                              "fmt": "13.20"
+                              "raw": 25801.2,
+                              "fmt": "25,801.20"
                         },
                         "exchange": "NSI",
-                        "shortName": "YES BANK",
+                        "shortName": "3M INDIA LTD",
                         "region": "US",
                         "triggerable": true,
-                        "longName": "Yes Bank Limited"
+                        "longName": "3M India Limited"
                   }
             ],
             "error": null

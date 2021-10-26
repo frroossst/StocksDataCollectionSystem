@@ -1,7 +1,7 @@
 {
       "exchg": "nse",
       "exchg_help": "the exchange which is to be scraped",
-      "ovrwrt": true,
+      "ovrwrt": false,
       "ovrwrt_help": "allows the user to run the program when the markets are closed using previous working day's data",
       "onlyBuy": false,
       "onlyBuy_help": "shows only buy trades",
@@ -13,7 +13,7 @@
       "showFlagsHotlist_help": "will shows scrips that are in the GSM/ASM lists in hotlist recommendations",
       "chromiumWait": 2.5,
       "chromiumWait_help": "amount of time (seconds) chromium will wait before closing a website",
-      "holidayCheck": 2019,
+      "holidayCheck": 2021,
       "holidayCheck_help": "the last time holiday check data was fetched",
       "showTrades": false,
       "showTrads_help": "prints the trades in console"

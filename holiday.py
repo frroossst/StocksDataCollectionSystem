@@ -48,8 +48,8 @@ def checkHolidays() -> bool:
     url = "https://www.nseindia.com/products-services/equity-market-timings-holidays"
     dateToday = datetime.today()
     dateTodayYear = int(dateToday.strftime("%Y"))
-    if ovrwrt == True:
-        dateTodayYear = holidayCheckY - 1
+    # if ovrwrt == True:
+    #     dateTodayYear = holidayCheckY - 1
     if dateTodayYear != holidayCheckY:
         driver = webdriver.Chrome(PATH)
         driver.get(url)
@@ -96,10 +96,6 @@ def checkHolidays() -> bool:
 
 def mainCheck() -> bool:
 
-    t = checkTimings()
-    w = checkWeekends()
-    h = checkHolidays()
-
     with open("settings.json","r") as fobj:
         content = json.load(fobj)
         fobj.close()
@@ -108,8 +104,13 @@ def mainCheck() -> bool:
     
     if ovrwrt:
         return True
-    elif t and w and h:
+
+    t = checkTimings()
+    w = checkWeekends()
+    h = checkHolidays()
+
+    
+    if t and w and h:
         return True
     else:
         return False
-
