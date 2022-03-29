@@ -1,5 +1,3 @@
-from selenium.webdriver.common.keys import Keys
-from requests_html import HTMLSession
 from matplotlib import pyplot as plt
 from selenium import webdriver
 from bs4 import BeautifulSoup

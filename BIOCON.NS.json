@@ -2,27 +2,27 @@
       "Basic Info": {
             "Name": "Biocon Limited",
             "Symbol": "BIOCON.NS",
-            "Current Price": "333.40",
-            "Change Percent": "3.77%",
-            "52 Week High": "487.75",
-            "52 Week Low": "320.10",
-            "Deliverable to Traded Quantity Percent": "58.58%"
+            "Current Price": "345.00",
+            "Change Percent": "-0.20%",
+            "52 Week High": "424.40",
+            "52 Week Low": "314.80",
+            "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 37.5832,
-            "ADX": 23.0745,
+            "RSI": 47.4037,
+            "ADX": 22.8704,
             "MACD": [
                   {
-                        "Line": -8.4976
+                        "Line": -6.8584
                   },
                   {
-                        "Signal": -5.6432
+                        "Signal": -9.9273
                   }
             ],
-            "OBV": 2351359976.0,
-            "MFI": 28.8172,
-            "50 day volume trend": true,
-            "MOMSQZE": "TRNDd",
-            "10 day MA": 341.01499633789064
+            "OBV": 2364239797.0,
+            "MFI": 58.057,
+            "50 day volume trend": false,
+            "MOMSQZE": "TRNDu",
+            "10 day MA": 337.1800048828125
       }
 }

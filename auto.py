@@ -3,6 +3,8 @@ import holiday
 import json
 import time
 
+
+
 def writeFlagLogs():
     with open("logs.json","r") as fobj:
         content = json.load(fobj)
@@ -65,4 +67,10 @@ def autoScript():
     print(f"completed execution in {round((end - start),2)} second(s)")
 
 if __name__ == "__main__":
-    autoScript()
+    DEBUG = False
+    if DEBUG:
+        import scraper
+        import algorithm
+        import backtest
+    else:
+        autoScript()

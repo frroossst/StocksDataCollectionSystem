@@ -1,28 +1,28 @@
 {
       "Basic Info": {
-            "Name": "Cadila Healthcare Limited",
+            "Name": "Zydus Lifesciences Limited",
             "Symbol": "CADILAHC.NS",
-            "Current Price": "509.50",
-            "Change Percent": "2.12%",
+            "Current Price": "346.05",
+            "Change Percent": "0.03%",
             "52 Week High": "673.70",
-            "52 Week Low": "404.00",
+            "52 Week Low": "331.55",
             "Deliverable to Traded Quantity Percent": "NA"
       },
       "Technical Indicators": {
-            "RSI": 32.4378,
-            "ADX": 32.0562,
+            "RSI": 39.4834,
+            "ADX": 27.2772,
             "MACD": [
                   {
-                        "Line": -13.4723
+                        "Line": -5.9322
                   },
                   {
-                        "Signal": -9.1935
+                        "Signal": -7.3576
                   }
             ],
-            "OBV": 846647361.0,
-            "MFI": 16.2946,
-            "50 day volume trend": false,
-            "MOMSQZE": "TRNDd",
-            "10 day MA": 523.0799987792968
+            "OBV": 834346604.0,
+            "MFI": 68.0515,
+            "50 day volume trend": true,
+            "MOMSQZE": "SQZE",
+            "10 day MA": 365.6999969482422
       }
 }
